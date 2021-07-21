@@ -30,7 +30,7 @@ body, html {
 }
 
 body {
-  background: #f1f1f1;
+  background: $backgroundColor;
 }
 
 html {
@@ -72,6 +72,13 @@ button {
   font-weight: 500;
 }
 
+.btn {
+  background-color: $textColor;
+  padding:          0.8125rem 1rem;
+  color:            $whiteColor;
+  font-size:        0.8125rem;
+  border-radius:    6rem;
+}
 
 .no-scroll {
   overflow: hidden;

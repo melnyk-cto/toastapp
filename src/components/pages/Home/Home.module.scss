@@ -84,7 +84,7 @@
       box-shadow:    -0.3125rem 0.3125rem 0.625rem 0 rgba(221, 221, 224, 0.2),
                      0.3125rem -0.3125rem 0.625rem 0 rgba(221, 221, 224, 0.2),
                      -0.3125rem -0.3125rem 0.625rem 0 rgba(255, 255, 255, 0.9),
-                     0.3125rem 0.3125rem 0.8125rem 0 rgba(220, 220, 220, 0.9),;
+                     0.3125rem 0.3125rem 0.8125rem 0 rgba(220, 220, 220, 0.9);
       display:       flex;
       align-items:   center;
       padding:       .25rem;
@@ -102,7 +102,7 @@
                           inset -0.125rem -0.125rem 0.25rem 0 rgba(255, 255, 255, 0.9),
                           inset 0.125rem 0.125rem 0.3125rem 0 rgba(220, 220, 220, 0.9),;
         color:            #3cbcb4;
-        background-color: #f1f1f1;
+        background-color: $backgroundColor;
         width:            24px;
         height:           24px;
         display:          flex;
