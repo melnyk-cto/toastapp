@@ -1,21 +1,87 @@
 @import "../../../assets/scss/variables";
 
-@media (any-hover: hover) {
-  .header {
-
-  }
-}
-
 .header {
-  width:       100%;
-  padding:     1rem 0;
-  position:    fixed;
-  z-index:     20;
-  top:         0;
-  left:        0;
-  background:  $blackColor;
-  color:       $whiteColor;
-  display:     flex;
-  align-items: center;
-  transition:  0.2s linear;
+  width:      100%;
+  padding:    1rem 1rem 0 1rem;
+  position:   fixed;
+  z-index:    20;
+  top:        0;
+  left:       0;
+  background: $backgroundColor;
+  box-shadow: inset -1px -1px 2px 0 rgba(212, 212, 212, 0.5);
+  .top {
+    display:         flex;
+    align-items:     center;
+    justify-content: space-between;
+    h3 {
+      margin-bottom: 0;
+    }
+    ul {
+      display:         flex;
+      align-items:     center;
+      justify-content: space-between;
+      li {
+        width:         2rem;
+        height:        2rem;
+        border-radius: 0.625rem;
+        box-shadow:    -0.3125rem 0.3125rem 0.625rem 0 rgba(221, 221, 224, 0.2),
+                       0.3125rem -0.3125rem 0.625rem 0 rgba(221, 221, 224, 0.2),
+                       -0.3125rem -0.3125rem 0.625rem 0 rgba(255, 255, 255, 0.9),
+                       0.3125rem 0.3125rem 0.8125rem 0 rgba(220, 220, 220, 0.9);
+        &:active {
+          box-shadow: inset -0.125rem 0.125rem 0.25rem 0 rgba(221, 221, 224, 0.2),
+                      inset 0.125rem -0.125rem 0.25rem 0 rgba(221, 221, 224, 0.2),
+                      inset -0.125rem -0.125rem 0.25rem 0 rgba(255, 255, 255, 0.9),
+                      inset 0.125rem 0.125rem 0.3125rem 0 rgba(220, 220, 220, 0.9),;
+        }
+        &:last-child {
+          margin-left: 1rem;
+        }
+        a {
+          display:         flex;
+          align-items:     center;
+          justify-content: center;
+          width:           100%;
+          height:          100%;
+          transition:      .2s linear;
+        }
+      }
+    }
+  }
+  nav {
+    margin-top: 1rem;
+    ul {
+      display:         flex;
+      align-items:     center;
+      justify-content: space-between;
+      li {
+        flex:          1 1 auto;
+        border-radius: 10px;
+        &.active {
+          background-color: #f1f1f1;
+          box-shadow:       inset -0.125rem 0.125rem 0.25rem 0 rgba(221, 221, 224, 0.2),
+                            inset 0.125rem -0.125rem 0.25rem 0 rgba(221, 221, 224, 0.2),
+                            inset -0.125rem -0.125rem 0.25rem 0 rgba(255, 255, 255, 0.9),
+                            inset 0.125rem 0.125rem 0.3125rem 0 rgba(220, 220, 220, 0.9);
+          border-radius:    10px 10px 0 0;
+          a {
+            opacity: 1;
+            color:   #3cbcb4;
+          }
+        }
+      }
+      a {
+        width:         100%;
+        font-size:     0.8125rem;
+        font-weight:   600;
+        line-height:   1.69;
+        color:         $textColor;
+        opacity:       .4;
+        display:       inline-block;
+        padding:       0.25rem 0;
+        text-align:    center;
+        border-radius: 10px;
+      }
+    }
+  }
 }
