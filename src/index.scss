@@ -1,0 +1,98 @@
+@import "./assets/scss/variables";
+
+*, *:after, *:before {
+  margin:     0;
+  padding:    0;
+  box-sizing: border-box;
+  outline:    none;
+  color:      $textColor;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  cursor:          pointer;
+  text-decoration: none;
+  //font-size:       1.125rem;
+  //line-height:     1.39;
+}
+
+body, html {
+  margin:  0;
+  padding: 0;
+  height:  100%;
+}
+
+body {
+  background: #f1f1f1;
+}
+
+html {
+  font-size:   16px;
+  font-family: Graphik, sans-serif;
+}
+
+h3 {
+  font-size:     1rem;
+  font-weight:   500;
+  line-height:   1.25;
+  margin-bottom: 1rem;
+
+}
+
+h4 {
+  font-size:     0.875rem;
+  font-weight:   500;
+  line-height:   1.14;
+  margin-bottom: 1.625rem;
+}
+
+p {
+  font-weight: 400;
+  //font-size:     1rem;
+  //line-height:   1.56;
+  //color:         #8c94a5;
+  //margin-bottom: 1rem;
+}
+
+
+#root {
+  height: 100%;
+}
+
+button {
+  cursor:      pointer;
+  line-height: 1rem;
+  font-weight: 500;
+}
+
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.container {
+  width:     100%;
+  max-width: 567px;
+  margin:    0 auto;
+  padding:   0 1rem;
+}
+
+
+.d-block {
+  display: block !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
