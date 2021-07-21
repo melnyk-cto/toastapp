@@ -2,7 +2,7 @@
 
 .header {
   width:      100%;
-  padding:    1rem 1rem 0 1rem;
+  padding:    1rem 0 0 0;
   position:   fixed;
   z-index:    20;
   top:        0;
@@ -49,7 +49,7 @@
     }
   }
   nav {
-    margin-top: 1rem;
+    margin-top: 1.25rem;
     ul {
       display:         flex;
       align-items:     center;
@@ -78,7 +78,7 @@
         color:         $textColor;
         opacity:       .4;
         display:       inline-block;
-        padding:       0.25rem 0;
+        padding:       0.5rem 0;
         text-align:    center;
         border-radius: 10px;
       }

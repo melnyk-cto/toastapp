@@ -12,12 +12,8 @@ const items = [
     name: 'Acai bowls',
     items: [
       {image: soup, title: 'Sunrise Acai Bowl', price: 299, link: '#'},
-      {image: soup, title: 'Sunrise Acai Bowl', price: 299, link: '#'},
       {title: 'Sunrise Acai Bowl', price: 299, link: '#'},
       {image: soup, title: 'Item name in two lines increases height', price: 299, link: '#'},
-      {image: soup, title: 'Sunrise Acai Bowl', price: 299, link: '#'},
-      {image: soup, title: 'Sunrise Acai Bowl', price: 299, link: '#'},
-      {image: soup, title: 'Sunrise Acai Bowl', price: 299, link: '#'},
     ]
   },
   {

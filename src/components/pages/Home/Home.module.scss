@@ -27,8 +27,12 @@
                     inset 0.125rem 0.125rem 0.3125rem 0 rgba(220, 220, 220, 0.9),;
   display:          flex;
   align-items:      center;
-  padding:          0.5rem;
+  padding:          0.35rem;
   margin-bottom:    1rem;
+  min-height:       88px;
+  h4 {
+    margin-bottom: 0;
+  }
   &:active {
     h3 {
       color: $defaultColor;
@@ -91,6 +95,7 @@
       font-size:     0.8125rem;
       font-weight:   500;
       background:    #f0f0f3;
+      width:         72px;
       &:active {
         color: $defaultColor;
       }
@@ -108,6 +113,7 @@
         display:          flex;
         align-items:      center;
         justify-content:  center;
+        margin-right:     0.5rem;
       }
     }
   }

@@ -1,11 +1,12 @@
 @import "./assets/scss/variables";
 
 *, *:after, *:before {
-  margin:     0;
-  padding:    0;
-  box-sizing: border-box;
-  outline:    none;
-  color:      $textColor;
+  margin:         0;
+  padding:        0;
+  box-sizing:     border-box;
+  outline:        none;
+  color:          $textColor;
+  letter-spacing: 0.5px;
 }
 
 img {
@@ -54,8 +55,8 @@ h4 {
 }
 
 p {
-  font-weight: 400;
-  font-size:    0.8125rem;
+  font-weight:   400;
+  font-size:     0.8125rem;
   line-height:   1.56;
   margin-bottom: 1rem;
 }
@@ -73,10 +74,17 @@ button {
 
 .btn {
   background-color: $textColor;
-  padding:          0.8125rem 1rem;
+  padding:          1rem;
   color:            $whiteColor;
   font-size:        0.8125rem;
   border-radius:    6rem;
+  box-shadow:       0 0.25rem 1rem 0 rgba(0, 0, 0, 0.25);
+  cursor:           pointer;
+  transition:       .2s linear;
+  &:active {
+    background-color: $whiteColor;
+    color:            $textColor;
+  }
 }
 
 .no-scroll {
