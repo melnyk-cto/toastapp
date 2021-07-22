@@ -5,7 +5,6 @@ import React from 'react';
 import styles from './Header.module.scss';
 import { ReactComponent as SearchSvg } from "../../../assets/images/icons/search.svg";
 import { ReactComponent as QRSvg } from "../../../assets/images/icons/qr.svg";
-import union1 from "../../../assets/images/icons/union1.png";
 
 const links = [
   {name: 'Special', url: ''},
@@ -37,9 +36,6 @@ export const Header = () => {
           <ul>
             {links.map((link) => (
               <li className={link.name === 'Main' ? styles.active : ''}>
-                {link.name === 'Main' && <div className={styles.union}>
-                  <img src={union1} alt='union1' />
-                </div>}
                 <a key={link.name} href={link.url}>{link.name}</a>
               </li>
             ))}
