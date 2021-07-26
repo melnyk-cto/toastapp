@@ -16,32 +16,30 @@ const links = [
 export const Header = () => {
   return (
     <header className={styles.header}>
-      <div className='container'>
-        <div className={styles.top}>
-          <h3>Sacred Earth Cafe</h3>
-          <ul>
-            <li>
-              <a href='#'>
-                <QRSvg />
-              </a>
-            </li>
-            <li>
-              <a href='#'>
-                <SearchSvg />
-              </a>
-            </li>
-          </ul>
-        </div>
-        <nav>
-          <ul>
-            {links.map((link) => (
-              <li className={link.name === 'Main' ? styles.active : ''}>
-                <a key={link.name} href={link.url}>{link.name}</a>
-              </li>
-            ))}
-          </ul>
-        </nav>
+      <div className={styles.top}>
+        <h3>Sacred Earth Cafe</h3>
+        <ul>
+          <li>
+            <a href='#'>
+              <QRSvg />
+            </a>
+          </li>
+          <li>
+            <a href='#'>
+              <SearchSvg />
+            </a>
+          </li>
+        </ul>
       </div>
+      <nav>
+        <ul>
+          {links.map((link) => (
+            <li className={link.name === 'Main' ? styles.active : ''}>
+              <a key={link.name} href={link.url}>{link.name}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </header>
   );
 };

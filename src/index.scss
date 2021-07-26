@@ -39,16 +39,25 @@ html {
   font-family: Graphik, sans-serif;
 }
 
+h2 {
+  font-size:     20px;
+  font-weight:   500;
+  line-height:   1.2;
+  margin-bottom: 16px;
+  color:         #39434E;
+
+}
+
 h3 {
-  font-size:     1rem;
+  font-size:     16px;
   font-weight:   500;
   line-height:   1.25;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
 
 }
 
 h4 {
-  font-size:     0.875rem;
+  font-size:     14px;
   font-weight:   500;
   line-height:   1.14;
   margin-bottom: 1.625rem;
@@ -56,9 +65,9 @@ h4 {
 
 p {
   font-weight:   400;
-  font-size:     0.8125rem;
-  line-height:   1.56;
-  margin-bottom: 1rem;
+  font-size:     14px;
+  line-height:   1.42;
+  margin-bottom: 16px;
 }
 
 
@@ -73,17 +82,63 @@ button {
 }
 
 .btn {
-  background-color: $textColor;
-  padding:          1rem;
+  background-color: $blackColor;
+  padding:          15px;
   color:            $whiteColor;
-  font-size:        0.8125rem;
-  border-radius:    6rem;
-  box-shadow:       0 0.25rem 1rem 0 rgba(0, 0, 0, 0.25);
+  font-size:        14px;
+  line-height:      1;
+  border-radius:    50px;
   cursor:           pointer;
   transition:       .2s linear;
+  width:            100%;
+  border:           none;
+  text-transform:   uppercase;
+  font-weight:      600;
+  box-shadow:       -5px 5px 10px rgba(212, 212, 212, 0.2), 5px -5px 10px rgba(212, 212, 212, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(212, 212, 212, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(212, 212, 212, 0.5);
   &:active {
-    background-color: $whiteColor;
-    color:            $textColor;
+    opacity: .7;
+  }
+}
+
+label {
+  margin-bottom: 16px;
+  display:       block;
+  position:      relative;
+  input {
+    width:         100%;
+    background:    #e0e2e7;
+    border:        none;
+    border-radius: 10px;
+    height:        48px;
+    font-size:     14px;
+    line-height:   1;
+    color:         #4A5662;
+    box-shadow:    inset -2px 2px 4px 0 rgba(190, 192, 196, 0.2),
+                   inset 2px -2px 4px 0 rgba(190, 192, 196, 0.2),
+                   inset -2px -2px 4px 0 rgba(255, 255, 255, 0.9),
+                   inset 2px 2px 5px 0 rgba(190, 192, 196, 0.9);
+
+    &::placeholder {
+      color:   #4A5662;
+      opacity: .4;
+    }
+  }
+  &.phone {
+    input {
+      padding-left: 68px;
+    }
+    select {
+      background:  transparent;
+      border:      transparent;
+      position:    absolute;
+      z-index:     1;
+      left:        7px;
+      top:         50%;
+      transform:   translate(0, -50%);
+      font-size:   14px;
+      font-weight: 500;
+      color:       #4A5662;
+    }
   }
 }
 
@@ -94,14 +149,6 @@ button {
 .d-none {
   display: none !important;
 }
-
-.container {
-  width:     100%;
-  max-width: 567px;
-  margin:    0 auto;
-  padding:   0 1rem;
-}
-
 
 .d-block {
   display: block !important;

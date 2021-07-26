@@ -13,25 +13,23 @@ export const Footer = () => {
       <div className={`${styles.menu} btn`}>
         Menu
       </div>
-      <div className='container'>
-        <ul>
-          <li>
-            <a href='#'>
-              <LightningSvg />
-            </a>
-          </li>
-          <li className={styles.active}>
-            <a href='#'>
-              <BookSvg />
-            </a>
-          </li>
-          <li>
-            <a href='#'>
-              <ShoppingSvg />
-            </a>
-          </li>
-        </ul>
-      </div>
+      <ul>
+        <li>
+          <a href='#'>
+            <LightningSvg />
+          </a>
+        </li>
+        <li className={styles.active}>
+          <a href='#'>
+            <BookSvg />
+          </a>
+        </li>
+        <li>
+          <a href='#'>
+            <ShoppingSvg />
+          </a>
+        </li>
+      </ul>
     </footer>
   );
 };

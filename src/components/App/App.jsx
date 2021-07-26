@@ -5,9 +5,9 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 // components
-import { Home } from "../pages";
-
-import { Footer, Header } from "../common";
+import { routes } from "./routes";
+import { Home, Register } from "../pages";
+// import { Footer, Header } from "../common";
 
 // assets
 import styles from './App.module.scss';
@@ -15,11 +15,12 @@ import styles from './App.module.scss';
 function App() {
   return (
     <div className={styles.app}>
-      <Header />
+      {/*<Header />*/}
       <Switch>
-        <Route path='/' component={Home} />
+        <Route exact path={routes.home} component={Home} />
+        <Route path={routes.register} component={Register} />
       </Switch>
-      <Footer />
+      {/*<Footer />*/}
     </div>
   );
 }

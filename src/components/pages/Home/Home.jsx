@@ -39,35 +39,33 @@ export const Home = () => {
   return (
     <main className='home'>
       <section>
-        <div className='container'>
-          {items.map(item => (
-            <div key={item.id} className={styles.items}>
-              <h4 className={styles.title}>
-                {item.name}
-                <hr />
-                <ArrowSvg />
-              </h4>
-              {item.items.map((product) => (
-                <a id={product.title} href={product.link} className={styles.item}>
-                  {product.image && <img src={product.image} alt={product.title} />}
-                  <div className={styles.description}>
-                    <h3>{product.title}</h3>
-                    <div className={styles.info}>
-                      <div className={styles.price}>
-                        <span />
-                        <h4>₹{product.price}</h4>
-                      </div>
-                      <button type='button' onClick={() => addButton()}>
-                        <span>+</span>
-                        ADD
-                      </button>
+        {items.map(item => (
+          <div key={item.id} className={styles.items}>
+            <h4 className={styles.title}>
+              {item.name}
+              <hr />
+              <ArrowSvg />
+            </h4>
+            {item.items.map((product) => (
+              <a id={product.title} href={product.link} className={styles.item}>
+                {product.image && <img src={product.image} alt={product.title} />}
+                <div className={styles.description}>
+                  <h3>{product.title}</h3>
+                  <div className={styles.info}>
+                    <div className={styles.price}>
+                      <span />
+                      <h4>₹{product.price}</h4>
                     </div>
+                    <button type='button' onClick={() => addButton()}>
+                      <span>+</span>
+                      ADD
+                    </button>
                   </div>
-                </a>
-              ))}
-            </div>
-          ))}
-        </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        ))}
       </section>
     </main>
   );
