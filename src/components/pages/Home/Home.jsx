@@ -46,8 +46,8 @@ export const Home = () => {
               <hr />
               <ArrowSvg />
             </h4>
-            {item.items.map((product) => (
-              <a id={product.title} href={product.link} className={styles.item}>
+            {item.items.map((product, index) => (
+              <a key={index} id={product.title} href={product.link} className={styles.item}>
                 {product.image && <img src={product.image} alt={product.title} />}
                 <div className={styles.description}>
                   <h3>{product.title}</h3>
