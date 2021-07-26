@@ -25,11 +25,6 @@
       display:         flex;
       align-items:     center;
       justify-content: space-between;
-      width:           100vw;
-      left:            -15px;
-      position:        relative;
-      max-width:       400px;
-      margin:          0 auto;
       li {
         width:         2rem;
         height:        2rem;
@@ -59,7 +54,11 @@
     }
   }
   nav {
-    margin: 1.25rem auto 0 auto;
+    width:           100vw;
+    left:            -15px;
+    position:        relative;
+    max-width:       400px;
+    margin:          1.25rem auto 0 auto;
     ul {
       display:         flex;
       align-items:     center;
