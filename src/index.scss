@@ -64,10 +64,11 @@ h4 {
 }
 
 p {
-  font-weight:   400;
-  font-size:     14px;
-  line-height:   1.42;
-  margin-bottom: 16px;
+  font-weight:    400;
+  font-size:      14px;
+  line-height:    1.42;
+  margin-bottom:  16px;
+  letter-spacing: 0.4px;
 }
 
 
@@ -122,6 +123,9 @@ label {
       color:   #4A5662;
       opacity: .4;
     }
+    &:active, &:focus {
+      background: #F1E9EE;
+    }
   }
   &.phone {
     input {
@@ -138,6 +142,15 @@ label {
       font-size:   14px;
       font-weight: 500;
       color:       #4A5662;
+    }
+  }
+  &.digit {
+    width:  48px;
+    height: 48px;
+    input {
+      height:    100%;
+      font-size: 20px;
+      padding:   16px 18px;
     }
   }
 }
