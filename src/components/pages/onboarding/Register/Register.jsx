@@ -6,7 +6,7 @@ import styles from './Register.module.scss';
 import saly from '../../../../assets/images/onboarding/saly.png';
 import numbers from '../../../../assets/images/onboarding/numbers.svg';
 
-const phoneCode = ['+093', '+380'];
+const phoneCode = ['+91', '+38'];
 export const Register = () => {
   const [activeButton, setActiveButton] = useState(false);
 
@@ -24,7 +24,7 @@ export const Register = () => {
       <section>
         <div className={styles.inner}>
           <img className={styles.saly} src={saly} alt='saly' />
-          <img className={styles.saly} src={numbers} alt='numbers' />
+          <img className={styles.numbers} src={numbers} alt='numbers' />
           <div className={styles.panel}>
             <h2>Register yourself</h2>
             <p>Enter your 10 digit phone number</p>

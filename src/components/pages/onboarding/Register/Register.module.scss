@@ -22,15 +22,20 @@
     background-size: cover;
     opacity:         .2;
   }
-  .saly {
+  .saly, .numbers {
     position:   absolute;
     z-index:    1;
     left:       50%;
-    top:        40%;
+    top:        35%;
     transform:  translate(-50%, -50%);
-    width:      80%;
+    width:      84%;
     height:     100%;
     object-fit: contain;
+  }
+  .numbers {
+    width: 60.5%;
+    top:   28%;
+
   }
 }
 
@@ -43,9 +48,10 @@
   border:          2px solid #eeece9;
   background:      linear-gradient(rgba(236, 233, 230, 0.5), rgba(255, 255, 255, 0.3));
   backdrop-filter: blur(3px);
-  padding:         24px 16px;
+  padding:         24px 16px 14px 16px;
   .sent {
-    margin-bottom: 80px;
+    margin-bottom: 86px;
+    font-size:     12px;
   }
   button {
     pointer-events: none;

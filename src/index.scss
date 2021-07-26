@@ -109,7 +109,7 @@ label {
     background:    #e0e2e7;
     border:        none;
     border-radius: 10px;
-    height:        48px;
+    height:        40px;
     font-size:     14px;
     line-height:   1;
     color:         #4A5662;
@@ -125,14 +125,14 @@ label {
   }
   &.phone {
     input {
-      padding-left: 68px;
+      padding-left: 64px;
     }
     select {
       background:  transparent;
       border:      transparent;
       position:    absolute;
       z-index:     1;
-      left:        7px;
+      left:        6px;
       top:         50%;
       transform:   translate(0, -50%);
       font-size:   14px;
