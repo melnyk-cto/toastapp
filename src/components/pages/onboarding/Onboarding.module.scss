@@ -71,6 +71,15 @@
     align-items:     center;
     justify-content: space-between;
   }
+  .alert {
+    margin-left: auto;
+    img {
+      display: flex;
+    }
+    &:active {
+      opacity: .7;
+    }
+  }
   .sent {
     font-size: 12px;
   }
@@ -98,12 +107,20 @@
   background: linear-gradient(144.47deg, #DAE2F8 -0.83%, #D6A4A4 77.74%);
 }
 
-.getStarted {
+.getStarted, .join {
   background: linear-gradient(22.89deg, #9796F0 -12.75%, #FBC7D4 65.52%, #FEDAA3 114.01%);
   button {
     box-shadow: -5px 5px 10px rgba(184, 177, 203, 0.2), 5px -5px 10px rgba(184, 177, 203, 0.2), -5px -5px 10px rgba(250, 239, 255, 0.9), 5px 5px 13px rgba(184, 177, 203, 0.9), inset 1px 1px 2px rgba(250, 239, 255, 0.3), inset -1px -1px 2px rgba(184, 177, 203, 0.5);
     &.active {
       background: linear-gradient(90deg, #C779D0 12.71%, #4BC0C8 142.38%);
+    }
+  }
+}
+
+.join {
+  .inner {
+    .saly {
+      width: 74%;
     }
   }
 }
