@@ -6,7 +6,7 @@ import { Switch, Route } from 'react-router-dom';
 
 // components
 import { routes } from "./routes";
-import { Home, Register, Verify } from "../pages";
+import { Home, Register, Verify, GetStarted } from "../pages";
 // import { Footer, Header } from "../common";
 
 // assets
@@ -20,6 +20,7 @@ function App() {
         <Route exact path={routes.home} component={Home} />
         <Route path={routes.register} component={Register} />
         <Route path={routes.verify} component={Verify} />
+        <Route path={routes.getStarted} component={GetStarted} />
       </Switch>
       {/*<Footer />*/}
     </div>
