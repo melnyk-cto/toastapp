@@ -1,12 +1,15 @@
 @import "../../../assets/scss/variables";
 
 .header {
+  margin:     0 auto;
+  max-width:  400px;
   width:      100%;
-  padding:    1rem 0 0 0;
+  padding:    16px 15px 0 15px;
   position:   fixed;
   z-index:    20;
   top:        0;
-  left:       0;
+  left:       50%;
+  transform:  translate(-50%, 0);
   background: $backgroundColor;
   box-shadow: -2px 2px 4px rgba(212, 212, 212, 0.2),
               2px -2px 4px rgba(212, 212, 212, 0.2),
@@ -54,11 +57,11 @@
     }
   }
   nav {
-    width:           100vw;
-    left:            -15px;
-    position:        relative;
-    max-width:       400px;
-    margin:          1.25rem auto 0 auto;
+    width:     100vw;
+    left:      -15px;
+    position:  relative;
+    max-width: 400px;
+    margin:    1.25rem auto 0 auto;
     ul {
       display:         flex;
       align-items:     center;
@@ -90,15 +93,15 @@
           }
         }
         &:nth-child(1):after {
-          content: "";
-          width: 30px;
-          height: 30px;
+          content:    "";
+          width:      30px;
+          height:     30px;
           background: radial-gradient(ellipse at center,
-                  rgba(241,241,241,1) 0%, rgba(241,241,241,0) 100%);
-          position: absolute;
-          right: -15px;
-          bottom: -15px;
-          z-index: 1;
+                  rgba(241, 241, 241, 1) 0%, rgba(241, 241, 241, 0) 100%);
+          position:   absolute;
+          right:      -15px;
+          bottom:     -15px;
+          z-index:    1;
         }
         &:nth-child(1):before {
           content:                    '';
