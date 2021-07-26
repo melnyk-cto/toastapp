@@ -39,6 +39,12 @@ html {
   font-family: Graphik, sans-serif;
 }
 
+section {
+  flex:           1 1 auto;
+  display:        flex;
+  flex-direction: column;
+}
+
 h2 {
   font-size:     20px;
   font-weight:   500;
