@@ -3,8 +3,8 @@ import React from 'react';
 
 // assets
 import styles from './Home.module.scss';
-import soup from '../../../assets/images/soup.jpg';
-import { ReactComponent as ArrowSvg } from '../../../assets/images/icons/arrow.svg';
+import soup from '../../../../assets/images/soup.jpg';
+import { ReactComponent as ArrowSvg } from '../../../../assets/images/icons/arrow.svg';
 
 const items = [
   {
