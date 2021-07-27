@@ -49,6 +49,20 @@ export const Join = () => {
     }
   }, [formInput]);
 
+
+  useEffect(() => {
+    document.body.addEventListener('keyup', function (e) {
+      if (e.keyCode === 8) {
+        // go to next input field
+        if (e.target.name) {
+          if (document.getElementsByName(`digit${Number(e.target.name.substr(e.target.name.length - 1) - 1)}`)[0]) {
+            document.getElementsByName(`digit${Number(e.target.name.substr(e.target.name.length - 1) - 1)}`)[0].focus()
+          }
+        }
+      }
+    });
+  }, [])
+
   const handleSubmit = (e) => {
     e.preventDefault();
     window.location = routes.home;
