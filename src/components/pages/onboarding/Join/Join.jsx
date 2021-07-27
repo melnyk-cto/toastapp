@@ -13,10 +13,15 @@ const digits = [0, 1, 2, 3];
 export const Join = () => {
   const [activeButton, setActiveButton] = useState(false);
 
-  const handleChangeDigits = evt => {
+  const handleChangeDigits = (evt, digit) => {
     const name = evt.target.name;
     const newValue = evt.target.value;
     setFormInput({[name]: newValue});
+
+    // go to next input field
+    if (document.getElementsByName(`digit${digit + 1}`)[0]) {
+      document.getElementsByName(`digit${digit + 1}`)[0].focus()
+    }
   };
 
 
@@ -61,7 +66,7 @@ export const Join = () => {
                            maxLength={1}
                            name={`digit${digit}`}
                            value={formInput[`digit${digit}`]}
-                           onChange={handleChangeDigits} />
+                           onChange={(e) => handleChangeDigits(e, digit)} />
                   </label>
                 ))}
                 <div className={styles.alert}>

@@ -15,10 +15,15 @@ export const Verify = () => {
   const [activeButton, setActiveButton] = useState(false);
   const [timer, setTimer] = useState(time);
 
-  const handleChangeDigits = evt => {
+  const handleChangeDigits = (evt, digit) => {
     const name = evt.target.name;
     const newValue = evt.target.value;
     setFormInput({[name]: newValue});
+
+    // go to next input field
+    if (document.getElementsByName(`digit${digit + 1}`)[0]) {
+      document.getElementsByName(`digit${digit + 1}`)[0].focus()
+    }
   };
 
   const onInput = (e) => {
@@ -83,7 +88,7 @@ export const Verify = () => {
                            name={`digit${digit}`}
                            value={formInput[`digit${digit}`]}
                            onInput={(e) => onInput(e)}
-                           onChange={handleChangeDigits} />
+                           onChange={(e) => handleChangeDigits(e, digit)} />
                   </label>
                 ))}
               </div>
