@@ -158,17 +158,28 @@ label {
     margin-right:  8px;
     margin-bottom: 0;
     input {
-      height:           100%;
-      font-size:        20px;
-      text-align:       center;
-      text-transform:   uppercase;
-      background-color: #e8dfe4;
-      padding:       10px;
-      box-shadow:       inset -2px 2px 4px rgba(186, 178, 182, 0.2),
-                        inset 2px -2px 4px rgba(186, 178, 182, 0.2),
-                        inset -2px -2px 4px rgba(255, 255, 255, 0.9),
-                        inset 2px 2px 5px rgba(186, 178, 182, 0.9);
+      appearance:         none;
+      -webkit-appearance: none;
+      height:             100%;
+      font-size:          20px;
+      text-align:         center;
+      text-transform:     uppercase;
+      background-color:   #e8dfe4;
+      padding:            10px;
+      box-shadow:         inset -2px 2px 4px rgba(186, 178, 182, 0.2),
+                          inset 2px -2px 4px rgba(186, 178, 182, 0.2),
+                          inset -2px -2px 4px rgba(255, 255, 255, 0.9),
+                          inset 2px 2px 5px rgba(186, 178, 182, 0.9);
     }
+  }
+  input[type=number]::-webkit-outer-spin-button,
+  input[type=number]::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin:             0; /* <-- Apparently some margin are still there even though it's hidden */
+  }
+  input[type=number] {
+    -moz-appearance: textfield; /* Firefox */
   }
 }
 

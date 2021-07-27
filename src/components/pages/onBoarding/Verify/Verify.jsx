@@ -16,18 +16,23 @@ export const Verify = () => {
   const [timer, setTimer] = useState(time);
 
   const handleChangeDigits = (evt, digit) => {
-    const name = evt.target.name;
-    const newValue = evt.target.value;
-    setFormInput({[name]: newValue});
+    if (evt.target.value.length <= 1) {
+      const name = evt.target.name;
+      const newValue = evt.target.value;
+      setFormInput({[name]: newValue});
 
-    // go to next input field
-    if (document.getElementsByName(`digit${digit + 1}`)[0]) {
-      document.getElementsByName(`digit${digit + 1}`)[0].focus()
+      // go to next input field
+      if (document.getElementsByName(`digit${digit + 1}`)[0]) {
+        document.getElementsByName(`digit${digit + 1}`)[0].focus()
+      }
     }
   };
 
-  const onInput = (e) => {
-    e.target.value = e.target.value.replace(/[^0-9]/g, '')
+  const onHandleFocus = (evt) => {
+    evt.target.value = '';
+    const name = evt.target.name;
+    const newValue = evt.target.value;
+    setFormInput({[name]: newValue});
   }
 
   useEffect(() => {
@@ -95,7 +100,7 @@ export const Verify = () => {
                            maxLength={1}
                            name={`digit${digit}`}
                            value={formInput[`digit${digit}`]}
-                           onInput={(e) => onInput(e)}
+                           onFocus={(e) => onHandleFocus(e)}
                            onChange={(e) => handleChangeDigits(e, digit)} />
                   </label>
                 ))}

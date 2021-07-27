@@ -24,6 +24,12 @@ export const Join = () => {
     }
   };
 
+  const onHandleFocus = (evt) => {
+    evt.target.value = '';
+    const name = evt.target.name;
+    const newValue = evt.target.value;
+    setFormInput({[name]: newValue});
+  }
 
   const [formInput, setFormInput] = useReducer(
     (state, newState) => ({...state, ...newState}),
@@ -66,6 +72,7 @@ export const Join = () => {
                            maxLength={1}
                            name={`digit${digit}`}
                            value={formInput[`digit${digit}`]}
+                           onFocus={(e) => onHandleFocus(e)}
                            onChange={(e) => handleChangeDigits(e, digit)} />
                   </label>
                 ))}

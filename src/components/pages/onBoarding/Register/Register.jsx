@@ -24,10 +24,6 @@ export const Register = () => {
     }
   };
 
-  const onInput = (e) => {
-    e.target.value = e.target.value.replace(/[^0-9]/g, '')
-  }
-
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formInput, 'formInput');
@@ -62,7 +58,6 @@ export const Register = () => {
                        placeholder='Phone number'
                        name='phone'
                        value={formInput.phone}
-                       onInput={(e) => onInput(e)}
                        onChange={handleChangePhone} />
               </label>
               <p className={styles.sent}>An OTP will be sent on this number.</p>
