@@ -1,12 +1,13 @@
 @import "./assets/scss/variables";
+@import "./assets/scss/font";
 
 *, *:after, *:before {
-  margin:         0;
-  padding:        0;
-  box-sizing:     border-box;
-  outline:        none;
-  color:          $textColor;
-  letter-spacing: 0.5px;
+  margin:      0;
+  padding:     0;
+  box-sizing:  border-box;
+  outline:     none;
+  color:       $textColor;
+  font-family: 'Graphik', sans-serif;
 }
 
 img {
@@ -35,8 +36,7 @@ body {
 }
 
 html {
-  font-size:   16px;
-  font-family: Graphik, sans-serif;
+  font-size: 16px;
 }
 
 section {
@@ -113,25 +113,25 @@ label {
   position:      relative;
   input {
     width:         100%;
-    background:    #e0e2e7;
-    border:        none;
-    border-radius: 10px;
-    height:        40px;
+    height:        48px;
     font-size:     14px;
     line-height:   1;
     color:         #4A5662;
     padding:       10px 16px;
-    box-shadow:    inset -2px 2px 4px 0 rgba(190, 192, 196, 0.2),
-                   inset 2px -2px 4px 0 rgba(190, 192, 196, 0.2),
-                   inset -2px -2px 4px 0 rgba(255, 255, 255, 0.9),
-                   inset 2px 2px 5px 0 rgba(190, 192, 196, 0.9);
-
+    background:    #e0e2e7;
+    border:        none;
+    box-shadow:    inset -2px 2px 4px rgba(190, 192, 196, 0.2),
+                   inset 2px -2px 4px rgba(190, 192, 196, 0.2),
+                   inset -2px -2px 4px rgba(255, 255, 255, 0.9),
+                   inset 2px 2px 5px rgba(190, 192, 196, 0.9);
+    border-radius: 10px;
+    transition:    .2s linear;
     &::placeholder {
       color:   #4A5662;
-      opacity: .4;
+      opacity: .6;
     }
     &:active, &:focus {
-      background: #F1E9EE;
+      opacity: .7;
     }
   }
   &.phone {
@@ -158,10 +158,15 @@ label {
     margin-right:  8px;
     margin-bottom: 0;
     input {
-      height:         100%;
-      font-size:      20px;
-      text-align:     center;
-      text-transform: uppercase;
+      height:           100%;
+      font-size:        20px;
+      text-align:       center;
+      text-transform:   uppercase;
+      background-color: #e8dfe4;
+      box-shadow:       inset -2px 2px 4px rgba(186, 178, 182, 0.2),
+                        inset 2px -2px 4px rgba(186, 178, 182, 0.2),
+                        inset -2px -2px 4px rgba(255, 255, 255, 0.9),
+                        inset 2px 2px 5px rgba(186, 178, 182, 0.9);
     }
   }
 }

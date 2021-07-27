@@ -55,12 +55,14 @@
   width:           100%;
   border-radius:   20px 20px 0 0;
   border:          2px solid #eeece9;
-  background:      linear-gradient(rgba(236, 233, 230, 0.5), rgba(255, 255, 255, 0.3));
-  backdrop-filter: blur(3px);
   padding:         24px 16px 14px 16px;
   height:          320px;
   display:         flex;
   flex-direction:  column;
+  background:      linear-gradient(146.29deg, rgba(236, 233, 230, 0.5) -5.05%, rgba(255, 255, 255, 0.3) 98.78%);
+  box-shadow:      0 4px 24px rgba(255, 255, 255, 0.24);
+  backdrop-filter: blur(10px);
+
   form {
     flex:           1 1 auto;
     display:        flex;
@@ -103,7 +105,7 @@
   display:        flex;
   flex-direction: column;
   padding:        0;
-  background:     linear-gradient(#757F9A, #D7DDE8);
+  background:     linear-gradient(166.09deg, #757F9A -14.69%, #D7DDE8 49.82%);
 }
 
 .verify {
@@ -120,10 +122,25 @@
   }
 }
 
+.getStarted {
+  label input {
+    box-shadow:       inset -2px 2px 4px rgba(201, 186, 198, 0.2),
+                      inset 2px -2px 4px rgba(201, 186, 198, 0.2),
+                      inset -2px -2px 4px rgba(255, 252, 255, 0.9),
+                      inset 2px 2px 5px rgba(201, 186, 198, 0.9);
+    background-color: #ecdbe9;
+  }
+}
+
 .join {
-  .inner {
-    .saly {
-      width: 74%;
-    }
+  .inner .saly {
+    width: 74%;
+  }
+  .digit label input {
+    box-shadow:       inset -2px 2px 4px rgba(174, 166, 191, 0.2),
+                      inset 2px -2px 4px rgba(174, 166, 191, 0.2),
+                      inset -2px -2px 4px rgba(255, 250, 255, 0.9),
+                      inset 2px 2px 5px rgba(174, 166, 191, 0.9);
+    background-color: #d9d0ef;
   }
 }
