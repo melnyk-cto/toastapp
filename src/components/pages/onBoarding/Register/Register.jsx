@@ -57,7 +57,7 @@ export const Register = () => {
                     <option key={code} value={code}>{code}</option>
                   ))}
                 </select>
-                <input type='text'
+                <input type='number'
                        required
                        placeholder='Phone number'
                        name='phone'

@@ -67,6 +67,14 @@ export const Verify = () => {
     window.location = routes.getStarted;
   }
 
+  useEffect(() => {
+    document.body.addEventListener('keyup', function (e) {
+      if (e.keyCode === 8) {
+        window.location = routes.register;
+      }
+    });
+  }, [])
+
   return (
     <main className={`${styles.register} ${styles.verify}`}>
       <section>
@@ -83,7 +91,7 @@ export const Verify = () => {
               <div className={styles.digit}>
                 {digits.map((digit) => (
                   <label key={digit} className='digit'>
-                    <input type="text"
+                    <input type="number"
                            maxLength={1}
                            name={`digit${digit}`}
                            value={formInput[`digit${digit}`]}
