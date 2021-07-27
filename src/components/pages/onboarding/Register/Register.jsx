@@ -6,7 +6,7 @@ import { routes } from "../../../App/routes";
 
 // assets
 import styles from '../Onboarding.module.scss';
-import saly from '../../../../assets/images/onboarding/saly.png';
+import saly from '../../../../assets/images/onboarding/saly-1.png';
 import numbers from '../../../../assets/images/onboarding/numbers.svg';
 
 const phoneCode = ['+91', '+38'];
