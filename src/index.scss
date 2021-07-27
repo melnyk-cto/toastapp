@@ -188,7 +188,7 @@ label {
     margin:             0; /* <-- Apparently some margin are still there even though it's hidden */
   }
   input[type=number] {
-    -moz-appearance: textfield; /* Firefox */
+    -moz-appearance: none; /* Firefox */
   }
 }
 
