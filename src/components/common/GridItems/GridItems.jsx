@@ -5,11 +5,11 @@ import { AddButton } from "../AddButton/AddButton";
 import { VeganStatus } from "../VeganStatus/VeganStatus";
 
 // assets
-import styles from "./ListItems.module.scss";
+import styles from "./GridItems.module.scss";
 import { ReactComponent as ArrowSvg } from "../../../assets/images/icons/arrow.svg";
 
 
-export const ListItems = ({items}) => {
+export const GridItems = ({items}) => {
 
   return (
     <div key={items.id} className={styles.items}>
@@ -20,12 +20,16 @@ export const ListItems = ({items}) => {
       </h4>
       {items.items.map((product, index) => (
         <a key={index} id={product.title} href={product.link} className={styles.item}>
-          {product.image && <img src={product.image} alt={product.title} />}
+          <div className={styles.image}>
+            {product.image && <img src={product.image} alt={product.title} />}
+          </div>
           <div className={styles.description}>
-            <h3>{product.title}</h3>
+            <h4 className={styles.itemTitle}>
+              <VeganStatus />
+              {product.title}
+            </h4>
             <div className={styles.info}>
               <div className={styles.price}>
-                <VeganStatus />
                 <h4>₹{product.price}</h4>
               </div>
               <AddButton />
