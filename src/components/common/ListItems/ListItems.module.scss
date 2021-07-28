@@ -8,6 +8,14 @@
   display:         flex;
   align-items:     center;
   justify-content: space-between;
+  text-transform:  uppercase;
+  color:           $blackColor;
+  font-size:       13px;
+  &.toggle {
+    text-transform: inherit;
+    color:          $textColor;
+    font-size:      14px;
+  }
   hr {
     flex:       1 1 auto;
     height:     0.0625rem;

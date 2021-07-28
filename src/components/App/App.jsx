@@ -2,7 +2,7 @@
 import React from 'react';
 
 // library
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 // components
 import { routes } from "./routes";
@@ -15,13 +15,14 @@ function App() {
   return (
     <div className={styles.app}>
       <Switch>
+        <Redirect exact from='/' to={routes.main} />
         <Route path={routes.register} component={Register} />
         <Route path={routes.verify} component={Verify} />
         <Route path={routes.getStarted} component={GetStarted} />
         <Route path={routes.join} component={Join} />
-        <Route exact path={routes.main} component={Main} />
-        <Route exact path={routes.special} component={Special} />
-        <Route exact path={routes.search} component={Search} />
+        <Route path={routes.main} component={Main} />
+        <Route path={routes.special} component={Special} />
+        <Route path={routes.search} component={Search} />
       </Switch>
     </div>
   );

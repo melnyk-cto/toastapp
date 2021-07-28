@@ -1,6 +1,9 @@
 // core
 import React from 'react';
 
+// library
+import { Link, NavLink } from "react-router-dom";
+
 // components
 import { routes } from "../../App/routes";
 
@@ -11,9 +14,9 @@ import { ReactComponent as QRSvg } from "../../../assets/images/icons/qr.svg";
 
 const links = [
   {name: 'Special', url: routes.special},
-  {name: 'Main', url: routes.home},
-  {name: 'Beverages', url: ''},
-  {name: 'Desserts', url: ''},
+  {name: 'Main', url: routes.main},
+  {name: 'Beverages', url: '#'},
+  {name: 'Desserts', url: '#'},
 ]
 
 export const Header = () => {
@@ -23,22 +26,22 @@ export const Header = () => {
         <h3>Sacred Earth Cafe</h3>
         <ul>
           <li>
-            <a href='#'>
+            <Link to='#'>
               <QRSvg />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href='#'>
+            <Link to={routes.search}>
               <SearchSvg />
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
       <nav>
         <ul>
           {links.map((link) => (
-            <li className={link.name === 'Main' ? styles.active : ''}>
-              <a key={link.name} href={link.url}>{link.name}</a>
+            <li key={link.name} className={link.name === 'Main' ? styles.active : ''}>
+              <NavLink key={link.name} to={link.url}>{link.name}</NavLink>
             </li>
           ))}
         </ul>

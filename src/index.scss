@@ -43,6 +43,7 @@ section {
   flex:           1 1 auto;
   display:        flex;
   flex-direction: column;
+  width:          100%;
 }
 
 h2 {
@@ -64,6 +65,13 @@ h3 {
 
 h4 {
   font-size:     14px;
+  font-weight:   500;
+  line-height:   1.14;
+  margin-bottom: 1.625rem;
+}
+
+h5 {
+  font-size:     12px;
   font-weight:   500;
   line-height:   1.14;
   margin-bottom: 1.625rem;
@@ -117,9 +125,9 @@ label {
     height:             48px;
     font-size:          14px;
     line-height:        1;
-    color:              #4A5662;
+    color:              $textColor;
     padding:            10px 16px;
-    background:         #e0e2e7;
+    background:         $backgroundColor;
     border:             none;
     box-shadow:         inset -2px 2px 4px rgba(190, 192, 196, 0.2),
                         inset 2px -2px 4px rgba(190, 192, 196, 0.2),
@@ -132,7 +140,7 @@ label {
     border-radius:      10px;
     transition:         .2s linear;
     &::placeholder {
-      color:   #4A5662;
+      color:   #bbbbbb;
       opacity: .6;
     }
     &:active, &:focus {
@@ -154,7 +162,7 @@ label {
       transform:   translate(0, -50%);
       font-size:   14px;
       font-weight: 500;
-      color:       #4A5662;
+      color:       $textColor;
     }
   }
   &.digit {

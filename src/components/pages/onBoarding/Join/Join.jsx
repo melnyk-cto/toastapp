@@ -66,7 +66,7 @@ export const Join = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    window.location = routes.home;
+    window.location = routes.main;
   }
 
   return (
