@@ -1,14 +1,17 @@
 // core
 import React from 'react';
 
+// components
+import { routes } from "../../App/routes";
+
 // assets
 import styles from './Header.module.scss';
 import { ReactComponent as SearchSvg } from "../../../assets/images/icons/search.svg";
 import { ReactComponent as QRSvg } from "../../../assets/images/icons/qr.svg";
 
 const links = [
-  {name: 'Special', url: ''},
-  {name: 'Main', url: ''},
+  {name: 'Special', url: routes.special},
+  {name: 'Main', url: routes.home},
   {name: 'Beverages', url: ''},
   {name: 'Desserts', url: ''},
 ]
