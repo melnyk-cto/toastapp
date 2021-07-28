@@ -3,6 +3,7 @@ import React, { useEffect, useReducer, useState } from 'react';
 
 // components
 import { routes } from "../../../App/routes";
+import { NoNavigationLayout } from "../../../common";
 
 // assets
 import styles from '../Onboarding.module.scss';
@@ -69,39 +70,41 @@ export const Join = () => {
   }
 
   return (
-    <main className={`${styles.register} ${styles.join}`}>
-      <section>
-        <div className={styles.inner}>
-          <img className={styles.saly} src={saly4} alt='saly4' />
-          <div className={styles.panel}>
-            <h2>
-              Join your friends on this table
-            </h2>
-            <p>Ask for the 4 digit code displayed on your friend's screen</p>
-            <form onSubmit={(e) => handleSubmit(e)}>
-              <div className={styles.digit}>
-                {digits.map((digit) => (
-                  <label key={digit} className='digit'>
-                    <input type="text"
-                           maxLength={1}
-                           name={`digit${digit}`}
-                           value={formInput[`digit${digit}`]}
-                           onFocus={(e) => onHandleFocus(e)}
-                           onChange={(e) => handleChangeDigits(e, digit)} />
-                  </label>
-                ))}
-                <div className={styles.alert}>
-                  <img src={alert} alt='alert' />
+    <NoNavigationLayout>
+      <main className={`${styles.register} ${styles.join}`}>
+        <section>
+          <div className={styles.inner}>
+            <img className={styles.saly} src={saly4} alt='saly4' />
+            <div className={styles.panel}>
+              <h2>
+                Join your friends on this table
+              </h2>
+              <p>Ask for the 4 digit code displayed on your friend's screen</p>
+              <form onSubmit={(e) => handleSubmit(e)}>
+                <div className={styles.digit}>
+                  {digits.map((digit) => (
+                    <label key={digit} className='digit'>
+                      <input type="text"
+                             maxLength={1}
+                             name={`digit${digit}`}
+                             value={formInput[`digit${digit}`]}
+                             onFocus={(e) => onHandleFocus(e)}
+                             onChange={(e) => handleChangeDigits(e, digit)} />
+                    </label>
+                  ))}
+                  <div className={styles.alert}>
+                    <img src={alert} alt='alert' />
+                  </div>
                 </div>
-              </div>
-              <button type='submit'
-                      className={`${activeButton ? styles.active : ''} btn`}>
-                JOIN TABLE
-              </button>
-            </form>
+                <button type='submit'
+                        className={`${activeButton ? styles.active : ''} btn`}>
+                  JOIN TABLE
+                </button>
+              </form>
+            </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </NoNavigationLayout>
   );
 };

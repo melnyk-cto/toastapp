@@ -3,6 +3,7 @@ import React, { useReducer, useState } from 'react';
 
 // components
 import { routes } from "../../../App/routes";
+import { NoNavigationLayout } from "../../../common";
 
 // assets
 import styles from '../Onboarding.module.scss';
@@ -36,31 +37,33 @@ export const GetStarted = () => {
   );
 
   return (
-    <main className={`${styles.register} ${styles.getStarted}`}>
-      <section>
-        <div className={styles.inner}>
-          <img className={styles.saly} src={saly3} alt='saly3' />
-          <div className={styles.panel}>
-            <h2>Let’s get started</h2>
-            <p>What should we call you?</p>
-            <form onSubmit={(e) => handleSubmit(e)}>
-              <label>
-                <input type='text'
-                       required
-                       placeholder='Your name'
-                       name='name'
-                       value={formInput.name}
-                       onChange={handleChangePhone} />
-              </label>
-              <button
-                type='submit'
-                className={`${activeButton ? styles.active : ''} btn`}>
-                Start ordering
-              </button>
-            </form>
+    <NoNavigationLayout>
+      <main className={`${styles.register} ${styles.getStarted}`}>
+        <section>
+          <div className={styles.inner}>
+            <img className={styles.saly} src={saly3} alt='saly3' />
+            <div className={styles.panel}>
+              <h2>Let’s get started</h2>
+              <p>What should we call you?</p>
+              <form onSubmit={(e) => handleSubmit(e)}>
+                <label>
+                  <input type='text'
+                         required
+                         placeholder='Your name'
+                         name='name'
+                         value={formInput.name}
+                         onChange={handleChangePhone} />
+                </label>
+                <button
+                  type='submit'
+                  className={`${activeButton ? styles.active : ''} btn`}>
+                  Start ordering
+                </button>
+              </form>
+            </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </NoNavigationLayout>
   );
 };

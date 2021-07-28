@@ -2,7 +2,7 @@
 import React from 'react';
 
 // components
-import { ListItems } from "../../../common";
+import { Layout, ListItems } from "../../../common";
 
 // assets
 import soup from '../../../../assets/images/soup.jpg';
@@ -34,12 +34,14 @@ const items2 = {
 export const Main = () => {
 
   return (
-    <main className='home'>
-      <section>
-        <ListItems items={items1} />
-        <ListItems items={items2} />
-      </section>
-    </main>
+    <Layout>
+      <main className='home'>
+        <section>
+          <ListItems items={items1} />
+          <ListItems items={items2} />
+        </section>
+      </main>
+    </Layout>
   );
 };
 

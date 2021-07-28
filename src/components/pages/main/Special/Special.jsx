@@ -2,7 +2,7 @@
 import React from 'react';
 
 // components
-import { GridItems } from "../../../common";
+import { GridItems, Layout } from "../../../common";
 
 // assets
 import styles from './Special.module.scss';
@@ -24,19 +24,21 @@ const items1 = {
 export const Special = () => {
 
   return (
-    <main className='special'>
-      <section>
-        <div className={styles.banner}>
-          <div className={styles.image}>
-            <img src={banner} alt='banner' />
-            <h2>Welcome to <br /> Sacred Earth Cafe</h2>
+    <Layout>
+      <main className='special'>
+        <section>
+          <div className={styles.banner}>
+            <div className={styles.image}>
+              <img src={banner} alt='banner' />
+              <h2>Welcome to <br /> Sacred Earth Cafe</h2>
+            </div>
           </div>
-        </div>
-      </section>
-      <section>
-        <GridItems items={items1} />
-      </section>
-    </main>
+        </section>
+        <section>
+          <GridItems items={items1} />
+        </section>
+      </main>
+    </Layout>
   );
 };
 

@@ -3,6 +3,7 @@ import React, { useEffect, useReducer, useState } from 'react';
 
 // components
 import { routes } from "../../../App/routes";
+import { NoNavigationLayout } from "../../../common";
 
 // assets
 import styles from '../Onboarding.module.scss';
@@ -86,42 +87,44 @@ export const Verify = () => {
   }, [])
 
   return (
-    <main className={`${styles.register} ${styles.verify}`}>
-      <section>
-        <div className={styles.inner}>
-          <img className={styles.saly} src={saly2} alt='saly2' />
-          <div className={styles.panel}>
-            <h2>
-              <a href={routes.register}>
-                <img src={arrow} alt='arrow' />
-              </a>
-              Enter Verification Code</h2>
-            <p>Enter the 6 digit code sent to your moble number</p>
-            <form onSubmit={(e) => handleSubmit(e)}>
-              <div className={styles.digit}>
-                {digits.map((digit) => (
-                  <label key={digit} className='digit'>
-                    <input type="number"
-                           maxLength={1}
-                           name={`digit${digit}`}
-                           value={formInput[`digit${digit}`]}
-                           onFocus={(e) => onHandleFocus(e)}
-                           onChange={(e) => handleChangeDigits(e, digit)} />
-                  </label>
-                ))}
-              </div>
-              <p className={styles.sent}>
-                Resend OTP?
-                <span className={styles.timer}>00:{timer}</span>
-              </p>
-              <button type='submit'
-                      className={`${activeButton ? styles.active : ''} btn`}>
-                VERIFY OTP
-              </button>
-            </form>
+    <NoNavigationLayout>
+      <main className={`${styles.register} ${styles.verify}`}>
+        <section>
+          <div className={styles.inner}>
+            <img className={styles.saly} src={saly2} alt='saly2' />
+            <div className={styles.panel}>
+              <h2>
+                <a href={routes.register}>
+                  <img src={arrow} alt='arrow' />
+                </a>
+                Enter Verification Code</h2>
+              <p>Enter the 6 digit code sent to your moble number</p>
+              <form onSubmit={(e) => handleSubmit(e)}>
+                <div className={styles.digit}>
+                  {digits.map((digit) => (
+                    <label key={digit} className='digit'>
+                      <input type="number"
+                             maxLength={1}
+                             name={`digit${digit}`}
+                             value={formInput[`digit${digit}`]}
+                             onFocus={(e) => onHandleFocus(e)}
+                             onChange={(e) => handleChangeDigits(e, digit)} />
+                    </label>
+                  ))}
+                </div>
+                <p className={styles.sent}>
+                  Resend OTP?
+                  <span className={styles.timer}>00:{timer}</span>
+                </p>
+                <button type='submit'
+                        className={`${activeButton ? styles.active : ''} btn`}>
+                  VERIFY OTP
+                </button>
+              </form>
+            </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </NoNavigationLayout>
   );
 };
