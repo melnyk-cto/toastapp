@@ -37,7 +37,7 @@ export const Special = () => {
           </div>
         </section>
         <section>
-          <GridItems items={items1} />
+          <GridItems items={items1} toggle />
         </section>
       </main>
     </Layout>

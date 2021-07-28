@@ -11,10 +11,14 @@ import { ReactComponent as ArrowSvg } from "../../../assets/images/icons/arrow.s
 
 export const ListItems = ({items, toggle}) => {
 
+  const showItems = (e) => {
+    e.target.parentElement.classList.toggle(styles.hide);
+  };
+
   return (
-    items.map(item => (
+    items.map((item) => (
       <div key={item.id} className={styles.items}>
-        {toggle ? <h4 className={`${styles.title} ${styles.toggle}`}>
+        {toggle ? <h4 className={`${styles.title} ${styles.toggle}`} onClick={(e) => showItems(e)}>
             {item.name}
             <hr />
             <ArrowSvg />
@@ -22,21 +26,23 @@ export const ListItems = ({items, toggle}) => {
           : <h4 className={styles.title}>
             {item.name}
           </h4>}
-        {item.items.map((product, index) => (
-          <a key={index} id={product.title} href={product.link} className={styles.item}>
-            {product.image && <img src={product.image} alt={product.title} />}
-            <div className={styles.description}>
-              <h3>{product.title}</h3>
-              <div className={styles.info}>
-                <div className={styles.price}>
-                  <VeganStatus />
-                  <h4>₹{product.price}</h4>
+        <div className={styles.panel}>
+          {item.items.map((product, index) => (
+            <a key={index} id={product.title} href={product.link} className={styles.item}>
+              {product.image && <img src={product.image} alt={product.title} />}
+              <div className={styles.description}>
+                <h3>{product.title}</h3>
+                <div className={styles.info}>
+                  <div className={styles.price}>
+                    <VeganStatus />
+                    <h4>₹{product.price}</h4>
+                  </div>
+                  <AddButton />
                 </div>
-                <AddButton />
               </div>
-            </div>
-          </a>
-        ))}
+            </a>
+          ))}
+        </div>
       </div>
     ))
   )
