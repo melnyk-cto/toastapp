@@ -34,21 +34,23 @@ export const ComplaintsModal = () => {
 
   return (
     <div className={styles.modal}>
-      <div className={`${styles.feedback} ${showFeedback ? styles.open : ''}`}>
-        <h3>
-          Provide a feedback
-          <span className={styles.close} onClick={() => setShowFeedback(false)}>
+     <div className={`${styles.feedback} ${showFeedback ? styles.open : ''}`}>
+       <div className={styles.inner}>
+         <h3>
+           Provide a feedback
+           <span className={styles.close} onClick={() => setShowFeedback(false)}>
             <CloseSvg />
           </span>
-        </h3>
-        <hr />
-        <form>
-          <label>
-            <textarea placeholder='Something else? Mention it here.' />
-          </label>
-          <button type='submit' className='btn btn-primary'>SUBMIT FEEDBACK</button>
-        </form>
-      </div>
+         </h3>
+         <hr />
+         <form>
+           <label>
+             <textarea placeholder='Something else? Mention it here.' />
+           </label>
+           <button type='submit' className='btn btn-primary'>SUBMIT FEEDBACK</button>
+         </form>
+       </div>
+     </div>
       <div className={styles.back} onClick={() => dispatch(modalsActions.setShowModal(''))}>
         <BackSvg />
       </div>
