@@ -71,7 +71,7 @@ export const ListItems = ({items, toggle, list, instruction}) => {
                 </div>
               </div>
             ))}
-            {instruction && <div className={styles.link}>Add cooking instruction</div>}
+            {instruction && <div className={styles.link} onClick={()=> dispatch(modalsActions.setShowModal('Complaints'))}>Add cooking instruction</div>}
           </div>}
       </div>
     ))

@@ -10,7 +10,6 @@
   background-color: $textColor;
   max-width:        768px;
   transform:        translate(-50%, 0);
-  overflow:         auto;
   .back {
     cursor:          pointer;
     position:        absolute;
@@ -58,7 +57,9 @@
 }
 
 .bottom {
-  padding: 16px 11px 8px 11px;
+  padding:  16px 11px 40px 11px;
+  height:   calc(100vh - 200px);
+  overflow: auto;
   .form {
     padding-bottom: 40px;
   }

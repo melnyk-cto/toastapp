@@ -4,9 +4,9 @@ import React from "react";
 import styles from "./PrimaryButton.module.scss";
 import { ReactComponent as ArrowRightSvg } from "../../../assets/images/icons/arrow-right.svg";
 
-export const PrimaryButton = ({title, info}) => {
+export const PrimaryButton = ({title, info, white}) => {
   return (
-    <button type='submit' className={`btn-card ${styles.card} ${styles.white}`}>
+    <button type='submit' className={`btn-card ${styles.card} ${white ? styles.white : ''}`}>
       {info}
       <span className={styles.add}>
 
