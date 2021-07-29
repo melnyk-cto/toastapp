@@ -149,6 +149,17 @@ button {
     bottom:          8px;
     left:            0;
   }
+  &-primary {
+    padding:        8px 16px;
+    background:     linear-gradient(90deg, #97D8D8 0%, #5AD7DF 100%, #17A2C0 100%);
+    box-shadow:     -4px 4px 8px rgba(215, 215, 215, 0.2), 4px -4px 8px rgba(215, 215, 215, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(215, 215, 215, 0.9);
+    border-radius:  10px;
+    font-size:      13px;
+    letter-spacing: 1px;
+    height:         44px;
+    display:        flex;
+    align-items:    center;
+  }
 }
 
 label {

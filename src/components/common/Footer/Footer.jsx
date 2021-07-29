@@ -1,6 +1,9 @@
 // core
 import React from 'react';
 
+// components
+import { routes } from "../../App/routes";
+
 // assets
 import styles from './Footer.module.scss';
 import { ReactComponent as LightningSvg } from '../../../assets/images/icons/lightning.svg';
@@ -25,7 +28,7 @@ export const Footer = () => {
           </a>
         </li>
         <li>
-          <a href='#'>
+          <a href={routes.placeOrder}>
             <ShoppingSvg />
           </a>
         </li>

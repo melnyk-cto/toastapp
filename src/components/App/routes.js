@@ -6,4 +6,5 @@ export const routes = Object.freeze({
   main: '/main',
   special: '/special',
   search: '/search',
+  placeOrder: '/place-order',
 });
