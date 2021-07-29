@@ -6,12 +6,12 @@ import { useDispatch } from "react-redux";
 // components
 import { VeganStatus } from "../../VeganStatus/VeganStatus";
 import { modalsActions } from "../../../../redux/modals/actions";
+import { Feedback } from "../../Feedback/Feedback";
 
 // assets
 import styles from "./ComplaintsModal.module.scss";
 import { ReactComponent as BackSvg } from "../../../../assets/images/icons/arrow-back.svg";
 import { ReactComponent as ArrowSvg } from "../../../../assets/images/icons/arrow.svg";
-import { ReactComponent as CloseSvg } from "../../../../assets/images/icons/close.svg";
 
 const items = [
   {
@@ -34,23 +34,7 @@ export const ComplaintsModal = () => {
 
   return (
     <div className={styles.modal}>
-     <div className={`${styles.feedback} ${showFeedback ? styles.open : ''}`}>
-       <div className={styles.inner}>
-         <h3>
-           Provide a feedback
-           <span className={styles.close} onClick={() => setShowFeedback(false)}>
-            <CloseSvg />
-          </span>
-         </h3>
-         <hr />
-         <form>
-           <label>
-             <textarea placeholder='Something else? Mention it here.' />
-           </label>
-           <button type='submit' className='btn btn-primary'>SUBMIT FEEDBACK</button>
-         </form>
-       </div>
-     </div>
+      <Feedback showFeedback={showFeedback} setShowFeedback={setShowFeedback} />
       <div className={styles.back} onClick={() => dispatch(modalsActions.setShowModal(''))}>
         <BackSvg />
       </div>

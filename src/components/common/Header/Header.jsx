@@ -3,9 +3,11 @@ import React from 'react';
 
 // library
 import { Link, NavLink } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 // components
 import { routes } from "../../App/routes";
+import { modalsActions } from "../../../redux/modals/actions";
 
 // assets
 import styles from './Header.module.scss';
@@ -20,18 +22,20 @@ const links = [
 ]
 
 export const Header = () => {
+  const dispatch = useDispatch();
+
   return (
     <header className={styles.header}>
       <div className={styles.top}>
         <h3>Sacred Earth Cafe</h3>
         <ul>
           <li>
-            <Link to='#'>
+            <div className={styles.icon} onClick={() => dispatch(modalsActions.setShowModal('Share'))}>
               <QRSvg />
-            </Link>
+            </div>
           </li>
           <li>
-            <Link to={routes.search}>
+            <Link to={routes.search} className={styles.icon}>
               <SearchSvg />
             </Link>
           </li>

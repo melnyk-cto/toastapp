@@ -5,7 +5,7 @@ import React from 'react'
 import { useSelector } from "react-redux";
 
 // components
-import { AddProductModal, Footer, Header, } from "../";
+import { AddProductModal, Footer, Header, ShareModal, } from "../";
 import { getShowModal } from "../../../redux/modals/selectors";
 
 export const Layout = ({children}) => {
@@ -14,6 +14,7 @@ export const Layout = ({children}) => {
   return (
     <>
       {modal === 'Add Product' && <AddProductModal />}
+      {modal === 'Share' && <ShareModal />}
       <Header />
       {children}
       <Footer />
