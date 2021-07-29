@@ -23,6 +23,10 @@ a {
   text-decoration: none;
   font-size:       1rem;
   line-height:     1.39;
+  color:           #45dfd5;
+  &:active {
+    opacity: .7;
+  }
 }
 
 body, html {
@@ -109,10 +113,41 @@ button {
   border:             none;
   text-transform:     uppercase;
   font-weight:        600;
-  box-shadow:         -5px 5px 10px rgba(212, 212, 212, 0.2), 5px -5px 10px rgba(212, 212, 212, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(212, 212, 212, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(212, 212, 212, 0.5);
-  -webkit-box-shadow: -5px 5px 10px rgba(212, 212, 212, 0.2), 5px -5px 10px rgba(212, 212, 212, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(212, 212, 212, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(212, 212, 212, 0.5);
+  user-select:        none;
+  box-shadow:         -5px 5px 10px rgba(212, 212, 212, 0.2),
+                      5px -5px 10px rgba(212, 212, 212, 0.2),
+                      -5px -5px 10px rgba(255, 255, 255, 0.9),
+                      5px 5px 13px rgba(212, 212, 212, 0.9),
+                      inset 1px 1px 2px rgba(255, 255, 255, 0.3),
+                      inset -1px -1px 2px rgba(212, 212, 212, 0.5);
+  -webkit-box-shadow: -5px 5px 10px rgba(212, 212, 212, 0.2),
+                      5px -5px 10px rgba(212, 212, 212, 0.2),
+                      -5px -5px 10px rgba(255, 255, 255, 0.9),
+                      5px 5px 13px rgba(212, 212, 212, 0.9),
+                      inset 1px 1px 2px rgba(255, 255, 255, 0.3),
+                      inset -1px -1px 2px rgba(212, 212, 212, 0.5);
   &:active {
     opacity: .7;
+  }
+  &-card {
+    display:         flex;
+    justify-content: space-between;
+    align-items:     center;
+    padding:         8px 8px 8px 16px;
+    height:          44px;
+    background:      linear-gradient(135deg, #459EAF 0%, #007991 100%);
+    box-shadow:      -5px 5px 10px rgba(48, 57, 66, 0.2), 5px -5px 10px rgba(48, 57, 66, 0.2), -5px -5px 10px rgba(66, 77, 90, 0.9), 5px 5px 13px rgba(48, 57, 66, 0.9);
+    border-radius:   10px;
+    font-weight:     600;
+    font-size:       13px;
+    letter-spacing:  1px;
+    text-transform:  uppercase;
+    border:          none;
+    width:           100%;
+    position:        sticky;
+    z-index:         1;
+    bottom:          8px;
+    left:            0;
   }
 }
 
@@ -120,6 +155,10 @@ label {
   margin-bottom: 16px;
   display:       block;
   position:      relative;
+  user-select:   none;
+  font-size:     14px;
+  font-weight:   400;
+  line-height:   1;
   input {
     width:              100%;
     height:             48px;
@@ -145,6 +184,69 @@ label {
     }
     &:active, &:focus {
       opacity: .7;
+    }
+  }
+  input[type="checkbox"], input[type="radio"] {
+    width:              auto;
+    box-shadow:         none;
+    -webkit-appearance: checkbox;
+    -moz-appearance:    checkbox; /* Firefox */
+    height:             auto;
+    margin-right:       8px;
+    border-radius:      50%;
+  }
+  &.radio, &.checkbox {
+    display:     flex;
+    align-items: center;
+    input:checked + .icon:before, input:checked + .icon:after {
+      display: block;
+    }
+    .icon {
+      width:         24px;
+      height:        24px;
+      background:    #4A5662;
+      box-shadow:    inset -2px 2px 4px rgba(59, 69, 78, 0.2), inset 2px -2px 4px rgba(59, 69, 78, 0.2), inset -2px -2px 4px rgba(89, 103, 118, 0.9), inset 2px 2px 5px rgba(59, 69, 78, 0.9);
+      border-radius: 24px;
+      display:       inline-block;
+      margin-right:  8px;
+      position:      relative;
+      &:before {
+        content:       '';
+        position:      absolute;
+        z-index:       1;
+        left:          25%;
+        right:         25%;
+        top:           25%;
+        bottom:        25%;
+        background:    linear-gradient(90deg, #97D8D8 0%, #5AD7DF 100%, #17A2C0 100%);
+        border-radius: 24px;
+        display:       none;
+      }
+    }
+  }
+  &.checkbox {
+    .icon {
+      border-radius: 8px;
+      &:before {
+        content:       '';
+        left:          12.5%;
+        right:         12.5%;
+        top:           12.5%;
+        bottom:        12.5%;
+        border-radius: 6px;
+      }
+      &:after {
+        content:         '';
+        position:        absolute;
+        z-index:         1;
+        background:      url("./assets/images/icons/check.svg") no-repeat center center;
+        background-size: contain;
+        left:            16.67%;
+        right:           16.67%;
+        top:             16.67%;
+        bottom:          16.67%;
+        display:         none;
+      }
     }
   }
   &.phone {

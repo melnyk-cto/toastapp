@@ -12,7 +12,7 @@ import styles from './Search.module.scss';
 import saly5 from "../../../../assets/images/saly-5.png";
 import banner from "../../../../assets/images/search-banner.png";
 import { ReactComponent as SearchSvg } from "../../../../assets/images/icons/search.svg";
-import { ReactComponent as BackSvg } from "../../../../assets/images/icons/arrow_back.svg";
+import { ReactComponent as BackSvg } from "../../../../assets/images/icons/arrow-back.svg";
 import cacao from "../../../../assets/images/cacao.png";
 import chocolate from "../../../../assets/images/chocolate2.png";
 

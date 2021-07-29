@@ -2,12 +2,13 @@
 import React from 'react'
 
 // components
-import { Footer, Header, } from "../";
+import { AddProductModal, Footer, Header, } from "../";
 
 export const Layout = ({children}) => {
 
   return (
     <>
+      <AddProductModal />
       <Header />
       {children}
       <Footer />

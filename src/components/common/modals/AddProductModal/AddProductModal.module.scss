@@ -1,0 +1,129 @@
+@import "../../../../assets/scss/variables";
+
+.modal {
+  position:         fixed;
+  z-index:          40;
+  left:             50%;
+  top:              0;
+  width:            100%;
+  height:           100%;
+  background-color: $textColor;
+  max-width:        768px;
+  transform:        translate(-50%, 0);
+  overflow:         auto;
+  .back {
+    position:        absolute;
+    z-index:         1;
+    left:            8px;
+    top:             16px;
+    width:           40px;
+    height:          40px;
+    border-radius:   10px;
+    background:      #657280;
+    box-shadow:      -4px 4px 8px rgba(91, 103, 115, 0.2),
+                     4px -4px 8px rgba(91, 103, 115, 0.2),
+                     -4px -4px 8px rgba(111, 125, 141, 0.9),
+                     4px 4px 10px rgba(91, 103, 115, 0.9);
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    transition:      .2s linear;
+    margin-right:    8px;
+    svg path {
+      fill: $whiteColor;
+    }
+    &:active {
+      box-shadow: inset -0.125rem 0.125rem 0.25rem 0 rgba(91, 103, 115, 0.2),
+                  inset 0.125rem -0.125rem 0.25rem 0 rgba(91, 103, 115, 0.2),
+                  inset -0.125rem -0.125rem 0.25rem 0 rgba(111, 125, 141, 0.9),
+                  inset 0.125rem 0.125rem 0.3125rem 0 rgba(91, 103, 115, 0.9);
+    }
+  }
+  .add {
+    display:     flex;
+    align-items: center;
+    .right {
+      width:           28px;
+      height:          28px;
+      border-radius:   100px;
+      display:         flex;
+      align-items:     center;
+      justify-content: center;
+      transition:      .2s linear;
+      margin-left:     8px;
+      background:      linear-gradient(135deg, #459EAF 0%, #007991 100%);
+      box-shadow:      inset -2px 2px 4px rgba(28, 111, 128, 0.2),
+                       inset 2px -2px 4px rgba(28, 111, 128, 0.2),
+                       inset -2px -2px 4px rgba(42, 167, 192, 0.9),
+                       inset 2px 2px 5px rgba(28, 111, 128, 0.9);
+    }
+  }
+  .top {
+    background-color: #657280;
+    height:           200px;
+    width:            100%;
+    display:          flex;
+    align-items:      center;
+    justify-content:  center;
+    img {
+      width:   21%;
+      opacity: .25;
+    }
+  }
+  * {
+    color: $whiteColor;
+  }
+}
+
+.bottom {
+  padding: 16px 11px 8px 11px;
+  .card {
+    &:active {
+      //bottom: 4px;
+    }
+  }
+  .form {
+    padding-bottom: 40px;
+  }
+  .itemTitle {
+    display:     flex;
+    align-items: center;
+    color:       $whiteColor;
+  }
+  .chip {
+    display:        inline-block;
+    padding:        8px;
+    color:          $whiteColor;
+    box-shadow:     inset -2px 2px 4px rgba(67, 77, 88, 0.2), inset 2px -2px 4px rgba(67, 77, 88, 0.2), inset -2px -2px 4px rgba(81, 95, 108, 0.9), inset 2px 2px 5px rgba(67, 77, 88, 0.9);
+    border-radius:  16px;
+    font-size:      10px;
+    text-transform: uppercase;
+    font-weight:    500;
+    margin:         0 8px 16px 0;
+  }
+  p {
+    opacity: .4;
+  }
+  .option {
+    h4 {
+      font-size:     13px;
+      margin-bottom: 16px;
+      span {
+        text-transform: uppercase;
+        color:          #bbbbbb;
+      }
+    }
+    label {
+      cursor: pointer;
+    }
+    .price {
+      font-size:   10px;
+      color:       #bbbbbb;
+      margin-left: auto;
+    }
+  }
+  .more {
+    color:     #45dfd5;
+    font-size: 12px;
+  }
+}
