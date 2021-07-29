@@ -2,7 +2,7 @@ import { handleActions } from 'redux-actions';
 import { modalsActions } from './actions';
 
 const initialState = {
-  show: '',
+  show: 'Complaints',
 };
 
 
