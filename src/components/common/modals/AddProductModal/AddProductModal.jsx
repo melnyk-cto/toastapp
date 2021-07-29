@@ -2,10 +2,11 @@ import React from "react";
 
 // library
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 // components
-import { routes } from "../../../App/routes";
 import { VeganStatus } from "../../VeganStatus/VeganStatus";
+import { modalsActions } from "../../../../redux/modals/actions";
 
 // assets
 import styles from "./AddProductModal.module.scss";
@@ -14,6 +15,7 @@ import { ReactComponent as ArrowRightSvg } from "../../../../assets/images/icons
 import { ReactComponent as BackSvg } from "../../../../assets/images/icons/arrow-back.svg";
 
 export const AddProductModal = () => {
+  const dispatch = useDispatch();
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -22,9 +24,9 @@ export const AddProductModal = () => {
 
   return (
     <div className={styles.modal}>
-      <Link to={routes.main} className={styles.back}>
+      <div className={styles.back} onClick={() => dispatch(modalsActions.setShowModal(''))}>
         <BackSvg />
-      </Link>
+      </div>
       <div className={styles.top}>
         <img src={plate} alt='plate' />
       </div>

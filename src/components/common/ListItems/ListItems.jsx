@@ -1,8 +1,12 @@
 import React from "react";
 
+//library
+import { useDispatch } from "react-redux";
+
 // components
 import { AddButton } from "../AddButton/AddButton";
 import { VeganStatus } from "../VeganStatus/VeganStatus";
+import { modalsActions } from "../../../redux/modals/actions";
 
 // assets
 import styles from "./ListItems.module.scss";
@@ -10,9 +14,15 @@ import { ReactComponent as ArrowSvg } from "../../../assets/images/icons/arrow.s
 
 
 export const ListItems = ({items, toggle}) => {
+  const dispatch = useDispatch();
 
   const showItems = (e) => {
     e.target.parentElement.classList.toggle(styles.hide);
+  };
+
+  const addProduct = () => {
+    dispatch(modalsActions.setShowModal('Add Product'));
+
   };
 
   return (
@@ -28,7 +38,7 @@ export const ListItems = ({items, toggle}) => {
           </h4>}
         <div className={styles.panel}>
           {item.items.map((product, index) => (
-            <a key={index} id={product.title} href={product.link} className={styles.item}>
+            <a key={index} id={product.title} href={product.link} className={styles.item} onClick={() => addProduct()}>
               {product.image && <img src={product.image} alt={product.title} />}
               <div className={styles.description}>
                 <h3>{product.title}</h3>
