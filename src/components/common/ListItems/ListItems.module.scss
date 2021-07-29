@@ -71,6 +71,10 @@
     flex:         1 1 auto;
     padding-left: 0.5rem;
   }
+  .list {
+    display:     flex;
+    align-items: center;
+  }
   .price {
     display:     flex;
     align-items: center;
@@ -82,5 +86,47 @@
     display:         flex;
     align-items:     center;
     justify-content: space-between;
+  }
+}
+
+
+.panel {
+  &.mod {
+    padding:       16px 10px 16px 10px;
+    background:    #F1F1F1;
+    box-shadow:    inset -3px -3px 7px #FFFFFF,
+                   inset 2px 2px 5px rgba(174, 174, 192, 0.4);
+    border-radius: 10px;
+    .item {
+      box-shadow: none;
+      min-height: auto;
+      background: #F1F1F1;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .description {
+      display:         flex;
+      align-items:     center;
+      justify-content: space-between;
+      padding-left:    0;
+      h4, h5 {
+        font-weight:   400;
+        margin-bottom: 0;
+      }
+      h4 {
+        margin-bottom: 4px;
+      }
+    }
+  }
+  .link {
+    font-size:       12px;
+    font-weight:     500;
+    color:           #76dfe5;
+    text-decoration: underline;
+    cursor:          pointer;
+    &:active {
+      text-decoration: none;
+    }
   }
 }

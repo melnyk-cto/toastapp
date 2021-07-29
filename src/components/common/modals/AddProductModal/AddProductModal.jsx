@@ -7,11 +7,11 @@ import { useDispatch } from "react-redux";
 // components
 import { VeganStatus } from "../../VeganStatus/VeganStatus";
 import { modalsActions } from "../../../../redux/modals/actions";
+import { PrimaryButton } from "../../PrimaryButton/PrimaryButton";
 
 // assets
 import styles from "./AddProductModal.module.scss";
 import plate from "../../../../assets/images/icons/plate.svg";
-import { ReactComponent as ArrowRightSvg } from "../../../../assets/images/icons/arrow-right.svg";
 import { ReactComponent as BackSvg } from "../../../../assets/images/icons/arrow-back.svg";
 
 export const AddProductModal = () => {
@@ -96,15 +96,7 @@ export const AddProductModal = () => {
           </div>
           <Link to='#' className={styles.more}>Show more</Link>
         </div>
-        <button type='submit' className={`btn-card ${styles.card}`}>
-          ₹405.00
-          <span className={styles.add}>
-            ADD ITEM
-            <div className={styles.right}>
-              <ArrowRightSvg />
-            </div>
-          </span>
-        </button>
+        <PrimaryButton title='ADD ITEM' info='₹405.00'/>
       </form>
     </div>
   )

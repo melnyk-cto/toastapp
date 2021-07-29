@@ -27,7 +27,8 @@ export const Footer = () => {
             <BookSvg />
           </a>
         </li>
-        <li>
+        <li className={styles.notEmpty}>
+          <span className={styles.count}>1</span>
           <a href={routes.placeOrder}>
             <ShoppingSvg />
           </a>

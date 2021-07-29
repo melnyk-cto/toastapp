@@ -1,0 +1,36 @@
+@import "../../../assets/scss/variables";
+
+.card {
+  color: $whiteColor;
+  &.white {
+    background: linear-gradient(135deg, #459EAF 0%, #007991 100%);
+    box-shadow: -5px 5px 10px rgba(205, 205, 205, 0.2),
+                5px -5px 10px rgba(205, 205, 205, 0.2),
+                -5px -5px 10px rgba(255, 255, 255, 0.9),
+                5px 5px 13px rgba(205, 205, 205, 0.9);
+  }
+  &:active {
+    //bottom: 4px;
+  }
+}
+
+.add {
+  display:     flex;
+  align-items: center;
+  color:       $whiteColor;
+  .right {
+    width:           28px;
+    height:          28px;
+    border-radius:   100px;
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    transition:      .2s linear;
+    margin-left:     8px;
+    background:      linear-gradient(135deg, #459EAF 0%, #007991 100%);
+    box-shadow:      inset -2px 2px 4px rgba(28, 111, 128, 0.2),
+                     inset 2px -2px 4px rgba(28, 111, 128, 0.2),
+                     inset -2px -2px 4px rgba(42, 167, 192, 0.9),
+                     inset 2px 2px 5px rgba(28, 111, 128, 0.9);
+  }
+}
