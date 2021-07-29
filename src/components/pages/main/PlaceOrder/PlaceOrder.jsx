@@ -2,17 +2,23 @@ import React, { useState } from "react";
 
 // library
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 // components
-import { ListItems, NoNavigationLayout, PrimaryButton } from "../../../common";
+import { CookingInstruction, ListItems, NoNavigationLayout, PrimaryButton } from "../../../common";
 import { routes } from "../../../App/routes";
+import { modalsActions } from "../../../../redux/modals/actions";
 
 // assets
 import styles from './PlaceOrder.module.scss';
 import saly6 from "../../../../assets/images/saly-6.png";
 import { ReactComponent as BackSvg } from "../../../../assets/images/icons/arrow-back.svg";
+import { ReactComponent as WarningSvg } from "../../../../assets/images/icons/warning.svg";
 
 export const PlaceOrder = () => {
+  const dispatch = useDispatch();
+
+  const [show, setShow] = useState(false);
   const [items, setItems] = useState([
     {
       id: 0,
@@ -28,17 +34,23 @@ export const PlaceOrder = () => {
 
   return (
     <NoNavigationLayout>
+      <CookingInstruction show={show} setShow={setShow} />
       <main className={styles.placeOrder}>
         <div className={styles.panel}>
-          <Link to={routes.main}>
+          <Link to={routes.main} className={styles.icon} >
             <BackSvg />
           </Link>
-          <h2>Place Order</h2>
+          <h2>
+            Place Order
+            <div className={styles.icon} onClick={()=> dispatch(modalsActions.setShowModal('Complaints'))}>
+              <WarningSvg />
+            </div>
+          </h2>
         </div>
         {items ? <section className={styles.products}>
-            <ListItems items={items} toggle list instruction />
+            <ListItems items={items} toggle list instruction setShow={setShow}/>
             <ListItems items={items} toggle list />
-            <PrimaryButton title='PLACE ORDER' info='4 Items' white/>
+            <PrimaryButton title='PLACE ORDER' info='4 Items' white />
           </section>
           : <section className={styles.content}>
             <h3>No orders yet!</h3>

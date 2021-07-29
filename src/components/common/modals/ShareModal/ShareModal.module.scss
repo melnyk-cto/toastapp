@@ -46,8 +46,23 @@
 }
 
 .bottom {
+  .digit {
+    width:           45px;
+    height:          45px;
+    background:      #4A5662;
+    border-radius:   16px;
+    font-weight:     500;
+    font-size:       20px;
+    display:         inline-flex;
+    justify-content: center;
+    align-items:     center;
+    color:           #F1F1F1;
+    margin:          0 8px 16px 0;
+    box-shadow:      inset -2px 2px 4px rgba(56, 65, 74, 0.2), inset 2px -2px 4px rgba(56, 65, 74, 0.2), inset -2px -2px 4px rgba(92, 107, 122, 0.9), inset 2px 2px 5px rgba(56, 65, 74, 0.9);
+  }
   .description {
-    color: #bbbbbb;
+    color:   $whiteColor;
+    opacity: .4;
   }
   .panel {
     margin-top: 18px;
@@ -70,7 +85,7 @@
       border:          none;
       box-shadow:      none;
       font-weight:     400;
-      margin-bottom:   66px;
+      margin-bottom:   46px;
       &:active {
         text-decoration: none;
       }

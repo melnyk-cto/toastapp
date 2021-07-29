@@ -12,7 +12,7 @@ import { modalsActions } from "../../../redux/modals/actions";
 import styles from "./ListItems.module.scss";
 import { ReactComponent as ArrowSvg } from "../../../assets/images/icons/arrow.svg";
 
-export const ListItems = ({items, toggle, list, instruction}) => {
+export const ListItems = ({items, toggle, list, instruction, setShow}) => {
   const dispatch = useDispatch();
 
   const showItems = (e) => {
@@ -71,7 +71,7 @@ export const ListItems = ({items, toggle, list, instruction}) => {
                 </div>
               </div>
             ))}
-            {instruction && <div className={styles.link} onClick={()=> dispatch(modalsActions.setShowModal('Complaints'))}>Add cooking instruction</div>}
+            {instruction && <div className={styles.link} onClick={() => setShow(true)}>Add cooking instruction</div>}
           </div>}
       </div>
     ))

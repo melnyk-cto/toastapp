@@ -29,6 +29,10 @@ export const ShareModal = () => {
           <p className={styles.description}>
             This code will be required by others to join your table.
           </p>
+          <span className={styles.digit}>E</span>
+          <span className={styles.digit}>E</span>
+          <span className={styles.digit}>E</span>
+          <span className={styles.digit}>E</span>
           <hr />
           <h3>Request Service</h3>
           <div className={styles.panel}>
