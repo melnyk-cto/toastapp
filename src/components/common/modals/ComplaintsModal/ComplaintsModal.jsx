@@ -12,11 +12,13 @@ import { Feedback } from "../../Feedback/Feedback";
 import styles from "./ComplaintsModal.module.scss";
 import { ReactComponent as BackSvg } from "../../../../assets/images/icons/arrow-back.svg";
 import { ReactComponent as ArrowSvg } from "../../../../assets/images/icons/arrow.svg";
+import edit from "../../../../assets/images/icons/edit-white.svg";
+import minus from "../../../../assets/images/icons/minus-circle.svg";
 
 const items = [
   {
     title: 'Sunrise Acai Bowl',
-    price: '299',
+    price: '299.00',
     description: 'Blended with frozen mango & pineapple, topped with fresh fruit, goji berries, fresh coconut, and house granola.'
   },
   {
@@ -27,7 +29,10 @@ const items = [
 ]
 export const ComplaintsModal = () => {
   const dispatch = useDispatch();
+
+  const [instructionAdded, setInstructionAdded] = useState(false);
   const [showFeedback, setShowFeedback] = useState(false);
+
   const showItems = (e) => {
     e.target.parentElement.classList.toggle(styles.hide);
   };
@@ -71,8 +76,21 @@ export const ComplaintsModal = () => {
                 <span className='icon' />
                 Missing items
               </label>
-              <button type='button' className={styles.something} onClick={() => setShowFeedback(true)}>Something else?
-              </button>
+              {instructionAdded ?  <div className={styles.instruction}>
+                <div>
+                  <h5>Cooking instruction:</h5>
+                  <p>
+                    Sunrise: dklfnvslvn <br />
+                    Chocolate: jadfasbd
+                  </p>
+                </div>
+                <div className={styles.action}>
+                  <img src={edit} alt='edit' />
+                  <img src={minus} alt='minus' />
+                </div>
+              </div>:<button type='button' className={styles.something} onClick={() => setShowFeedback(true)}>
+                Something else?
+              </button>}
             </div>
           </div>
         ))}

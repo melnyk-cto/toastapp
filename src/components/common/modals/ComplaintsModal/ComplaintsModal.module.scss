@@ -21,10 +21,10 @@
     cursor:          pointer;
     position:        absolute;
     z-index:         1;
-    left:            8px;
-    top:             16px;
-    width:           40px;
-    height:          40px;
+    left:            12px;
+    top:             11px;
+    width:           30px;
+    height:          30px;
     border-radius:   10px;
     display:         flex;
     align-items:     center;
@@ -44,19 +44,19 @@
     color: $whiteColor;
   }
   .header {
-    padding:       28px 64px;
+    padding:       14px 0 14px 60px;
     margin-bottom: 0;
   }
 }
 
 .bottom {
-  padding:  6px 11px;
+  padding:  16px 11px 6px 11px;
   height:   calc(100vh - 80px);
   overflow: auto;
 
   .item {
     margin-bottom: 24px;
-    padding:       16px 8px;
+    padding:       16px 8px 13px 8px;
     background:    #4A5662;
     box-shadow:    inset -2px 2px 4px rgba(59, 69, 78, 0.2), inset 2px -2px 4px rgba(59, 69, 78, 0.2), inset -2px -2px 4px rgba(89, 103, 118, 0.9), inset 2px 2px 5px rgba(59, 69, 78, 0.9);
     border-radius: 10px;
@@ -73,9 +73,10 @@
   }
   .top {
     .title {
-      display:     flex;
-      align-items: center;
-      color:       $whiteColor;
+      display:       flex;
+      align-items:   center;
+      color:         $whiteColor;
+      margin-bottom: 11px;
       .price {
         margin-left: auto;
         font-size:   12px;
@@ -83,8 +84,9 @@
     }
   }
   .description {
-    color:     #bbbbbb;
-    font-size: 12px;
+    color:          #bbbbbb;
+    font-size:      12px;
+    letter-spacing: 0;
   }
   .subTitle {
     display:         flex;
@@ -114,6 +116,29 @@
     label {
       cursor: pointer;
     }
+    .instruction {
+      padding:         13px 10px 8px 10px;
+      display:         flex;
+      justify-content: space-between;
+      h5 {
+        margin-bottom: 4px;
+      }
+      p {
+        font-size:     12px;
+        margin-bottom: 0;
+      }
+      .action {
+        display:     flex;
+        align-items: center;
+        img {
+          width:       16px;
+          margin-left: 16px;
+          &:active {
+            opacity: .7;
+          }
+        }
+      }
+    }
     .something {
       font-size:       12px;
       color:           #eaf2fb;
@@ -121,6 +146,7 @@
       background:      transparent;
       border:          none;
       box-shadow:      none;
+      padding:         10px 8px;
       &:active {
         text-decoration: none;
       }
