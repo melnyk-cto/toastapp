@@ -9,4 +9,9 @@ const app = express();
 app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, 'build')));
 
+// Express serve up index.html file if it doesn't recognize route
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
+})
+
 app.listen(port);
