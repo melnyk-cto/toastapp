@@ -345,3 +345,11 @@ label {
 .d-flex {
   display: flex !important;
 }
+
+
+header {
+  nav ul a.active {
+    opacity: 0.99;
+    color:   #3cbcb4;
+  }
+}

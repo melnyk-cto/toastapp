@@ -5,6 +5,8 @@ export const routes = Object.freeze({
   join: '/join',
   main: '/main',
   special: '/special',
+  desserts: '/desserts',
+  beverages: '/beverages',
   search: '/search',
   placeOrder: '/place-order',
 });

@@ -17,8 +17,8 @@ import { ReactComponent as QRSvg } from "../../../assets/images/icons/qr.svg";
 const links = [
   {name: 'Special', url: routes.special},
   {name: 'Main', url: routes.main},
-  {name: 'Beverages', url: '#'},
-  {name: 'Desserts', url: '#'},
+  {name: 'Beverages', url: routes.beverages},
+  {name: 'Desserts', url: routes.desserts},
 ]
 
 export const Header = () => {
@@ -44,7 +44,7 @@ export const Header = () => {
       <nav>
         <ul>
           {links.map((link) => (
-            <li key={link.name} className={link.name === 'Main' ? styles.active : ''}>
+            <li key={link.name}>
               <NavLink key={link.name} to={link.url}>{link.name}</NavLink>
             </li>
           ))}
