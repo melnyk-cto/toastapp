@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 //library
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 // components
 import { AddButton } from "../AddButton/AddButton";
@@ -39,7 +40,7 @@ export const ListItems = ({items, mod, toggle, list, instruction, setShow}) => {
           </h4>}
         {!list ? <div className={styles.panel}>
             {item.items.map((product, index) => (
-              <a key={index} id={product.title} href={product.link} className={styles.item} onClick={() => addProduct()}>
+              <Link key={index} id={product.title} to={product.link} className={styles.item} onClick={() => addProduct()}>
                 {product.image && <img src={product.image} alt={product.title} />}
                 <div className={styles.description}>
                   <h3>{product.title}</h3>
@@ -51,7 +52,7 @@ export const ListItems = ({items, mod, toggle, list, instruction, setShow}) => {
                     <AddButton />
                   </div>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
           : <div className={`${styles.panel} ${styles.mod}`}>

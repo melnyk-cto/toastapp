@@ -1,6 +1,9 @@
 // core
 import React, { useState } from 'react';
 
+// library
+import { Link } from "react-router-dom";
+
 // components
 import { routes } from "../../App/routes";
 
@@ -57,20 +60,20 @@ export const Footer = () => {
         </div>
         <ul className={styles.nav}>
           <li>
-            <a href='#'>
+            <Link to='#'>
               <LightningSvg />
-            </a>
+            </Link>
           </li>
           <li className={styles.active}>
-            <a href='#'>
+            <Link to='#'>
               <BookSvg />
-            </a>
+            </Link>
           </li>
           <li className={styles.notEmpty}>
             <span className={styles.count}>1</span>
-            <a href={routes.placeOrder}>
+            <Link to={routes.placeOrder}>
               <ShoppingSvg />
-            </a>
+            </Link>
           </li>
         </ul>
       </footer>

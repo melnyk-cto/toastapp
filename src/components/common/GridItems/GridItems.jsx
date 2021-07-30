@@ -2,6 +2,7 @@ import React from "react";
 
 // library
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 // components
 import { AddButton } from "../AddButton/AddButton";
@@ -11,7 +12,6 @@ import { modalsActions } from "../../../redux/modals/actions";
 // assets
 import styles from "./GridItems.module.scss";
 import { ReactComponent as ArrowSvg } from "../../../assets/images/icons/arrow.svg";
-
 
 export const GridItems = ({items, toggle}) => {
   const dispatch = useDispatch();
@@ -37,7 +37,7 @@ export const GridItems = ({items, toggle}) => {
           </h4>}
         <div className={styles.panel}>
           {item.items.map((product, index) => (
-            <a key={index} id={product.title} href={product.link} className={styles.item} onClick={() => addProduct()}>
+            <Link key={index} id={product.title} to={product.link} className={styles.item} onClick={() => addProduct()}>
               <div className={styles.image}>
                 {product.image && <img src={product.image} alt={product.title} />}
               </div>
@@ -53,7 +53,7 @@ export const GridItems = ({items, toggle}) => {
                   <AddButton />
                 </div>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
