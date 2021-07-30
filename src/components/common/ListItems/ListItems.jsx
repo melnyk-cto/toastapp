@@ -24,7 +24,6 @@ export const ListItems = ({items, mod, toggle, list, instruction, setShow}) => {
 
   const addProduct = () => {
     dispatch(modalsActions.setShowModal('Add Product'));
-
   };
 
   return (
@@ -57,7 +56,7 @@ export const ListItems = ({items, mod, toggle, list, instruction, setShow}) => {
           </div>
           : <div className={`${styles.panel} ${styles.mod}`}>
             {item.items.map((product, index) => (
-              <div key={index} id={product.title} className={styles.item}>
+              <div key={index} id={product.title} className={styles.item} onClick={() => addProduct()}>
                 <div className={styles.description}>
                   <div className={styles.list}>
                     <VeganStatus />

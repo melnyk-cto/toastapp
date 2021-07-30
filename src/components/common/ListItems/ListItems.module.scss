@@ -111,9 +111,8 @@
     .item {
       box-shadow: none;
       min-height: auto;
-      background: #F1F1F1;
-      z-index:    -1;
       position:   relative;
+      background: transparent;
       &:last-child {
         margin-bottom: 0;
       }

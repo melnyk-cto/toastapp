@@ -5,7 +5,7 @@ import React from 'react'
 import { useSelector } from "react-redux";
 
 // components
-import { ComplaintsModal } from "../";
+import { AddProductModal, ComplaintsModal } from "../";
 import { getShowModal } from "../../../redux/modals/selectors";
 
 export const NoNavigationLayout = ({children}) => {
@@ -13,6 +13,7 @@ export const NoNavigationLayout = ({children}) => {
 
   return (
     <>
+      {modal === 'Add Product' && <AddProductModal />}
       {modal === 'Complaints' && <ComplaintsModal />}
       {children}
     </>
