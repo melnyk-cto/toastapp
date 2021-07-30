@@ -35,16 +35,35 @@
     align-items:      center;
     justify-content:  center;
     margin-right:     0.5rem;
-    &.minus {
+    &.minus, &.plus {
       margin-right: 14px;
       margin-left:  0;
-      cursor: pointer;
+      cursor:       pointer;
+      position:     relative;
+      &:active {
+        opacity: .7;
+      }
+      &:before {
+        content:         '';
+        position:        absolute;
+        width:           10px;
+        height:          2px;
+        background:      url("../../../assets/images/icons/minus.svg") no-repeat center center;
+        background-size: contain;
+        left:            50%;
+        top:             50%;
+        transform:       translate(-50%, -50%);
+      }
     }
 
     &.plus {
       margin-right: 0;
       margin-left:  14px;
-      cursor: pointer;
+      &:before {
+        height:          10px;
+        background:      url("../../../assets/images/icons/plus.svg") no-repeat center center;
+        background-size: contain;
+      }
     }
   }
 }

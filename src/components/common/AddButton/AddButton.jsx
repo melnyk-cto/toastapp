@@ -23,9 +23,9 @@ export const AddButton = ({count}) => {
         ADD
       </button>
       : <button className={`${styles.add} ${styles.mod}`} type='button'>
-        <span className={styles.minus} onClick={() => changeCount('-')}>-</span>
+        <span className={styles.minus} onClick={() => changeCount('-')} />
         {count}
-        <span className={styles.plus} onClick={() => changeCount('+')}>+</span>
+        <span className={styles.plus} onClick={() => changeCount('+')} />
       </button>
   )
 }

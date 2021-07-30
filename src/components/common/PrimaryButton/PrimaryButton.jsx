@@ -9,7 +9,6 @@ export const PrimaryButton = ({title, info, white}) => {
     <button type='submit' className={`btn-card ${styles.card} ${white ? styles.white : ''}`}>
       {info}
       <span className={styles.add}>
-
         {title}
         <div className={styles.right}>
               <ArrowRightSvg />
