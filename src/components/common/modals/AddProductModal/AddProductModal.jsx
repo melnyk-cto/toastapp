@@ -32,10 +32,10 @@ export const AddProductModal = () => {
       </div>
       <form onSubmit={(e) => onSubmit(e)} className={styles.bottom}>
         <div className={styles.form}>
-          <h4 className={styles.itemTitle}>
+          <h3 className={styles.itemTitle}>
             <VeganStatus />
             Sunrise Acai Bowl
-          </h4>
+          </h3>
           <span className={styles.chip}>
           gluten-free
         </span>

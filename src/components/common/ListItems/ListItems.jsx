@@ -12,7 +12,7 @@ import { modalsActions } from "../../../redux/modals/actions";
 import styles from "./ListItems.module.scss";
 import { ReactComponent as ArrowSvg } from "../../../assets/images/icons/arrow.svg";
 
-export const ListItems = ({items, toggle, list, instruction, setShow}) => {
+export const ListItems = ({items, mod,toggle, list, instruction, setShow}) => {
   const dispatch = useDispatch();
 
   const showItems = (e) => {
@@ -26,7 +26,7 @@ export const ListItems = ({items, toggle, list, instruction, setShow}) => {
 
   return (
     items.map((item) => (
-      <div key={item.id} className={styles.items}>
+      <div key={item.id} className={`${styles.items} ${mod ? styles.mod : ''}`}>
         {toggle ? <h4 className={`${styles.title} ${styles.toggle}`} onClick={(e) => showItems(e)}>
             {item.name}
             <hr />

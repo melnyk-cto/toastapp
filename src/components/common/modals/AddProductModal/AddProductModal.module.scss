@@ -16,8 +16,8 @@
     z-index:         1;
     left:            8px;
     top:             16px;
-    width:           40px;
-    height:          40px;
+    width:           30px;
+    height:          30px;
     border-radius:   10px;
     background:      #657280;
     box-shadow:      -4px 4px 8px rgba(91, 103, 115, 0.2),
@@ -57,7 +57,7 @@
 }
 
 .bottom {
-  padding:  16px 11px 40px 11px;
+  padding:  16px 16px 40px 16px;
   height:   calc(100vh - 200px);
   overflow: auto;
   .form {
@@ -71,28 +71,32 @@
   .chip {
     display:        inline-block;
     padding:        8px;
-    color:          $whiteColor;
     box-shadow:     inset -2px 2px 4px rgba(67, 77, 88, 0.2), inset 2px -2px 4px rgba(67, 77, 88, 0.2), inset -2px -2px 4px rgba(81, 95, 108, 0.9), inset 2px 2px 5px rgba(67, 77, 88, 0.9);
     border-radius:  16px;
     font-size:      10px;
     text-transform: uppercase;
     font-weight:    500;
-    margin:         0 8px 16px 0;
+    margin:         0 8px 14px 0;
+    color:          #F1F1F1;
   }
   p {
-    opacity: .4;
+    opacity:       .4;
+    margin-bottom: 21px;
   }
   .option {
+    margin-bottom: 20px;
     h4 {
       font-size:     13px;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
       span {
         text-transform: uppercase;
         color:          #bbbbbb;
+        font-size:      10px;
       }
     }
     label {
-      cursor: pointer;
+      cursor:        pointer;
+      margin-bottom: 16px;
     }
     .price {
       font-size:   10px;
