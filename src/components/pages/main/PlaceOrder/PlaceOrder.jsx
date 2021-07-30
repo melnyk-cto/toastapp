@@ -27,7 +27,6 @@ export const PlaceOrder = () => {
         {title: 'Cacao Acai Bowl', price: 299, link: '#'},
         {title: 'Cacao Acai Bowl', price: 299, link: '#'},
         {title: 'Cacao Acai Bowl', price: 299, link: '#'},
-        {title: 'Cacao Acai Bowl', price: 299, link: '#'},
       ]
     },
   ]);
@@ -37,18 +36,18 @@ export const PlaceOrder = () => {
       <CookingInstruction show={show} setShow={setShow} />
       <main className={styles.placeOrder}>
         <div className={styles.panel}>
-          <Link to={routes.main} className={styles.icon} >
+          <Link to={routes.main} className={styles.icon}>
             <BackSvg />
           </Link>
           <h2>
             Place Order
-            <div className={styles.icon} onClick={()=> dispatch(modalsActions.setShowModal('Complaints'))}>
+            {items && <div className={styles.icon} onClick={() => dispatch(modalsActions.setShowModal('Complaints'))}>
               <WarningSvg />
-            </div>
+            </div>}
           </h2>
         </div>
         {items ? <section className={styles.products}>
-            <ListItems items={items} toggle list instruction setShow={setShow}/>
+            <ListItems items={items} toggle list instruction setShow={setShow} />
             <ListItems items={items} toggle list />
             <PrimaryButton title='PLACE ORDER' info='4 Items' white />
           </section>

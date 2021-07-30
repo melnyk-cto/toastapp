@@ -5,6 +5,11 @@ import styles from "./Feedback.module.scss";
 import { ReactComponent as CloseSvg } from "../../../assets/images/icons/close.svg";
 
 export const Feedback = ({showFeedback, setShowFeedback}) => {
+
+  const onSubmit = (e)=> {
+    e.preventDefault();
+    setShowFeedback(false);
+  }
   return (
     <div className={`${styles.feedback} ${showFeedback ? styles.open : ''}`}>
       <div className={styles.inner}>
@@ -15,7 +20,7 @@ export const Feedback = ({showFeedback, setShowFeedback}) => {
           </span>
         </h3>
         <hr />
-        <form>
+        <form onSubmit={(e)=> onSubmit(e)}>
           <label>
             <textarea placeholder='Something else? Mention it here.' />
           </label>

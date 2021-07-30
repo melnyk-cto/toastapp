@@ -12,13 +12,13 @@
 }
 
 .card {
-  margin-top:      35px;
+  margin-top:      25px;
   display:         flex;
   align-items:     center;
   justify-content: space-between;
   background:      linear-gradient(90deg, #EFEFBB 0%, #D4D3DD 100%);
   border-radius:   10px;
-  padding:         10px 20px;
+  padding:         8px 18px;
   p {
     font-size: 12px;
   }
@@ -87,6 +87,7 @@
       background:    #F1F1F1;
       box-shadow:    inset -2px 2px 4px rgba(204, 207, 207, 0.2), inset 2px -2px 4px rgba(204, 207, 207, 0.2), inset -2px -2px 4px rgba(255, 255, 255, 0.9), inset 2px 2px 5px rgba(204, 207, 207, 0.9);
       border-radius: 10px;
+      font-size:     16px;
     }
   }
 }

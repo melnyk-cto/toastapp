@@ -32,7 +32,7 @@ export const Special = () => {
           <div className={styles.banner}>
             <div className={styles.image}>
               <img src={banner} alt='banner' />
-              <h2>Welcome to <br /> Sacred Earth Cafe</h2>
+              <h3>Welcome to <br /> Sacred Earth Cafe</h3>
             </div>
           </div>
         </section>

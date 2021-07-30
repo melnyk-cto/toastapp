@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 //library
 import { useDispatch } from "react-redux";
@@ -11,10 +11,13 @@ import { modalsActions } from "../../../redux/modals/actions";
 // assets
 import styles from "./ListItems.module.scss";
 import { ReactComponent as ArrowSvg } from "../../../assets/images/icons/arrow.svg";
+import edit from "../../../assets/images/icons/edit.svg";
+import minus from "../../../assets/images/icons/minus-circle.svg";
 
-export const ListItems = ({items, mod,toggle, list, instruction, setShow}) => {
+export const ListItems = ({items, mod, toggle, list, instruction, setShow}) => {
   const dispatch = useDispatch();
 
+  const [instructionAdded, setInstructionAdded] = useState(false);
   const showItems = (e) => {
     e.target.parentElement.classList.toggle(styles.hide);
   };
@@ -71,7 +74,23 @@ export const ListItems = ({items, mod,toggle, list, instruction, setShow}) => {
                 </div>
               </div>
             ))}
-            {instruction && <div className={styles.link} onClick={() => setShow(true)}>Add cooking instruction</div>}
+            <div>
+              {instructionAdded ? <div className={styles.instruction}>
+                  <div>
+                    <h5>Cooking instruction:</h5>
+                    <p>
+                      Sunrise: dklfnvslvn <br />
+                      Chocolate: jadfasbd
+                    </p>
+                  </div>
+                  <div className={styles.action}>
+                    <img src={edit} alt='edit' />
+                    <img src={minus} alt='minus' />
+                  </div>
+                </div>
+                : instruction &&
+                <div className={styles.link} onClick={() => setShow(true)}>Add cooking instruction</div>}
+            </div>
           </div>}
       </div>
     ))

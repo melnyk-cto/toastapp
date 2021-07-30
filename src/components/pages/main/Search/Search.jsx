@@ -28,7 +28,7 @@ export const Search = () => {
       setItems([
         {
           id: 0,
-          name: 'Today’s Special',
+          name: 'ACAI BOWLS',
           items: [
             {image: cacao, title: 'Cacao Acai Bowl', price: 299, link: '#'},
           ]
@@ -58,7 +58,7 @@ export const Search = () => {
           </label>
         </div>
         {items ? <section>
-            <ListItems items={items} />
+            <ListItems items={items} mod/>
           </section>
           : <section>
             <div className={styles.card}>

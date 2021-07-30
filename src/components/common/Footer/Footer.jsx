@@ -27,14 +27,14 @@ export const Footer = () => {
           <hr />
           <ul className={styles.availability}>
             <li>
-              All
+              Veg Only
               <label className={styles.radio}>
-                <input type='checkbox' hidden />
+                <input type='checkbox' hidden checked />
                 <span />
               </label>
             </li>
             <li>
-              Starters
+              Contains Egg
               <label className={styles.radio}>
                 <input type='checkbox' hidden />
                 <span />

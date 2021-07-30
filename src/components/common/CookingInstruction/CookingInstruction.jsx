@@ -6,6 +6,12 @@ import { ReactComponent as CloseSvg } from "../../../assets/images/icons/close.s
 import cacao from "../../../assets/images/cacao.png";
 
 export const CookingInstruction = ({show, setShow}) => {
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    setShow(false)
+  };
+
   return (
     <div className={`${styles.cooking} ${show ? styles.open : ''}`}>
       <div className={styles.inner}>
@@ -30,12 +36,12 @@ export const CookingInstruction = ({show, setShow}) => {
             <img src={cacao} alt='cacao' />
           </div>
         </div>
-        <form>
+        <form onSubmit={(e) => onSubmit(e)}>
           <label>
             Sunrise Acai Bowl
             <textarea placeholder='I would like my dish less spicy...' />
           </label>
-          <button type='submit' className='btn btn-primary'>SUBMIT FEEDBACK</button>
+          <button type='submit' className='btn btn-primary'>ADD</button>
         </form>
       </div>
     </div>

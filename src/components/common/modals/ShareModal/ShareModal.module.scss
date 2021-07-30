@@ -31,7 +31,7 @@
     color: $whiteColor;
   }
   .header {
-    padding:         20px 0;
+    padding:         20px 0 14px 0;
     margin-bottom:   0;
     display:         flex;
     align-items:     center;
@@ -85,7 +85,8 @@
       border:          none;
       box-shadow:      none;
       font-weight:     400;
-      margin-bottom:   46px;
+      margin-bottom:   80px;
+      margin-left:     16px;
       &:active {
         text-decoration: none;
       }

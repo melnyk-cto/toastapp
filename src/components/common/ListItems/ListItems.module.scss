@@ -36,6 +36,7 @@
     color:          $textColor;
     font-size:      14px;
     cursor:         pointer;
+    margin-bottom:  19px;
     &:active {
       color: $defaultColor;
     }
@@ -102,8 +103,8 @@
 
 .panel {
   &.mod {
-    padding:       16px 10px 16px 10px;
-    background:    #F1F1F1;
+    padding:       14px 0 14px 0;
+    background:    transparent;
     box-shadow:    inset -3px -3px 7px #FFFFFF,
                    inset 2px 2px 5px rgba(174, 174, 192, 0.4);
     border-radius: 10px;
@@ -111,6 +112,8 @@
       box-shadow: none;
       min-height: auto;
       background: #F1F1F1;
+      z-index:    -1;
+      position:   relative;
       &:last-child {
         margin-bottom: 0;
       }
@@ -125,7 +128,30 @@
         margin-bottom: 0;
       }
       h4 {
-        margin-bottom: 4px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .instruction {
+    padding:         13px 10px 8px 10px;
+    display:         flex;
+    justify-content: space-between;
+    h5 {
+      margin-bottom: 4px;
+    }
+    p {
+      font-size:     12px;
+      margin-bottom: 0;
+    }
+    .action {
+      display:     flex;
+      align-items: center;
+      img {
+        width:       16px;
+        margin-left: 16px;
+        &:active {
+          opacity: .7;
+        }
       }
     }
   }
@@ -135,6 +161,7 @@
     color:           #76dfe5;
     text-decoration: underline;
     cursor:          pointer;
+    padding:         4px 10px;
     &:active {
       text-decoration: none;
     }
