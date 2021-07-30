@@ -5,11 +5,12 @@ import styles from "./CookingInstruction.module.scss";
 import { ReactComponent as CloseSvg } from "../../../assets/images/icons/close.svg";
 import cacao from "../../../assets/images/cacao.png";
 
-export const CookingInstruction = ({show, setShow}) => {
+export const CookingInstruction = ({show, setShow, setInstructionAdded}) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    setShow(false)
+    setShow(false);
+    setInstructionAdded(true)
   };
 
   return (

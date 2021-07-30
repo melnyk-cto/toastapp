@@ -32,7 +32,7 @@ export const Footer = () => {
             <li>
               Veg Only
               <label className={styles.radio}>
-                <input type='checkbox' hidden checked />
+                <input type='checkbox' hidden />
                 <span />
               </label>
             </li>

@@ -15,25 +15,32 @@ import saly6 from "../../../../assets/images/saly-6.png";
 import { ReactComponent as BackSvg } from "../../../../assets/images/icons/arrow-back.svg";
 import { ReactComponent as WarningSvg } from "../../../../assets/images/icons/warning.svg";
 
+const data = [
+  {
+    id: 0,
+    name: 'Current order',
+    items: [
+      {title: 'Cacao Acai Bowl', price: 299, link: '#'},
+      {title: 'Cacao Acai Bowl', price: 299, link: '#'},
+      {title: 'Cacao Acai Bowl', price: 299, link: '#'},
+    ]
+  },
+]
 export const PlaceOrder = () => {
   const dispatch = useDispatch();
 
   const [show, setShow] = useState(false);
-  const [items, setItems] = useState([
-    {
-      id: 0,
-      name: 'Current order',
-      items: [
-        {title: 'Cacao Acai Bowl', price: 299, link: '#'},
-        {title: 'Cacao Acai Bowl', price: 299, link: '#'},
-        {title: 'Cacao Acai Bowl', price: 299, link: '#'},
-      ]
-    },
-  ]);
+  const [items, setItems] = useState(null);
+  const [instructionAdded, setInstructionAdded] = useState(false);
+
+  const startOrdering = (e) => {
+    e.preventDefault();
+    setItems(data)
+  };
 
   return (
     <NoNavigationLayout>
-      <CookingInstruction show={show} setShow={setShow} />
+      <CookingInstruction show={show} setShow={setShow} setInstructionAdded={setInstructionAdded} />
       <main className={styles.placeOrder}>
         <div className={styles.panel}>
           <Link to={routes.main} className={styles.icon}>
@@ -47,14 +54,15 @@ export const PlaceOrder = () => {
           </h2>
         </div>
         {items ? <section className={styles.products}>
-            <ListItems items={items} toggle list instruction setShow={setShow} />
-            <ListItems items={items} toggle list />
+            <ListItems items={items} toggle list instruction setShow={setShow} instructionAdded={instructionAdded}/>
+            <ListItems items={items} toggle list instruction  instructionAdded={instructionAdded}/>
             <PrimaryButton title='PLACE ORDER' info='4 Items' white />
           </section>
           : <section className={styles.content}>
             <h3>No orders yet!</h3>
             <p>Add something from the menu.</p>
-            <Link to={routes.main} type='button' className={`btn btn-primary ${styles.btn}`}>START ORDERING</Link>
+            <Link to={routes.main} type='button' className={`btn btn-primary ${styles.btn}`}
+                  onClick={(e) => startOrdering(e)}>START ORDERING</Link>
             <img className={styles.banner} src={saly6} alt='' />
           </section>}
       </main>

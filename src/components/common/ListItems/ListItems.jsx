@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React  from "react";
 
 //library
 import { useDispatch } from "react-redux";
@@ -15,10 +15,9 @@ import { ReactComponent as ArrowSvg } from "../../../assets/images/icons/arrow.s
 import edit from "../../../assets/images/icons/edit.svg";
 import minus from "../../../assets/images/icons/minus-circle.svg";
 
-export const ListItems = ({items, mod, toggle, list, instruction, setShow}) => {
+export const ListItems = ({items, mod, toggle, list, instruction, instructionAdded, setShow}) => {
   const dispatch = useDispatch();
 
-  const [instructionAdded, setInstructionAdded] = useState(false);
   const showItems = (e) => {
     e.target.parentElement.classList.toggle(styles.hide);
   };

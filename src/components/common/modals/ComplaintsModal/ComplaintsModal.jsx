@@ -39,7 +39,7 @@ export const ComplaintsModal = () => {
 
   return (
     <div className={styles.modal}>
-      <Feedback showFeedback={showFeedback} setShowFeedback={setShowFeedback} />
+      <Feedback showFeedback={showFeedback} setShowFeedback={setShowFeedback} setInstructionAdded={setInstructionAdded}/>
       <div className={styles.back} onClick={() => dispatch(modalsActions.setShowModal(''))}>
         <BackSvg />
       </div>

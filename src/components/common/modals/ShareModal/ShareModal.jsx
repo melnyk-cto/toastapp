@@ -37,7 +37,7 @@ export const ShareModal = () => {
           <h3>Request Service</h3>
           <div className={styles.panel}>
             <label className='checkbox'>
-              <input type='checkbox' checked hidden name='water' />
+              <input type='checkbox' hidden name='water' />
               <span className='icon' />
               Water
             </label>
