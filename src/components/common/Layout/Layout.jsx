@@ -15,7 +15,7 @@ export const Layout = ({children}) => {
     <>
       {modal === 'Add Product' && <AddProductModal />}
       {modal === 'Share' && <ShareModal />}
-      {modal === '' && <OrderSuccessfullyModal />}
+      {modal === 'Order Successfully' && <OrderSuccessfullyModal />}
       <Header />
       {children}
       <Footer />

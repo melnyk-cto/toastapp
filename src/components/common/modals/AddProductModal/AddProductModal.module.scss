@@ -1,6 +1,6 @@
 @import "../../../../assets/scss/variables";
 
-.modal {
+.addProductModal {
   position:         fixed;
   z-index:          40;
   left:             50%;
@@ -10,35 +10,6 @@
   background-color: $textColor;
   max-width:        768px;
   transform:        translate(-50%, 0);
-  .back {
-    cursor:          pointer;
-    position:        absolute;
-    z-index:         1;
-    left:            8px;
-    top:             16px;
-    width:           30px;
-    height:          30px;
-    border-radius:   10px;
-    background:      #657280;
-    box-shadow:      -4px 4px 8px rgba(91, 103, 115, 0.2),
-                     4px -4px 8px rgba(91, 103, 115, 0.2),
-                     -4px -4px 8px rgba(111, 125, 141, 0.9),
-                     4px 4px 10px rgba(91, 103, 115, 0.9);
-    display:         flex;
-    align-items:     center;
-    justify-content: center;
-    transition:      .2s linear;
-    margin-right:    8px;
-    svg path {
-      fill: $whiteColor;
-    }
-    &:active {
-      box-shadow: inset -0.125rem 0.125rem 0.25rem 0 rgba(91, 103, 115, 0.2),
-                  inset 0.125rem -0.125rem 0.25rem 0 rgba(91, 103, 115, 0.2),
-                  inset -0.125rem -0.125rem 0.25rem 0 rgba(111, 125, 141, 0.9),
-                  inset 0.125rem 0.125rem 0.3125rem 0 rgba(91, 103, 115, 0.9);
-    }
-  }
   .top {
     background-color: #657280;
     height:           200px;

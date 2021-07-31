@@ -1,19 +1,15 @@
 import React, { useState } from "react";
 
-// library
-import { useDispatch } from "react-redux";
-
 // components
 import { VeganStatus } from "../../VeganStatus/VeganStatus";
-import { modalsActions } from "../../../../redux/modals/actions";
 import { Feedback } from "../../Feedback/Feedback";
 
 // assets
 import styles from "./ComplaintsModal.module.scss";
-import { ReactComponent as BackSvg } from "../../../../assets/images/icons/arrow-back.svg";
 import { ReactComponent as ArrowSvg } from "../../../../assets/images/icons/arrow.svg";
 import edit from "../../../../assets/images/icons/edit-white.svg";
 import minus from "../../../../assets/images/icons/minus-circle.svg";
+import { WrapperModal } from "../WrapperModal/WrapperModal";
 
 const items = [
   {
@@ -28,8 +24,6 @@ const items = [
   }
 ]
 export const ComplaintsModal = () => {
-  const dispatch = useDispatch();
-
   const [instructionAdded, setInstructionAdded] = useState(false);
   const [showFeedback, setShowFeedback] = useState(false);
 
@@ -38,63 +32,61 @@ export const ComplaintsModal = () => {
   };
 
   return (
-    <div className={styles.modal}>
-      <Feedback showFeedback={showFeedback} setShowFeedback={setShowFeedback} setInstructionAdded={setInstructionAdded}/>
-      <div className={styles.back} onClick={() => dispatch(modalsActions.setShowModal(''))}>
-        <BackSvg />
-      </div>
-      <h2 className={styles.header}>Complaints</h2>
-      <div className={styles.bottom}>
-        {items.map((item, index) => (
-          <div key={index} className={styles.item}>
-            <div className={styles.top}>
-              <h4 className={styles.title}>
-                <VeganStatus />
-                {item.title}
-                <span className={styles.price}>₹{item.price}</span>
-              </h4>
-              <p className={styles.description}>{item.description}</p>
-              <hr />
+    <WrapperModal title='Complaints'>
+      <div className={styles.complaints}>
+        <Feedback showFeedback={showFeedback} setShowFeedback={setShowFeedback} setInstructionAdded={setInstructionAdded}/>
+        <div className={styles.bottom}>
+          {items.map((item, index) => (
+            <div key={index} className={styles.item}>
+              <div className={styles.top}>
+                <h4 className={styles.title}>
+                  <VeganStatus />
+                  {item.title}
+                  <span className={styles.price}>₹{item.price}</span>
+                </h4>
+                <p className={styles.description}>{item.description}</p>
+                <hr />
+              </div>
+              <h5 className={styles.subTitle} onClick={(e) => showItems(e)}>
+                What was not right?
+                <ArrowSvg />
+              </h5>
+              <div className={styles.panel}>
+                <label className='checkbox'>
+                  <input type='checkbox' hidden name='taking' />
+                  <span className='icon' />
+                  Order taking too long
+                </label>
+                <label className='checkbox'>
+                  <input type='checkbox' hidden name='order' />
+                  <span className='icon' />
+                  Order not as mentioned
+                </label>
+                <label className='checkbox'>
+                  <input type='checkbox' hidden name='missing' />
+                  <span className='icon' />
+                  Missing items
+                </label>
+                {instructionAdded ?  <div className={styles.instruction}>
+                  <div>
+                    <h5>Cooking instruction:</h5>
+                    <p>
+                      Sunrise: dklfnvslvn <br />
+                      Chocolate: jadfasbd
+                    </p>
+                  </div>
+                  <div className={styles.action}>
+                    <img src={edit} alt='edit' />
+                    <img src={minus} alt='minus' />
+                  </div>
+                </div>:<button type='button' className={styles.something} onClick={() => setShowFeedback(true)}>
+                  Something else?
+                </button>}
+              </div>
             </div>
-            <h5 className={styles.subTitle} onClick={(e) => showItems(e)}>
-              What was not right?
-              <ArrowSvg />
-            </h5>
-            <div className={styles.panel}>
-              <label className='checkbox'>
-                <input type='checkbox' hidden name='taking' />
-                <span className='icon' />
-                Order taking too long
-              </label>
-              <label className='checkbox'>
-                <input type='checkbox' hidden name='order' />
-                <span className='icon' />
-                Order not as mentioned
-              </label>
-              <label className='checkbox'>
-                <input type='checkbox' hidden name='missing' />
-                <span className='icon' />
-                Missing items
-              </label>
-              {instructionAdded ?  <div className={styles.instruction}>
-                <div>
-                  <h5>Cooking instruction:</h5>
-                  <p>
-                    Sunrise: dklfnvslvn <br />
-                    Chocolate: jadfasbd
-                  </p>
-                </div>
-                <div className={styles.action}>
-                  <img src={edit} alt='edit' />
-                  <img src={minus} alt='minus' />
-                </div>
-              </div>:<button type='button' className={styles.something} onClick={() => setShowFeedback(true)}>
-                Something else?
-              </button>}
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </WrapperModal>
   )
 }
