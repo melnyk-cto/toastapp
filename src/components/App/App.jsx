@@ -6,7 +6,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 
 // components
 import { routes } from "./routes";
-import { Main, Register, Verify, GetStarted, Join, Special, Search, PlaceOrder } from "../pages";
+import { Main, Register, Verify, GetStarted, Join, Special, Search, PlaceOrder, Checkout } from "../pages";
 
 // assets
 import styles from './App.module.scss';
@@ -24,6 +24,7 @@ function App() {
         <Route path={routes.special} component={Special} />
         <Route path={routes.search} component={Search} />
         <Route path={routes.placeOrder} component={PlaceOrder} />
+        <Route path={routes.checkout} component={Checkout} />
       </Switch>
     </div>
   );

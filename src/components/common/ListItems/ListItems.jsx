@@ -1,4 +1,4 @@
-import React  from "react";
+import React from "react";
 
 //library
 import { useDispatch } from "react-redux";
@@ -56,7 +56,7 @@ export const ListItems = ({items, mod, toggle, list, instruction, instructionAdd
           </div>
           : <div className={`${styles.panel} ${styles.mod}`}>
             {item.items.map((product, index) => (
-              <div key={index} id={product.title} className={styles.item} onClick={() => addProduct()}>
+              <div key={index} id={product.title} className={styles.item}>
                 <div className={styles.description}>
                   <div className={styles.list}>
                     <VeganStatus />

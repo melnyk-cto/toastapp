@@ -1,0 +1,174 @@
+@import "../../../../assets/scss/variables";
+
+.placeOrder {
+  padding:        70px 15px 0 15px;
+  display:        flex;
+  flex-direction: column;
+  align-items:    flex-start;
+}
+
+.banner {
+  margin-top: auto;
+}
+
+.products {
+  padding: 20px 0 72px 0;
+}
+
+.order {
+  padding:       16px 16px 0 16px;
+  background:    $backgroundColor;
+  box-shadow:    inset -3px -3px 7px $whiteColor, inset 2px 2px 5px rgba(174, 174, 192, 0.4);
+  border-radius: 10px;
+  margin-bottom: 16px;
+  .title {
+    margin-bottom: 18px;
+  }
+  .item {
+    display:         flex;
+    align-items:     center;
+    justify-content: space-between;
+    margin-bottom:   18px;
+    h5 {
+      margin-bottom: 0;
+      display:       flex;
+      align-items:   center;
+    }
+  }
+  .count {
+    margin-left:  auto;
+    margin-right: 30px;
+  }
+}
+
+.coupons {
+  padding:       8px 8px;
+  background:    #F5F5F5;
+  border:        1px solid #E9E9E9;
+  border-radius: 10px;
+  display:       flex;
+  align-items:   center;
+  margin-bottom: 16px;
+  img {
+    width: 20px;
+  }
+  .description {
+    margin-left: 8px;
+    h5 {
+      margin-bottom: 4px;
+    }
+    h6 {
+      margin-bottom: 0;
+      color:         #bbbbbb;
+    }
+  }
+}
+
+.waiter {
+  padding:       16px 8px;
+  background:    linear-gradient(90deg, rgba(151, 216, 216, 0.16) 0%, rgba(90, 215, 223, 0.16) 100%, rgba(23, 162, 192, 0.16) 100%);
+  box-shadow:    inset -1px 1px 2px rgba(138, 183, 206, 0.2), inset 1px -1px 2px rgba(138, 183, 206, 0.2), inset -1px -1px 2px rgba(176, 233, 255, 0.9);
+  border-radius: 10px;
+  margin-bottom: 16px;
+  .title {
+    display:         flex;
+    width:           100%;
+    align-items:     center;
+    justify-content: space-between;
+    img {
+      width: 16px;
+    }
+    .donate {
+      margin-right: 8px;
+    }
+    .tipped {
+      margin-left:  auto;
+      font-weight:  400;
+      color:        #598B71;
+      margin-right: 8px;
+    }
+    .minus {
+      cursor: pointer;
+      &:active {
+        opacity: .7;
+      }
+    }
+  }
+  .boxes {
+    display: flex;
+    .box {
+      cursor:          pointer;
+      min-height:      40px;
+      min-width:       56px;
+      background:      #F6F4F3;
+      box-shadow:      -1px 1px 2px rgba(221, 220, 219, 0.2), 1px -1px 2px rgba(221, 220, 219, 0.2), -1px -1px 2px rgba(255, 255, 255, 0.9), 1px 1px 3px rgba(221, 220, 219, 0.9);
+      border-radius:   10px;
+      color:           rgba(15, 129, 152, 1);
+      font-size:       12px;
+      font-weight:     500;
+      display:         flex;
+      flex-direction:  column;
+      justify-content: center;
+      align-items:     center;
+      user-select:     none;
+      &.active, &:active {
+        border:     none;
+        background: $backgroundColor;
+        box-shadow: inset -2px 2px 4px rgba(221, 220, 219, 0.2), inset 2px -2px 4px rgba(221, 220, 219, 0.2), inset -2px -2px 4px rgba(255, 255, 255, 0.9), inset 2px 2px 5px rgba(221, 220, 219, 0.9);
+      }
+      &:nth-child(2), &:nth-child(3) {
+        color: rgba(110, 215, 221, 1);
+      }
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
+      span {
+        margin-top: 2px;
+        color:      rgba(244, 174, 37, 1);
+        font-size:  8px;
+      }
+    }
+    .input {
+      margin-bottom: 0;
+      padding:       0;
+      input {
+        text-align: center;
+        font-size:  12px;
+        height:     40px;
+        &::placeholder {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+.total {
+  padding:       16px;
+  background:    $backgroundColor;
+  box-shadow:    inset -3px -3px 7px $whiteColor, inset 2px 2px 5px rgba(174, 174, 192, 0.4);
+  border-radius: 10px;
+  h4, h5, h6 {
+    display:         flex;
+    align-items:     center;
+    justify-content: space-between;
+    margin-bottom:   16px;
+    span {
+      color: #727272;
+    }
+    .green {
+      color: #5BAC81;
+    }
+  }
+  h4 {
+    margin-bottom: 0;
+    color:         $blackColor;
+    span {
+      color: $blackColor;
+    }
+  }
+  h6 {
+    color:          #BBBBBB;
+    text-transform: uppercase;
+  }
+}

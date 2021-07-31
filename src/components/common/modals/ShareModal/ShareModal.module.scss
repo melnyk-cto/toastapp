@@ -57,7 +57,7 @@
     display:         inline-flex;
     justify-content: center;
     align-items:     center;
-    color:           #F1F1F1;
+    color:           $backgroundColor;
     margin:          0 8px 16px 0;
     box-shadow:      inset -2px 2px 4px rgba(56, 65, 74, 0.2), inset 2px -2px 4px rgba(56, 65, 74, 0.2), inset -2px -2px 4px rgba(92, 107, 122, 0.9), inset 2px 2px 5px rgba(56, 65, 74, 0.9);
   }

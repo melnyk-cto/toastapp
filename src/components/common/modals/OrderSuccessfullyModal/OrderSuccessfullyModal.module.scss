@@ -44,14 +44,16 @@
       border-radius: 10px;
     }
     .description {
-      display:     flex;
-      align-items: flex-start;
+      display:         flex;
+      align-items:     flex-start;
+      justify-content: space-between;
       h2 {
         color: $secondColor;
       }
       img {
         width:       49%;
         margin-left: 10px;
+        max-width:   200px;
       }
     }
     p {
@@ -63,7 +65,7 @@
       align-items:     center;
       justify-content: space-between;
       margin-top:      16px;
-      button {
+      .button {
         width:           46%;
         padding:         3px;
         background:      $secondColor;

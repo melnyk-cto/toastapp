@@ -2,18 +2,14 @@ import React, { useState } from "react";
 
 // library
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
 
 // components
-import { CookingInstruction, ListItems, NoNavigationLayout, PrimaryButton } from "../../../common";
+import { CookingInstruction, ListItems, NoNavigationLayout, PrimaryButton, TopPanel } from "../../../common";
 import { routes } from "../../../App/routes";
-import { modalsActions } from "../../../../redux/modals/actions";
 
 // assets
 import styles from './PlaceOrder.module.scss';
 import saly6 from "../../../../assets/images/saly-6.png";
-import { ReactComponent as BackSvg } from "../../../../assets/images/icons/arrow-back.svg";
-import { ReactComponent as WarningSvg } from "../../../../assets/images/icons/warning.svg";
 
 const data = [
   {
@@ -27,8 +23,6 @@ const data = [
   },
 ]
 export const PlaceOrder = () => {
-  const dispatch = useDispatch();
-
   const [show, setShow] = useState(false);
   const [items, setItems] = useState(null);
   const [instructionAdded, setInstructionAdded] = useState(false);
@@ -42,17 +36,7 @@ export const PlaceOrder = () => {
     <NoNavigationLayout>
       <CookingInstruction show={show} setShow={setShow} setInstructionAdded={setInstructionAdded} />
       <main className={styles.placeOrder}>
-        <div className={styles.panel}>
-          <Link to={routes.main} className={styles.icon}>
-            <BackSvg />
-          </Link>
-          <h2>
-            Place Order
-            {items && <div className={styles.icon} onClick={() => dispatch(modalsActions.setShowModal('Complaints'))}>
-              <WarningSvg />
-            </div>}
-          </h2>
-        </div>
+        <TopPanel title='Place Order' />
         {items ? <section className={styles.products}>
             <ListItems items={items} toggle list instruction setShow={setShow} instructionAdded={instructionAdded} />
             <ListItems items={items} toggle list instruction setShow={setShow} instructionAdded={instructionAdded} />

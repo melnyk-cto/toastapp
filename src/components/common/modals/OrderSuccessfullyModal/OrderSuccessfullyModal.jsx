@@ -2,10 +2,12 @@ import React from "react";
 
 // library
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 // components
-import { modalsActions } from "../../../../redux/modals/actions";
 import { WrapperModal } from "../WrapperModal/WrapperModal";
+import { routes } from "../../../App/routes";
+import { modalsActions } from "../../../../redux/modals/actions";
 
 // assets
 import styles from "./OrderSuccessfullyModal.module.scss";
@@ -19,7 +21,7 @@ export const OrderSuccessfullyModal = () => {
   return (
     <WrapperModal black>
       <div className={styles.order}>
-        <div className={styles.warning} onClick={() => dispatch(modalsActions.setShowModal('Complaints'))}>
+        <div className={styles.warning}>
           <WarningSvg />
         </div>
         <div className={styles.bottom}>
@@ -27,7 +29,8 @@ export const OrderSuccessfullyModal = () => {
             <div className={styles.item}>
               <div className={styles.description}>
                 <h2>
-                  Order successfully
+                  Order <br />
+                  successfully <br />
                   placed!
                 </h2>
                 <img src={saly7} alt='saly7' />
@@ -35,13 +38,15 @@ export const OrderSuccessfullyModal = () => {
               <p>Your order will be served soon.</p>
             </div>
             <div className={styles.buttons}>
-              <button type='button' className='btn'>Order more</button>
-              <button type='button' className='btn'>
+              <button type='button' className={`btn ${styles.button}`}>Order more</button>
+              <Link to={routes.checkout} type='button'
+                    className={`btn ${styles.button}`}
+                    onClick={() => dispatch(modalsActions.setShowModal(''))}>
                 Pay now
                 <span className={styles.currency}>
               <img src={currency} alt='currency' />
             </span>
-              </button>
+              </Link>
             </div>
           </div>
         </div>
