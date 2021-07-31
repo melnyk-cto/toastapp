@@ -54,8 +54,8 @@ export const PlaceOrder = () => {
           </h2>
         </div>
         {items ? <section className={styles.products}>
-            <ListItems items={items} toggle list instruction setShow={setShow} instructionAdded={instructionAdded}/>
-            <ListItems items={items} toggle list instruction  instructionAdded={instructionAdded}/>
+            <ListItems items={items} toggle list instruction setShow={setShow} instructionAdded={instructionAdded} />
+            <ListItems items={items} toggle list instruction setShow={setShow} instructionAdded={instructionAdded} />
             <PrimaryButton title='PLACE ORDER' info='4 Items' white />
           </section>
           : <section className={styles.content}>

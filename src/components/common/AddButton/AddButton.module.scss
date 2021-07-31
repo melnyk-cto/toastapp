@@ -16,6 +16,10 @@
   width:         72px;
   &.mod {
     width: auto;
+    .plus {
+      margin-right: 0;
+      margin-left:  14px;
+    }
   }
   &:active {
     color: $defaultColor;
@@ -55,10 +59,7 @@
         transform:       translate(-50%, -50%);
       }
     }
-
     &.plus {
-      margin-right: 0;
-      margin-left:  14px;
       &:before {
         height:          10px;
         background:      url("../../../assets/images/icons/plus.svg") no-repeat center center;

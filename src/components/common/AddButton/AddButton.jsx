@@ -19,7 +19,7 @@ export const AddButton = ({count}) => {
   return (
     !count ?
       <button className={styles.add} type='button' onClick={() => addButton()}>
-        <span>+</span>
+        <span className={styles.plus}/>
         ADD
       </button>
       : <button className={`${styles.add} ${styles.mod}`} type='button'>
