@@ -80,8 +80,9 @@
   position:         fixed;
   z-index:          40;
   top:              0;
-  left:             0;
+  left:             50%;
   width:            100%;
+  max-width:        768px;
   height:           100%;
   background-color: rgba(0, 0, 0, 0);
   display:          flex;
@@ -89,6 +90,7 @@
   justify-content:  flex-end;
   transition:       .2s linear;
   visibility:       hidden;
+  transform:        translate(-50%, 0);
   &.open {
     background-color: rgba(0, 0, 0, 0.8);
     visibility:       visible;
