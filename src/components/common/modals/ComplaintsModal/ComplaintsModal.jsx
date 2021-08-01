@@ -1,15 +1,11 @@
 import React, { useState } from "react";
 
 // components
-import { VeganStatus } from "../../VeganStatus/VeganStatus";
-import { Feedback } from "../../Feedback/Feedback";
+import { WrapperModal, VeganStatus, Feedback, Instruction } from "../../";
 
 // assets
 import styles from "./ComplaintsModal.module.scss";
 import { ReactComponent as ArrowSvg } from "../../../../assets/images/icons/arrow.svg";
-import edit from "../../../../assets/images/icons/edit-white.svg";
-import minus from "../../../../assets/images/icons/minus-circle.svg";
-import { WrapperModal } from "../WrapperModal/WrapperModal";
 
 const items = [
   {
@@ -34,7 +30,8 @@ export const ComplaintsModal = () => {
   return (
     <WrapperModal title='Complaints'>
       <div className={styles.complaints}>
-        <Feedback showFeedback={showFeedback} setShowFeedback={setShowFeedback} setInstructionAdded={setInstructionAdded}/>
+        <Feedback showFeedback={showFeedback} setShowFeedback={setShowFeedback}
+                  setInstructionAdded={setInstructionAdded} />
         <div className={styles.bottom}>
           {items.map((item, index) => (
             <div key={index} className={styles.item}>
@@ -67,21 +64,12 @@ export const ComplaintsModal = () => {
                   <span className='icon' />
                   Missing items
                 </label>
-                {instructionAdded ?  <div className={styles.instruction}>
-                  <div>
-                    <h5>Cooking instruction:</h5>
-                    <p>
-                      Sunrise: dklfnvslvn <br />
-                      Chocolate: jadfasbd
-                    </p>
-                  </div>
-                  <div className={styles.action}>
-                    <img src={edit} alt='edit' />
-                    <img src={minus} alt='minus' />
-                  </div>
-                </div>:<button type='button' className={styles.something} onClick={() => setShowFeedback(true)}>
-                  Something else?
-                </button>}
+                {instructionAdded
+                  ? <Instruction
+                    description='Convallis blandit egestas nulla rutrum. Eleifend suspendisse venenatis sed lectus. Sed quisque mauris in hac vulputate. Id.' />
+                  : <button type='button' className={styles.something} onClick={() => setShowFeedback(true)}>
+                    Something else?
+                  </button>}
               </div>
             </div>
           ))}

@@ -94,8 +94,8 @@ h6 {
 
 p {
   font-weight:    400;
-  font-size:      14px;
-  line-height:    1.42;
+  font-size:      12px;
+  line-height:    1.33;
   margin-bottom:  16px;
   letter-spacing: 0.4px;
 }
@@ -161,6 +161,7 @@ button {
     display:         flex;
     align-items:     center;
     justify-content: center;
+    min-width:       100px;
   }
   &-black {
     background:      #18191B;
@@ -172,6 +173,20 @@ button {
     display:         flex;
     align-items:     center;
     justify-content: center;
+    min-width:       100px;
+  }
+  &-white {
+    color:           $textColor;
+    background:      $whiteColor;
+    box-shadow:      -4px 4px 8px rgba(215, 215, 215, 0.2), 4px -4px 8px rgba(215, 215, 215, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(215, 215, 215, 0.9);
+    border-radius:   10px;
+    font-size:       13px;
+    letter-spacing:  1px;
+    height:          38px;
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    min-width:       100px;
   }
   &-second {
     padding:         8px 16px;

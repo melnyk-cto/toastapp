@@ -45,6 +45,7 @@
 .emotions {
   padding:       6px;
   width:         52px;
+  min-width:     52px;
   height:        40px;
   background:    $backgroundColor;
   box-shadow:    -5px 5px 10px rgba(222, 222, 222, 0.2), 5px -5px 10px rgba(222, 222, 222, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(222, 222, 222, 0.9);

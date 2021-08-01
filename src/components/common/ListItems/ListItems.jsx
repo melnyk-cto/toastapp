@@ -5,15 +5,12 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
 // components
-import { AddButton } from "../AddButton/AddButton";
-import { VeganStatus } from "../VeganStatus/VeganStatus";
+import { AddButton, Instruction, VeganStatus } from "../";
 import { modalsActions } from "../../../redux/modals/actions";
 
 // assets
 import styles from "./ListItems.module.scss";
 import { ReactComponent as ArrowSvg } from "../../../assets/images/icons/arrow.svg";
-import edit from "../../../assets/images/icons/edit.svg";
-import minus from "../../../assets/images/icons/minus-circle.svg";
 
 export const ListItems = ({items, mod, toggle, list, instruction, instructionAdded, setShow}) => {
   const dispatch = useDispatch();
@@ -74,19 +71,11 @@ export const ListItems = ({items, mod, toggle, list, instruction, instructionAdd
               </div>
             ))}
             <div>
-              {instructionAdded ? <div className={styles.instruction}>
-                  <div>
-                    <h5>Cooking instruction:</h5>
-                    <p>
-                      Sunrise: dklfnvslvn <br />
-                      Chocolate: jadfasbd
-                    </p>
-                  </div>
-                  <div className={styles.action}>
-                    <img src={edit} alt='edit' />
-                    <img src={minus} alt='minus' />
-                  </div>
-                </div>
+              {instructionAdded
+                ? <Instruction
+                  title='Cooking instruction:'
+                  description='Sunrise: dklfnvslvn, Chocolate: jadfasbd'
+                  black />
                 : instruction &&
                 <div className={styles.link} onClick={() => setShow(true)}>Add cooking instruction</div>}
             </div>

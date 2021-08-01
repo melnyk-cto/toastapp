@@ -80,29 +80,6 @@
     label {
       cursor: pointer;
     }
-    .instruction {
-      padding:         13px 10px 8px 10px;
-      display:         flex;
-      justify-content: space-between;
-      h5 {
-        margin-bottom: 4px;
-      }
-      p {
-        font-size:     12px;
-        margin-bottom: 0;
-      }
-      .action {
-        display:     flex;
-        align-items: center;
-        img {
-          width:       16px;
-          margin-left: 16px;
-          &:active {
-            opacity: .7;
-          }
-        }
-      }
-    }
     .something {
       font-size:       12px;
       color:           #eaf2fb;

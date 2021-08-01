@@ -1,13 +1,14 @@
-import React  from "react";
+import React, { useState } from "react";
 
 // library
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 // components
-import { Emotions, NoNavigationLayout, VeganStatus } from "../../../common";
+import { Dialogs, Emotions, Feedback, Instruction, NoNavigationLayout, VeganStatus } from "../../../common";
 import { Link } from "react-router-dom";
 import { routes } from "../../../App/routes";
 import { modalsActions } from "../../../../redux/modals/actions";
+import { getShowModal } from "../../../../redux/modals/selectors";
 
 // assets
 import styles from './OrderRating.module.scss';
@@ -25,13 +26,24 @@ const items = [
 const stars = [0, 1, 2, 3, 4];
 export const OrderRating = () => {
   const dispatch = useDispatch();
+  const modal = useSelector(getShowModal);
 
+  const [instructionAdded, setInstructionAdded] = useState(false);
+  const [showFeedback, setShowFeedback] = useState(false);
 
   return (
     <NoNavigationLayout>
+      {modal === 'Dialogs' && <Dialogs />}
+      <Feedback showFeedback={showFeedback} setShowFeedback={setShowFeedback}
+                setInstructionAdded={setInstructionAdded} />
       <main className={styles.orderRating}>
         <div className={styles.panel}>
-          <Link to={routes.checkout} className={`${styles.icon} ${styles.close}`}>
+          <Link to={routes.checkout}
+                className={`${styles.icon} ${styles.close}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  dispatch(modalsActions.setShowModal('Dialogs'))
+                }}>
             <CloseSvg />
           </Link>
           <h2>
@@ -57,11 +69,19 @@ export const OrderRating = () => {
                   <VeganStatus />
                   {product.title}
                 </h3>
-                <Link to={'#'} className={styles.review}>Add a review</Link>
+                {!instructionAdded &&
+                <Link to={'#'} className={styles.review} onClick={() => setShowFeedback(true)}>
+                  Add a review
+                </Link>}
               </div>
               <Emotions />
-            </div>
-          ))}
+              <div>
+                {instructionAdded &&
+                <Instruction
+                  black
+                  description='Convallis blandit egestas nulla rutrum. Eleifend suspendisse venenatis sed lectus. Sed quisque mauris in hac vulputate. Id.' />}
+              </div>
+            </div>))}
           <button type='button' className='btn btn-primary'>SUBMIT</button>
         </section>
       </main>
