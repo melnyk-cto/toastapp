@@ -31,7 +31,7 @@ export const OrderRating = () => {
     <NoNavigationLayout>
       <main className={styles.orderRating}>
         <div className={styles.panel}>
-          <Link to={routes.main} className={`${styles.icon} ${styles.close}`}>
+          <Link to={routes.checkout} className={`${styles.icon} ${styles.close}`}>
             <CloseSvg />
           </Link>
           <h2>
@@ -43,7 +43,7 @@ export const OrderRating = () => {
             </div>
           </h2>
           <div className={`${styles.icon} ${styles.edit}`}
-               onClick={() => dispatch(modalsActions.setShowModal('Payment Confirmation'))}>
+               onClick={() => dispatch(modalsActions.setShowModal('Rating Update'))}>
             <EditSvg />
           </div>
         </div>

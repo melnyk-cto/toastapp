@@ -13,12 +13,12 @@ import { ReactComponent as BackSvg } from "../../../assets/images/icons/arrow-ba
 import { ReactComponent as WarningSvg } from "../../../assets/images/icons/warning.svg";
 import { modalsActions } from "../../../redux/modals/actions";
 
-export const TopPanel = ({title, noBorder, noWarning}) => {
+export const TopPanel = ({title, noBorder, noWarning, route}) => {
   const dispatch = useDispatch();
 
   return (
     <div className={`${styles.panel} ${noBorder ? styles.noBorder : ''}`}>
-      <Link to={routes.main} className={styles.icon}>
+      <Link to={route ? route : routes.main} className={styles.icon}>
         <BackSvg />
       </Link>
       <h2>

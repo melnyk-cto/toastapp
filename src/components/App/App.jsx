@@ -20,7 +20,7 @@ import {
   Coupons,
   OrderRating
 } from "../pages";
-import { OrderSuccessfullyModal, PaymentConfirmationModal } from "../common";
+import { OrderModal, RatingModal, RatingUpdateModal } from "../common";
 import { getShowModal } from "../../redux/modals/selectors";
 
 // assets
@@ -31,8 +31,9 @@ function App() {
 
   return (
     <div className={styles.app}>
-      {modal === 'Order Successfully' && <OrderSuccessfullyModal />}
-      {modal === 'Payment Confirmation' && <PaymentConfirmationModal />}
+      {modal === 'Order' && <OrderModal />}
+      {modal === 'Rating' && <RatingModal />}
+      {modal === 'Rating Update' && <RatingUpdateModal />}
       <Switch>
         <Redirect exact from='/' to={routes.main} />
         <Route path={routes.register} component={Register} />

@@ -1,0 +1,38 @@
+@import "../../../assets/scss/variables";
+
+.wrong {
+  padding: 16px 0;
+  h5 {
+    margin-bottom: 16px;
+  }
+  span {
+    background:     $textColor;
+    box-shadow:     inset -2px 2px 4px rgba(67, 77, 88, 0.2), inset 2px -2px 4px rgba(67, 77, 88, 0.2), inset -2px -2px 4px rgba(81, 95, 108, 0.9), inset 2px 2px 5px rgba(67, 77, 88, 0.9);
+    border-radius:  16px;
+    text-transform: uppercase;
+    padding:        10px 8px 8px 8px;
+    display:        inline-block;
+    margin-right:   8px;
+    margin-bottom:  8px;
+    font-size:      10px;
+    color:          $backgroundColor;
+    line-height:    1;
+    cursor:         pointer;
+    user-select:    none;
+    &:active, &.active {
+      background-color: #18191B;
+      box-shadow:       inset -2px 2px 4px rgba(10, 10, 11, 0.2), inset 2px -2px 4px rgba(10, 10, 11, 0.2), inset -2px -2px 4px rgba(38, 40, 43, 0.9), inset 2px 2px 5px rgba(10, 10, 11, 0.9);
+    }
+  }
+  .provide {
+    margin-top:      16px;
+    margin-bottom:   46px;
+    font-size:       12px;
+    display:         block;
+    text-decoration: underline;
+    color:           #eaf2fb;
+    &:active {
+      text-decoration: none;
+    }
+  }
+}

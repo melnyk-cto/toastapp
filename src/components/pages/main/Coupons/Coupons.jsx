@@ -6,6 +6,7 @@ import { NoNavigationLayout, TopPanel } from "../../../common";
 // assets
 import styles from './Coupons.module.scss';
 import { ReactComponent as CheckSvg } from "../../../../assets/images/icons/check.svg";
+import { routes } from "../../../App/routes";
 
 const coupons = [
   {
@@ -32,7 +33,7 @@ export const Coupons = () => {
   return (
     <NoNavigationLayout>
       <main className={styles.coupons}>
-        <TopPanel title='Coupons' noBorder noWarning />
+        <TopPanel title='Coupons' noBorder noWarning route={routes.checkout} />
         {coupons.map(coupon => (
           <div className={styles.coupon}>
             <h2>{coupon.title}</h2>

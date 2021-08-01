@@ -38,7 +38,7 @@ export const PlaceOrder = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    dispatch(modalsActions.setShowModal('Order Successfully'))
+    dispatch(modalsActions.setShowModal('Order'))
   };
 
   return (

@@ -1,0 +1,17 @@
+@import "../../../../assets/scss/variables";
+
+.ratingUpdate {
+  padding:        16px 0 6px 0;
+  overflow:       auto;
+  display:        flex;
+  flex-direction: column;
+  * {
+    color: $whiteColor;
+  }
+}
+
+.continue {
+  a {
+    box-shadow: -4px 4px 8px rgba(48, 57, 66, 0.2), 4px -4px 8px rgba(48, 57, 66, 0.2), -4px -4px 8px rgba(66, 77, 90, 0.9), 4px 4px 10px rgba(48, 57, 66, 0.9);
+  }
+}

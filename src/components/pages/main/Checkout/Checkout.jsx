@@ -25,12 +25,12 @@ export const Checkout = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    dispatch(modalsActions.setShowModal('Payment Confirmation'))
+    dispatch(modalsActions.setShowModal('Rating'))
   };
   return (
     <NoNavigationLayout>
       <main className={styles.placeOrder}>
-        <TopPanel title='Checkout' noBorder />
+        <TopPanel title='Checkout' noBorder route={routes.placeOrder} />
         <form onSubmit={(e) => onSubmit(e)} className={styles.products}>
           <div className={styles.order}>
             <h5 className={styles.title}>Your Order</h5>

@@ -10,19 +10,19 @@ import { routes } from "../../../App/routes";
 import { modalsActions } from "../../../../redux/modals/actions";
 
 // assets
-import styles from "./OrderSuccessfullyModal.module.scss";
+import styles from "./OrderModal.module.scss";
 import { ReactComponent as WarningSvg } from "../../../../assets/images/icons/warning.svg";
 import saly7 from "../../../../assets/images/saly-7.png";
 import currency from "../../../../assets/images/icons/currency.svg";
 
-export const OrderSuccessfullyModal = () => {
+export const OrderModal = () => {
   const dispatch = useDispatch();
 
   return (
     <WrapperModal black>
       <div className={styles.order}>
         <div className={styles.warning}>
-          <WarningSvg />
+          <WarningSvg onClick={() => dispatch(modalsActions.setShowModal('Complaints'))} />
         </div>
         <div className={styles.card}>
           <div className={styles.item}>
