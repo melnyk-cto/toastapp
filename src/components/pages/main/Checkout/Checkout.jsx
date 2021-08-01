@@ -1,9 +1,13 @@
 import React from "react";
 
+// library
+import { useDispatch } from "react-redux";
+
 // components
 import { NoNavigationLayout, PrimaryButton, TopPanel, VeganStatus } from "../../../common";
 import { Link } from "react-router-dom";
 import { routes } from "../../../App/routes";
+import { modalsActions } from "../../../../redux/modals/actions";
 
 // assets
 import styles from './Checkout.module.scss';
@@ -17,16 +21,21 @@ const item1 = [
   {title: 'Sunrise Acai Bowl', price: '299.00', count: 1},
 ]
 export const Checkout = () => {
+  const dispatch = useDispatch();
 
+  const onSubmit = (e) => {
+    e.preventDefault();
+    dispatch(modalsActions.setShowModal('Payment Confirmation'))
+  };
   return (
     <NoNavigationLayout>
       <main className={styles.placeOrder}>
         <TopPanel title='Checkout' noBorder />
-        <section className={styles.products}>
+        <form onSubmit={(e) => onSubmit(e)} className={styles.products}>
           <div className={styles.order}>
             <h5 className={styles.title}>Your Order</h5>
-            {item1.map((item) => (
-              <div className={styles.item}>
+            {item1.map((item, index) => (
+              <div key={index} className={styles.item}>
                 <h5>
                   <VeganStatus />
                   {item.title}
@@ -38,8 +47,8 @@ export const Checkout = () => {
           </div>
           <div className={styles.order}>
             <h5 className={styles.title}>Your Order</h5>
-            {item1.map((item) => (
-              <div className={styles.item}>
+            {item1.map((item, index) => (
+              <div key={index} className={styles.item}>
                 <h5>
                   <VeganStatus />
                   {item.title}
@@ -83,7 +92,7 @@ export const Checkout = () => {
             <h4>Grand Total<span>₹1850.00</span></h4>
           </div>
           <PrimaryButton title='MAKE PAYMENT' info='₹1850.00' white />
-        </section>
+        </form>
       </main>
     </NoNavigationLayout>
   )
