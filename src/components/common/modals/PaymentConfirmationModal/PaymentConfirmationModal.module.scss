@@ -49,9 +49,6 @@
         background-repeat:   no-repeat;
         background-position: center;
         background-size:     76%;
-        &:hover {
-          //background-image:    url('../../../../assets/images/icons/star-yellow.svg');
-        }
       }
       p {
         margin-left:   50px;
@@ -67,7 +64,7 @@
     }
     .stars > .star.active,
     .stars > .star.active ~ .star {
-      background-image: url('../../../../assets/images/icons/star-yellow.svg');
+      background-image: url('../../../../assets/images/icons/star-yellow-gradient.svg');
     }
   }
 }
@@ -111,7 +108,7 @@
 .continue {
   margin-top: auto;
   padding:    0 16px;
-  button {
+  a {
     box-shadow:    -4px 4px 8px rgba(48, 57, 66, 0.2), 4px -4px 8px rgba(48, 57, 66, 0.2), -4px -4px 8px rgba(66, 77, 90, 0.9), 4px 4px 10px rgba(48, 57, 66, 0.9);
     margin-bottom: 8px;
   }

@@ -7,7 +7,19 @@ import { useSelector } from "react-redux";
 
 // components
 import { routes } from "./routes";
-import { Main, Register, Verify, GetStarted, Join, Special, Search, PlaceOrder, Checkout, Coupons } from "../pages";
+import {
+  Main,
+  Register,
+  Verify,
+  GetStarted,
+  Join,
+  Special,
+  Search,
+  PlaceOrder,
+  Checkout,
+  Coupons,
+  OrderRating
+} from "../pages";
 import { OrderSuccessfullyModal, PaymentConfirmationModal } from "../common";
 import { getShowModal } from "../../redux/modals/selectors";
 
@@ -33,6 +45,7 @@ function App() {
         <Route path={routes.placeOrder} component={PlaceOrder} />
         <Route path={routes.checkout} component={Checkout} />
         <Route path={routes.coupons} component={Coupons} />
+        <Route path={routes.orderRating} component={OrderRating} />
       </Switch>
     </div>
   );

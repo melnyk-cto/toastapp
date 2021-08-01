@@ -2,9 +2,12 @@ import React, { useState } from "react";
 
 // library
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 // components
 import { WrapperModal } from "../WrapperModal/WrapperModal";
+import { modalsActions } from "../../../../redux/modals/actions";
+import { routes } from "../../../App/routes";
 
 // assets
 import styles from "./PaymentConfirmationModal.module.scss";
@@ -19,6 +22,8 @@ const stars = [
 ];
 const wrong = ['SERVICE', 'PREPARATION ISSUES', 'FOOD TASTE', 'APP ISSUE', 'CLEANLINESS', 'OTHER'];
 export const PaymentConfirmationModal = () => {
+  const dispatch = useDispatch();
+
   const [activeStar, setActiveStar] = useState('Awesome!');
 
   return (
@@ -57,7 +62,10 @@ export const PaymentConfirmationModal = () => {
           </div>
         </div>
         <div className={styles.continue}>
-          <button type='button' className='btn btn-primary'>CONTINUE</button>
+          <Link to={routes.orderRating} type='button' className='btn btn-primary'
+                onClick={() => dispatch(modalsActions.setShowModal(''))}>
+            CONTINUE
+          </Link>
         </div>
       </div>
     </WrapperModal>

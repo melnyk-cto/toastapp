@@ -4,6 +4,7 @@ export * from './main/Search/Search';
 export * from './main/PlaceOrder/PlaceOrder';
 export * from './main/Checkout/Checkout';
 export * from './main/Coupons/Coupons';
+export * from './main/OrderRating/OrderRating';
 export * from './onBoarding/Register/Register';
 export * from './onBoarding/Verify/Verify';
 export * from './onBoarding/GetStarted/GetStarted';

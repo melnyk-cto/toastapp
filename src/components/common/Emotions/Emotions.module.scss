@@ -1,0 +1,59 @@
+@import "../../../assets/scss/variables";
+
+.emotions {
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+  position:        relative;
+  user-select:     none;
+  &:before {
+    content:         '';
+    position:        absolute;
+    right:           6px;
+    top:             50%;
+    width:           8px;
+    height:          8px;
+    background:      url("../../../assets/images/icons/arrow-down.svg") no-repeat center center;
+    background-size: contain;
+    transform:       translate(0, -50%);
+  }
+  ul {
+    position:      absolute;
+    bottom:        0;
+    right:         0;
+    padding:       8px;
+    background:    #F6F6F6;
+    border:        1px solid #E9E9E9;
+    box-sizing:    border-box;
+    box-shadow:    0 3px 10px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    display:       flex;
+    align-items:   center;
+    transform:     translate(0, 100%);
+    li:not(:last-child) img {
+      display:      flex;
+      margin-right: 8px;
+    }
+    li {
+      &:active {
+        opacity: .7;
+      }
+    }
+  }
+}
+
+.emotions {
+  padding:       6px;
+  width:         52px;
+  height:        40px;
+  background:    $backgroundColor;
+  box-shadow:    -5px 5px 10px rgba(222, 222, 222, 0.2), 5px -5px 10px rgba(222, 222, 222, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(222, 222, 222, 0.9);
+  border-radius: 10px;
+  cursor:        pointer;
+  &:active {
+    box-shadow: inset -2px 2px 4px rgba(217, 217, 217, 0.2), inset 2px -2px 4px rgba(217, 217, 217, 0.2), inset -2px -2px 4px rgba(255, 255, 255, 0.9), inset 2px 2px 5px rgba(217, 217, 217, 0.9);
+  }
+  img {
+    width: 28px;
+  }
+}

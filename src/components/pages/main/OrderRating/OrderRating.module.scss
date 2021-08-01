@@ -1,0 +1,109 @@
+@import "../../../../assets/scss/variables";
+
+.orderRating {
+  padding:        70px 15px 0 15px;
+  display:        flex;
+  flex-direction: column;
+  align-items:    flex-start;
+}
+
+.panel {
+  display:     flex;
+  align-items: center;
+  padding:     8px 8px 20px 8px;
+  width:       100%;
+  position:    fixed;
+  z-index:     10;
+  left:        50%;
+  top:         0;
+  max-width:   768px;
+  transform:   translate(-50%, 0);
+  .icon {
+    min-width:          32px;
+    width:              32px;
+    height:             32px;
+    border-radius:      10px;
+    box-shadow:         -0.3125rem 0.3125rem 0.625rem 0 rgba(221, 221, 224, 0.2), 0.3125rem -0.3125rem 0.625rem 0 rgba(221, 221, 224, 0.2), -0.3125rem -0.3125rem 0.625rem 0 rgba(255, 255, 255, 0.9), 0.3125rem 0.3125rem 0.8125rem 0 rgba(220, 220, 220, 0.9);
+    -webkit-box-shadow: -0.3125rem 0.3125rem 0.625rem 0 rgba(221, 221, 224, 0.2), 0.3125rem -0.3125rem 0.625rem 0 rgba(221, 221, 224, 0.2), -0.3125rem -0.3125rem 0.625rem 0 rgba(255, 255, 255, 0.9), 0.3125rem 0.3125rem 0.8125rem 0 rgba(220, 220, 220, 0.9);
+    display:            flex;
+    align-items:        center;
+    justify-content:    center;
+    transition:         .2s linear;
+    margin-right:       8px;
+    cursor:             pointer;
+    &.close path {
+      fill: $textColor;
+    }
+    &.edit {
+      margin-left: auto;
+    }
+    &:active {
+      box-shadow: inset -0.125rem 0.125rem 0.25rem 0 rgba(221, 221, 224, 0.2), inset 0.125rem -0.125rem 0.25rem 0 rgba(221, 221, 224, 0.2), inset -0.125rem -0.125rem 0.25rem 0 rgba(255, 255, 255, 0.9), inset 0.125rem 0.125rem 0.3125rem 0 rgba(220, 220, 220, 0.9),;
+    }
+  }
+  h2 {
+    margin-bottom:  0;
+    display:        flex;
+    flex-direction: column;
+    align-items:    flex-start;
+    .stars {
+      display:        flex;
+      flex-direction: row-reverse;
+      align-items:    center;
+      margin-top:     4px;
+    }
+    .stars > .star.active,
+    .stars > .star.active ~ .star {
+      background-image: url('../../../../assets/images/icons/star-yellow.svg');
+    }
+    .star {
+      width:               10px;
+      height:              10px;
+      margin-top:          auto;
+      background-image:    url('../../../../assets/images/icons/star-gray.svg');
+      background-repeat:   no-repeat;
+      background-position: center;
+      background-size:     100%;
+      margin-right:        5px;
+    }
+  }
+}
+
+.content {
+  .item {
+    background:    #F4F4F4;
+    box-shadow:    inset -2px 2px 4px rgba(220, 220, 220, 0.2), inset 2px -2px 4px rgba(220, 220, 220, 0.2), inset -2px -2px 4px rgba(255, 255, 255, 0.9), inset 2px 2px 5px rgba(220, 220, 220, 0.9);
+    border-radius: 10px;
+    display:       flex;
+    align-items:   center;
+    padding:       6px 9px;
+    margin-bottom: 16px;
+    .image {
+      width:         60px;
+      height:        60px;
+      object-fit:    cover;
+      border-radius: 10px;
+      margin-right:  0.5rem;
+    }
+    h3 {
+      display:       flex;
+      align-items:   center;
+      margin-bottom: 10px;
+    }
+    .description {
+      flex:         1 1 auto;
+    }
+    .review {
+      font-size:       12px;
+      color:           #676767;
+      text-decoration: underline;
+      &:active {
+        text-decoration: none;
+      }
+    }
+  }
+  button {
+    margin-top:    auto;
+    margin-bottom: 8px;
+  }
+}
