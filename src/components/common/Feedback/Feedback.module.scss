@@ -1,3 +1,5 @@
+@import "../../../assets/scss/variables";
+
 .feedback {
   position:         fixed;
   z-index:          40;
@@ -19,7 +21,7 @@
     }
   }
   .inner {
-    background:     #4A5662;
+    background:     $textColor;
     box-shadow:     4px 4px 16px rgba(0, 0, 0, 0.38);
     border-radius:  16px 16px 0 0;
     padding:        16px;

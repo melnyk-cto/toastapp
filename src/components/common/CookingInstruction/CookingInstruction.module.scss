@@ -111,7 +111,7 @@
       .close {
         cursor: pointer;
         path {
-          fill: #4A5662;
+          fill: $textColor;
         }
         &:active {
           opacity: .7;

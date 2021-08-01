@@ -1,0 +1,78 @@
+@import "../../../../assets/scss/variables";
+
+.coupons {
+  padding:        70px 15px 0 15px;
+  display:        flex;
+  flex-direction: column;
+  align-items:    flex-start;
+}
+
+
+.coupon {
+  box-shadow:    inset -2px 2px 4px rgba(210, 210, 210, 0.2), inset 2px -2px 4px rgba(210, 210, 210, 0.2), inset -2px -2px 4px rgba(255, 255, 255, 0.9), inset 2px 2px 5px rgba(210, 210, 210, 0.9);
+  border-radius: 10px;
+  padding:       16px 0;
+  width:         100%;
+  overflow:      hidden;
+  margin-bottom: 16px;
+  hr {
+    border:        none;
+    border-bottom: 2px dashed #E9E9E9;
+    margin:        16px 0;
+    position:      relative;
+    z-index:       -1;
+    overflow:      visible;
+    &:before, &:after {
+      content:          '';
+      position:         absolute;
+      z-index:          1;
+      left:             0;
+      top:              50%;
+      transform:        translate(-50%, -50%);
+      width:            12px;
+      height:           12px;
+      background-color: #E9E9E9;
+      border-radius:    50%;
+    }
+    &:after {
+      left:      inherit;
+      right:     0;
+      transform: translate(50%, -50%);
+    }
+  }
+  h2 {
+    background:              -webkit-linear-gradient(45deg, rgba(254, 172, 94, 1), rgba(199, 121, 208, 1), rgba(75, 192, 200, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding:                 0 16px;
+  }
+  p {
+    font-size: 12px;
+    padding:   0 16px;
+  }
+  .info {
+    display:         flex;
+    align-items:     center;
+    justify-content: space-between;
+    font-family:     'IBM Plex Mono', sans-serif;
+    font-size:       14px;
+    text-transform:  uppercase;
+    font-weight:     500;
+    padding:         0 16px;
+    button {
+      padding:   8px;
+      width:     100px;
+      font-size: 12px;
+      &.applied {
+        background: $backgroundColor;
+        color:      $textColor;
+      }
+      svg {
+        margin-left: 8px;
+        path {
+          stroke: $whiteColor;
+        }
+      }
+    }
+  }
+}

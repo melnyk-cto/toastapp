@@ -21,7 +21,7 @@
   .item {
     margin-bottom: 24px;
     padding:       16px 8px 13px 8px;
-    background:    #4A5662;
+    background:    $textColor;
     box-shadow:    inset -2px 2px 4px rgba(59, 69, 78, 0.2), inset 2px -2px 4px rgba(59, 69, 78, 0.2), inset -2px -2px 4px rgba(89, 103, 118, 0.9), inset 2px 2px 5px rgba(59, 69, 78, 0.9);
     border-radius: 10px;
     &.hide {

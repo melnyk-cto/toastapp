@@ -2,6 +2,8 @@ import React from "react";
 
 // components
 import { NoNavigationLayout, PrimaryButton, TopPanel, VeganStatus } from "../../../common";
+import { Link } from "react-router-dom";
+import { routes } from "../../../App/routes";
 
 // assets
 import styles from './Checkout.module.scss';
@@ -47,13 +49,13 @@ export const Checkout = () => {
               </div>
             ))}
           </div>
-          <div className={styles.coupons}>
+          <Link to={routes.coupons} className={styles.coupons}>
             <img src={coupons} alt='coupons' />
             <div className={styles.description}>
               <h5>Coupons</h5>
               <h6>No coupons for now</h6>
             </div>
-          </div>
+          </Link>
           <div className={styles.waiter}>
             <h4 className={styles.title}>
               <img src={donate} alt='' className={styles.donate} />

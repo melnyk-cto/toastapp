@@ -23,7 +23,7 @@
     align-items:     center;
     justify-content: center;
     margin-right:    8px;
-    background:      #4A5662;
+    background:      $textColor;
     box-shadow:      -4px 4px 8px rgba(62, 72, 82, 0.2), 4px -4px 8px rgba(62, 72, 82, 0.2), -4px -4px 8px rgba(86, 100, 114, 0.9), 4px 4px 10px rgba(62, 72, 82, 0.9);
     transition:      .2s linear;
     &:active {

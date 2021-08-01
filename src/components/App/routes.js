@@ -10,4 +10,5 @@ export const routes = Object.freeze({
   search: '/search',
   placeOrder: '/place-order',
   checkout: '/checkout',
+  coupons: '/coupons',
 });
