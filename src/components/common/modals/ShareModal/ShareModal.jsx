@@ -5,27 +5,25 @@ import { useDispatch } from "react-redux";
 
 // components
 import { Feedback } from "../../Feedback/Feedback";
+import { WrapperModal } from "../WrapperModal/WrapperModal";
+import { modalsActions } from "../../../../redux/modals/actions";
 
 // assets
 import styles from "./ShareModal.module.scss";
-import { ReactComponent as CloseSvg } from "../../../../assets/images/icons/close.svg";
-import { modalsActions } from "../../../../redux/modals/actions";
 
 export const ShareModal = () => {
   const dispatch = useDispatch();
   const [showFeedback, setShowFeedback] = useState(false);
+  const [instructionAdded, setInstructionAdded] = useState(false);
 
   return (
-    <div className={styles.modal}>
-      <div className={styles.inner}>
-        <Feedback showFeedback={showFeedback} setShowFeedback={setShowFeedback} />
-        <h3 className={styles.header}>
-          Share code with friends
-          <span className={styles.close} onClick={() => dispatch(modalsActions.setShowModal(''))}>
-            <CloseSvg />
-          </span>
-        </h3>
-        <div className={styles.bottom}>
+    <>
+      <Feedback
+        showFeedback={showFeedback}
+        setShowFeedback={setShowFeedback}
+        setInstructionAdded={setInstructionAdded} />}
+      <WrapperModal noFullScreen title='Share code with friends'>
+        <div className={styles.share}>
           <p className={styles.description}>
             This code will be required by others to join your table.
           </p>
@@ -65,11 +63,12 @@ export const ShareModal = () => {
               Something else?
             </button>
             <button type='button' className='btn btn-second'
-                    onClick={() => dispatch(modalsActions.setShowModal(''))}>REQUEST
+                    onClick={() => dispatch(modalsActions.setShowModal(''))}>
+              REQUEST
             </button>
           </div>
         </div>
-      </div>
-    </div>
+      </WrapperModal>
+    </>
   )
 }

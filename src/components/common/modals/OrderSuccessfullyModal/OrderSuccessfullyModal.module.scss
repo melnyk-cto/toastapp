@@ -1,6 +1,7 @@
 @import "../../../../assets/scss/variables";
 
 .order {
+  padding:  16px 11px 6px 11px;
   * {
     color: $whiteColor;
   }
@@ -27,12 +28,6 @@
       box-shadow: inset -5px 5px 10px rgba(48, 57, 66, 0.2), inset 5px -5px 10px rgba(48, 57, 66, 0.2), inset -5px -5px 10px rgba(66, 77, 90, 0.9), inset 5px 5px 13px rgba(48, 57, 66, 0.9), inset 1px 1px 2px rgba(66, 77, 90, 0.3), inset -1px -1px 2px rgba(48, 57, 66, 0.5);
     }
   }
-}
-
-.bottom {
-  padding:  16px 11px 6px 11px;
-  height:   calc(100vh - 80px);
-  overflow: auto;
   .card {
     padding:       8px 8px 16px;
     background:    $secondColor;

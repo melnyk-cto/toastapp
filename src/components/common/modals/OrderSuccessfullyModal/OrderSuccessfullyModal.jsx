@@ -24,30 +24,28 @@ export const OrderSuccessfullyModal = () => {
         <div className={styles.warning}>
           <WarningSvg />
         </div>
-        <div className={styles.bottom}>
-          <div className={styles.card}>
-            <div className={styles.item}>
-              <div className={styles.description}>
-                <h2>
-                  Order <br />
-                  successfully <br />
-                  placed!
-                </h2>
-                <img src={saly7} alt='saly7' />
-              </div>
-              <p>Your order will be served soon.</p>
+        <div className={styles.card}>
+          <div className={styles.item}>
+            <div className={styles.description}>
+              <h2>
+                Order <br />
+                successfully <br />
+                placed!
+              </h2>
+              <img src={saly7} alt='saly7' />
             </div>
-            <div className={styles.buttons}>
-              <button type='button' className={`btn ${styles.button}`}>Order more</button>
-              <Link to={routes.checkout} type='button'
-                    className={`btn ${styles.button}`}
-                    onClick={() => dispatch(modalsActions.setShowModal(''))}>
-                Pay now
-                <span className={styles.currency}>
+            <p>Your order will be served soon.</p>
+          </div>
+          <div className={styles.buttons}>
+            <button type='button' className={`btn ${styles.button}`}>Order more</button>
+            <Link to={routes.checkout} type='button'
+                  className={`btn ${styles.button}`}
+                  onClick={() => dispatch(modalsActions.setShowModal(''))}>
+              Pay now
+              <span className={styles.currency}>
               <img src={currency} alt='currency' />
             </span>
-              </Link>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

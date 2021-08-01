@@ -11,15 +11,11 @@ import { WrapperModal } from "../WrapperModal/WrapperModal";
 // assets
 import styles from "./AddProductModal.module.scss";
 import plate from "../../../../assets/images/icons/plate.svg";
-import { useDispatch } from "react-redux";
-import { modalsActions } from "../../../../redux/modals/actions";
 
 export const AddProductModal = () => {
-  const dispatch = useDispatch();
 
   const onSubmit = (e) => {
     e.preventDefault();
-    dispatch(modalsActions.setShowModal('Order Successfully'))
   };
 
   return (

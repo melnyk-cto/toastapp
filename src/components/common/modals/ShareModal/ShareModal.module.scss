@@ -1,52 +1,6 @@
 @import "../../../../assets/scss/variables";
 
-.modal {
-  position:         fixed;
-  z-index:          40;
-  left:             50%;
-  bottom:           0;
-  width:            100%;
-  max-width:        768px;
-  height:           100%;
-  transform:        translate(-50%, 0);
-  background-color: rgba(0, 0, 0, 0.8);
-  display:          flex;
-  flex-direction:   column;
-  justify-content:  flex-end;
-}
-
-.inner {
-  background-color: $textColor;
-  width:            100%;
-  box-shadow:       4px 4px 16px rgba(0, 0, 0, 0.38);
-  border-radius:    16px 16px 0 0;
-  padding:          0 15px 15px 15px;
-  hr {
-    border:           none;
-    height:           1px;
-    background-color: #e9e9e9;
-    opacity:          .4;
-    margin-bottom:    18px;
-  }
-  * {
-    color: $whiteColor;
-  }
-  .header {
-    padding:         20px 0 14px 0;
-    margin-bottom:   0;
-    display:         flex;
-    align-items:     center;
-    justify-content: space-between;
-    .close {
-      cursor: pointer;
-      &:active {
-        opacity: .7;
-      }
-    }
-  }
-}
-
-.bottom {
+.share {
   .digit {
     width:           45px;
     height:          45px;

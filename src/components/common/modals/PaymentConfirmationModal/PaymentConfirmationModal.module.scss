@@ -1,18 +1,13 @@
 @import "../../../../assets/scss/variables";
 
 .paymentConfirmation {
-  height:         100%;
+  padding:        16px 0 6px 0;
+  overflow:       auto;
   display:        flex;
   flex-direction: column;
   * {
     color: $whiteColor;
   }
-}
-
-.bottom {
-  padding:  16px 11px 6px 11px;
-  height:   calc(100vh - 60px);
-  overflow: auto;
   .card {
     border-radius: 10px;
     background:    linear-gradient(90deg, #757F9A 0%, #D7DDE8 100%);
@@ -95,6 +90,7 @@
   }
   .provide {
     margin-top:      16px;
+    margin-bottom:   46px;
     font-size:       12px;
     display:         block;
     text-decoration: underline;
@@ -106,10 +102,7 @@
 }
 
 .continue {
-  margin-top: auto;
-  padding:    0 16px;
   a {
-    box-shadow:    -4px 4px 8px rgba(48, 57, 66, 0.2), 4px -4px 8px rgba(48, 57, 66, 0.2), -4px -4px 8px rgba(66, 77, 90, 0.9), 4px 4px 10px rgba(48, 57, 66, 0.9);
-    margin-bottom: 8px;
+    box-shadow: -4px 4px 8px rgba(48, 57, 66, 0.2), 4px -4px 8px rgba(48, 57, 66, 0.2), -4px -4px 8px rgba(66, 77, 90, 0.9), 4px 4px 10px rgba(48, 57, 66, 0.9);
   }
 }

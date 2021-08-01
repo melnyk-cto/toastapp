@@ -43,7 +43,7 @@ export const OrderRating = () => {
             </div>
           </h2>
           <div className={`${styles.icon} ${styles.edit}`}
-               onClick={() => dispatch(modalsActions.setShowModal('Complaints'))}>
+               onClick={() => dispatch(modalsActions.setShowModal('Payment Confirmation'))}>
             <EditSvg />
           </div>
         </div>
