@@ -1,5 +1,5 @@
 // core
-import React from 'react';
+import React, { useEffect } from 'react';
 
 // library
 import { Switch, Route, Redirect } from 'react-router-dom';
@@ -19,7 +19,8 @@ import {
   Checkout,
   Coupons,
   OrderRating,
-  Event
+  Event,
+  Tickets
 } from "../pages";
 import { OrderModal, RatingModal, RatingUpdateModal } from "../common";
 import { getShowModal } from "../../redux/modals/selectors";
@@ -29,6 +30,14 @@ import styles from './App.module.scss';
 
 function App() {
   const modal = useSelector(getShowModal);
+
+  useEffect(() => {
+    if (modal !== '') {
+      document.body.classList.add('no-scroll')
+    } else {
+      document.body.classList.remove('no-scroll')
+    }
+  }, [modal])
 
   return (
     <div className={styles.app}>
@@ -49,6 +58,7 @@ function App() {
         <Route path={routes.coupons} component={Coupons} />
         <Route path={routes.orderRating} component={OrderRating} />
         <Route path={routes.event} component={Event} />
+        <Route path={routes.tickets} component={Tickets} />
       </Switch>
     </div>
   );

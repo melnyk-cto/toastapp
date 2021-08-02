@@ -59,15 +59,15 @@ export const Event = () => {
             <h2>Events</h2>
             <p>Hyderabad {items && <span>| 413 Events</span>}</p>
           </div>
-          <div className={styles.icon} onClick={() => setItems(events)}>
+          <Link to={routes.tickets} className={styles.icon}>
             <TicketSvg />
-          </div>
+          </Link>
           <Link to={routes.eventCalendar} className={`${styles.icon} ${items ? '' : styles.noActive}`}>
             <CalendarSvg />
           </Link>
         </div>
         {!items ? <section className={styles.empty}>
-            <img src={saly9} alt='' />
+            <img src={saly9} alt='' onClick={() => setItems(events)} />
             <p>Oh oh! No events for now.</p>
           </section>
           : <section className={styles.content}>

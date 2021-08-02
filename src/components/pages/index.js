@@ -10,3 +10,4 @@ export * from './onBoarding/Verify/Verify';
 export * from './onBoarding/GetStarted/GetStarted';
 export * from './onBoarding/Join/Join';
 export * from './event/Event/Event';
+export * from './event/Tickets/Tickets';
