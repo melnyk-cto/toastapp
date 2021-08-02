@@ -61,7 +61,7 @@
       margin-bottom: 20px;
       span {
         text-transform: uppercase;
-        color:          #bbbbbb;
+        color:          $placeholderColor;
         font-size:      10px;
       }
     }
@@ -71,7 +71,7 @@
     }
     .price {
       font-size:   10px;
-      color:       #bbbbbb;
+      color:       $placeholderColor;
       margin-left: auto;
     }
   }

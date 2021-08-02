@@ -1,0 +1,181 @@
+@import "../../../../assets/scss/variables";
+
+.event {
+  padding:        70px 15px 80px 15px;
+  display:        flex;
+  flex-direction: column;
+  align-items:    flex-start;
+}
+
+.panel {
+  display:          flex;
+  align-items:      center;
+  justify-content:  space-between;
+  width:            100%;
+  padding:          8px 8px 20px 8px;
+  position:         fixed;
+  z-index:          10;
+  left:             50%;
+  top:              0;
+  max-width:        768px;
+  transform:        translate(-50%, 0);
+  background-color: $backgroundColor;
+  h2 {
+    margin-bottom: 2px;
+  }
+  p {
+    margin-bottom: 0;
+  }
+  .icon {
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    transition:      .2s linear;
+    width:           2rem;
+    height:          2rem;
+    border-radius:   0.625rem;
+    cursor:          pointer;
+    margin-left:     auto;
+    box-shadow:      -0.3125rem 0.3125rem 0.625rem 0 rgba(221, 221, 224, 0.2), 0.3125rem -0.3125rem 0.625rem 0 rgba(221, 221, 224, 0.2), -0.3125rem -0.3125rem 0.625rem 0 rgba(255, 255, 255, 0.9), 0.3125rem 0.3125rem 0.8125rem 0 rgba(220, 220, 220, 0.9);
+    &:last-child {
+      margin-left: 1rem;
+    }
+    &.noActive {
+      pointer-events: none;
+      box-shadow:     none;
+      path {
+        stroke: $placeholderColor;
+      }
+    }
+    &:active {
+      box-shadow: inset -0.125rem 0.125rem 0.25rem 0 rgba(221, 221, 224, 0.2), inset 0.125rem -0.125rem 0.25rem 0 rgba(221, 221, 224, 0.2), inset -0.125rem -0.125rem 0.25rem 0 rgba(255, 255, 255, 0.9), inset 0.125rem 0.125rem 0.3125rem 0 rgba(220, 220, 220, 0.9),;
+    }
+  }
+}
+
+.empty {
+  text-align:      center;
+  max-width:       60%;
+  margin:          0 auto;
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  p {
+    margin-top: 16px;
+    color:      $placeholderColor;
+  }
+}
+
+.content {
+  .item {
+    background:    $backgroundColor;
+    box-shadow:    inset -2px 2px 4px rgba(220, 220, 220, 0.2), inset 2px -2px 4px rgba(220, 220, 220, 0.2), inset -2px -2px 4px rgba(255, 255, 255, 0.9), inset 2px 2px 5px rgba(220, 220, 220, 0.9);
+    border-radius: 10px;
+    margin-bottom: 16px;
+  }
+  .top {
+    padding:     16px;
+    width:       100%;
+    display:     flex;
+    align-items: center;
+    img {
+      width:         28px;
+      height:        28px;
+      border-radius: 50%;
+      overflow:      hidden;
+      margin-right:  8px;
+    }
+    p, h4 {
+      margin-bottom: 0;
+      color:         #657280;
+    }
+    .title {
+      margin-bottom: 4px;
+      cursor:        $blackColor;
+    }
+    .date {
+      margin-left:     auto;
+      justify-content: center;
+      align-items:     center;
+      flex-direction:  column;
+      width:           34px;
+      height:          34px;
+      background:      $whiteColor;
+      border-radius:   10px;
+      display:         flex;
+      p {
+        color:          $placeholderColor;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .middle {
+    position:    relative;
+    display:     flex;
+    align-items: flex-start;
+    .peoples {
+      position:    absolute;
+      bottom:      10px;
+      left:        10px;
+      z-index:     1;
+      display:     flex;
+      align-items: center;
+    }
+    .people {
+      width:           48px;
+      height:          48px;
+      border-radius:   50%;
+      font-weight:     500;
+      display:         flex;
+      align-items:     center;
+      justify-content: center;
+      &:nth-child(2) {
+        margin-left: -35px;
+      }
+      &:nth-child(3) {
+        margin-left: -35px;
+      }
+      &:nth-child(4) {
+        margin-left:      -30px;
+        width:            38px;
+        height:           38px;
+        background-color: $whiteColor;
+        border:           2px solid #e9e9e9;
+        font-size:        8px;
+      }
+    }
+  }
+  .description {
+    padding: 16px;
+    h6 {
+      font-weight:   600;
+      color:         #5BAC81;
+      margin-bottom: 8px;
+    }
+  }
+  .action {
+    display:     flex;
+    align-items: center;
+    .icon {
+      display:         flex;
+      align-items:     center;
+      justify-content: center;
+      margin-right:    16px;
+      min-width:       28px;
+      height:          28px;
+      background:      $backgroundColor;
+      box-shadow:      -5px 5px 10px rgba(222, 222, 222, 0.2), 5px -5px 10px rgba(222, 222, 222, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(222, 222, 222, 0.9);
+      border-radius:   10px;
+      h5 {
+        margin-left:   4px;
+        margin-bottom: 0;
+      }
+      &.mod {
+        padding:       6px 8px;
+        background:    $backgroundColor;
+        box-shadow:    inset -2px 2px 4px rgba(205, 205, 205, 0.2), inset 2px -2px 4px rgba(205, 205, 205, 0.2), inset -2px -2px 4px rgba(255, 255, 255, 0.9), inset 2px 2px 5px rgba(205, 205, 205, 0.9);
+        border-radius: 8px;
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 
 // library
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 // components
 import { routes } from "../../App/routes";
@@ -14,7 +14,7 @@ import { ReactComponent as BookSvg } from '../../../assets/images/icons/book-ope
 import { ReactComponent as ShoppingSvg } from '../../../assets/images/icons/shopping-bag.svg';
 import { ReactComponent as CloseSvg } from "../../../assets/images/icons/close.svg";
 
-export const Footer = () => {
+export const Footer = ({noMenu}) => {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
@@ -55,25 +55,25 @@ export const Footer = () => {
         </div>
       </div>
       <footer className={styles.footer}>
-        <div className={`${styles.menuBtn} btn`} onClick={() => setShowMenu(true)}>
+        {!noMenu && <div className={`${styles.menuBtn} btn`} onClick={() => setShowMenu(true)}>
           Menu
-        </div>
+        </div>}
         <ul className={styles.nav}>
           <li>
-            <Link to='#'>
+            <NavLink to={routes.event}>
               <LightningSvg />
-            </Link>
+            </NavLink>
           </li>
-          <li className={styles.active}>
-            <Link to='#'>
+          <li>
+            <NavLink to={routes.main}>
               <BookSvg />
-            </Link>
+            </NavLink>
           </li>
           <li className={styles.notEmpty}>
             <span className={styles.count}>1</span>
-            <Link to={routes.placeOrder}>
+            <NavLink to={routes.placeOrder}>
               <ShoppingSvg />
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </footer>

@@ -32,16 +32,12 @@
     li {
       width:         2rem;
       height:        2rem;
-      border-radius: 0.625rem;
-      box-shadow:    -0.3125rem 0.3125rem 0.625rem 0 rgba(221, 221, 224, 0.2),
-                     0.3125rem -0.3125rem 0.625rem 0 rgba(221, 221, 224, 0.2),
-                     -0.3125rem -0.3125rem 0.625rem 0 rgba(255, 255, 255, 0.9),
-                     0.3125rem 0.3125rem 0.8125rem 0 rgba(220, 220, 220, 0.9);
-      &:active, &.active {
-        box-shadow: inset -0.125rem 0.125rem 0.25rem 0 rgba(221, 221, 224, 0.2),
-                    inset 0.125rem -0.125rem 0.25rem 0 rgba(221, 221, 224, 0.2),
-                    inset -0.125rem -0.125rem 0.25rem 0 rgba(255, 255, 255, 0.9),
-                    inset 0.125rem 0.125rem 0.3125rem 0 rgba(220, 220, 220, 0.9),;
+      a {
+        border-radius: 0.625rem;
+        box-shadow: -0.3125rem 0.3125rem 0.625rem 0 rgba(221, 221, 224, 0.2), 0.3125rem -0.3125rem 0.625rem 0 rgba(221, 221, 224, 0.2), -0.3125rem -0.3125rem 0.625rem 0 rgba(255, 255, 255, 0.9), 0.3125rem 0.3125rem 0.8125rem 0 rgba(220, 220, 220, 0.9);
+        &:active {
+          box-shadow: inset -0.125rem 0.125rem 0.25rem 0 rgba(221, 221, 224, 0.2), inset 0.125rem -0.125rem 0.25rem 0 rgba(221, 221, 224, 0.2), inset -0.125rem -0.125rem 0.25rem 0 rgba(255, 255, 255, 0.9), inset 0.125rem 0.125rem 0.3125rem 0 rgba(220, 220, 220, 0.9),;
+        }
       }
       &.notEmpty {
         position: relative;

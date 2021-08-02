@@ -224,7 +224,7 @@ label {
     border:        none;
     line-height:   1.4;
     &::placeholder {
-      color: #bbbbbb;
+      color: $placeholderColor;
     }
   }
   input {
@@ -241,7 +241,7 @@ label {
     border-radius:      10px;
     transition:         .2s linear;
     &::placeholder {
-      color:   #bbbbbb;
+      color:   $placeholderColor;
       opacity: .6;
     }
     &:active, &:focus {
@@ -387,5 +387,11 @@ header {
   nav ul a.active {
     opacity: 0.99;
     color:   #3cbcb4;
+  }
+}
+
+footer {
+   ul li a.active {
+    box-shadow: inset -0.125rem 0.125rem 0.25rem 0 rgba(221, 221, 224, 0.2), inset 0.125rem -0.125rem 0.25rem 0 rgba(221, 221, 224, 0.2), inset -0.125rem -0.125rem 0.25rem 0 rgba(255, 255, 255, 0.9), inset 0.125rem 0.125rem 0.3125rem 0 rgba(220, 220, 220, 0.9) !important;
   }
 }

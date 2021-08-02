@@ -18,7 +18,8 @@ import {
   PlaceOrder,
   Checkout,
   Coupons,
-  OrderRating
+  OrderRating,
+  Event
 } from "../pages";
 import { OrderModal, RatingModal, RatingUpdateModal } from "../common";
 import { getShowModal } from "../../redux/modals/selectors";
@@ -47,6 +48,7 @@ function App() {
         <Route path={routes.checkout} component={Checkout} />
         <Route path={routes.coupons} component={Coupons} />
         <Route path={routes.orderRating} component={OrderRating} />
+        <Route path={routes.event} component={Event} />
       </Switch>
     </div>
   );

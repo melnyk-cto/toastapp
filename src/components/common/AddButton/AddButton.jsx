@@ -3,7 +3,7 @@ import React from "react";
 // styles
 import styles from "./AddButton.module.scss";
 
-export const AddButton = ({count}) => {
+export const AddButton = ({count, register}) => {
   const addButton = () => {
     console.log('add');
   }
@@ -17,9 +17,14 @@ export const AddButton = ({count}) => {
   }
 
   return (
-    !count ?
+    register
+      ? <button className={`${styles.add} ${styles.register}`} type='button' onClick={() => addButton()}>
+        <span className={styles.plus} />
+        REGISTER
+      </button>
+      : !count ?
       <button className={styles.add} type='button' onClick={() => addButton()}>
-        <span className={styles.plus}/>
+        <span className={styles.plus} />
         ADD
       </button>
       : <button className={`${styles.add} ${styles.mod}`} type='button'>

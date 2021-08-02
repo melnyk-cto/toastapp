@@ -48,7 +48,7 @@
     }
   }
   .description {
-    color:          #bbbbbb;
+    color:          $placeholderColor;
     font-size:      12px;
     letter-spacing: 0;
   }
@@ -74,7 +74,7 @@
       margin-bottom: 16px;
       span {
         text-transform: uppercase;
-        color:          #bbbbbb;
+        color:          $placeholderColor;
       }
     }
     label {

@@ -12,4 +12,6 @@ export const routes = Object.freeze({
   checkout: '/checkout',
   coupons: '/coupons',
   orderRating: '/order-rating',
+  event: '/event',
+  eventCalendar: '/event-calendar',
 });
