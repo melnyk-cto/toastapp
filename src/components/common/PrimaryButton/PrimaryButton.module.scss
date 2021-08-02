@@ -1,7 +1,7 @@
 @import "../../../assets/scss/variables";
 
 .card {
-  color: $whiteColor;
+  color: $whiteColor !important;
   &.white {
     background: linear-gradient(135deg, #459EAF 0%, #007991 100%);
     box-shadow: -5px 5px 10px rgba(205, 205, 205, 0.2), 5px -5px 10px rgba(205, 205, 205, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(205, 205, 205, 0.9);
@@ -17,6 +17,7 @@
   color:          $whiteColor;
   font-size:      13px;
   letter-spacing: 1px;
+  text-transform: uppercase;
   .right {
     width:           28px;
     height:          28px;

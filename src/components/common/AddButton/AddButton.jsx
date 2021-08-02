@@ -1,9 +1,17 @@
 import React from "react";
 
+// library
+import { useDispatch } from "react-redux";
+
+// components
+import { modalsActions } from "../../../redux/modals/actions";
+
 // styles
 import styles from "./AddButton.module.scss";
 
 export const AddButton = ({count, register}) => {
+  const dispatch = useDispatch();
+
   const addButton = () => {
     console.log('add');
   }
@@ -18,7 +26,8 @@ export const AddButton = ({count, register}) => {
 
   return (
     register
-      ? <button className={`${styles.add} ${styles.register}`} type='button' onClick={() => addButton()}>
+      ? <button className={`${styles.add} ${styles.register}`} type='button'
+                onClick={() => dispatch(modalsActions.setShowModal('Register Event'))}>
         <span className={styles.plus} />
         REGISTER
       </button>

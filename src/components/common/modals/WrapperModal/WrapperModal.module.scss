@@ -61,6 +61,20 @@
       }
     }
   }
+  &.event {
+    .inner {
+      background-color: $backgroundColor;
+      hr {
+        opacity: 1;
+      }
+      .close path {
+        fill: $blackColor;
+      }
+      * {
+        color: inherit;
+      }
+    }
+  }
   &.noFullScreen {
     z-index:          45;
     background-color: rgba(0, 0, 0, 0.8);

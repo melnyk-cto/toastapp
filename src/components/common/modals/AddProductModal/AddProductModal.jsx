@@ -19,7 +19,7 @@ export const AddProductModal = () => {
   };
 
   return (
-    <WrapperModal light>
+    <WrapperModal lightIcon>
       <div className={styles.addProductModal}>
         <div className={styles.top}>
           <img src={plate} alt='plate' />

@@ -1,0 +1,55 @@
+@import "../../../../assets/scss/variables";
+
+.registerEvent {
+  padding:        0 0 32px 0;
+  overflow:       auto;
+  display:        flex;
+  flex-direction: column;
+}
+
+.info {
+  display:     flex;
+  flex-wrap:   wrap;
+  align-items: center;
+  .item {
+    margin-bottom: 16px;
+    width:         50%;
+    display:       flex;
+    align-items:   center;
+    &:last-child {
+      width: 100%;
+    }
+    img {
+      width:        16px;
+      margin-right: 8px;
+    }
+    h5 {
+      margin-bottom: 0;
+      span {
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.form {
+  .whatsapp {
+    position:  absolute;
+    z-index:   1;
+    right:     6px;
+    width:     20px;
+    top:       50%;
+    transform: translate(0, -50%);
+  }
+  .taxes {
+    margin-top:      32px;
+    margin-bottom:   32px;
+    display:         flex;
+    align-items:     center;
+    justify-content: space-between;
+    h5 {
+      margin-bottom: 0;
+    }
+  }
+
+}

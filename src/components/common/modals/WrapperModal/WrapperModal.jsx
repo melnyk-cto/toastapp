@@ -11,12 +11,12 @@ import styles from "./WrapperModal.module.scss";
 import { ReactComponent as BackSvg } from "../../../../assets/images/icons/arrow-back.svg";
 import { ReactComponent as CloseSvg } from "../../../../assets/images/icons/close.svg";
 
-export const WrapperModal = ({children, light, black, title, disableMenu, noFullScreen}) => {
+export const WrapperModal = ({children, lightIcon, blackIcon, title, disableMenu, noFullScreen, event}) => {
   const dispatch = useDispatch();
 
   return (
     <div
-      className={`${styles.modal} ${light ? styles.light : ''} ${black ? styles.black : ''} ${noFullScreen ? styles.noFullScreen : ''}`}>
+      className={`${styles.modal} ${lightIcon ? styles.light : ''} ${blackIcon ? styles.black : ''} ${noFullScreen ? styles.noFullScreen : ''} ${event ? styles.event : ''}`}>
       {disableMenu ? '' : noFullScreen ? '' : <>
         <div className={styles.back} onClick={() => dispatch(modalsActions.setShowModal(''))}>
           <BackSvg />

@@ -19,7 +19,7 @@ export const OrderModal = () => {
   const dispatch = useDispatch();
 
   return (
-    <WrapperModal black>
+    <WrapperModal blackIcon>
       <div className={styles.order}>
         <div className={styles.warning}>
           <WarningSvg onClick={() => dispatch(modalsActions.setShowModal('Complaints'))} />
