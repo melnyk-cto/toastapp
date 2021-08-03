@@ -12,3 +12,4 @@ export * from './onBoarding/Join/Join';
 export * from './event/Event/Event';
 export * from './event/Tickets/Tickets';
 export * from './event/BookingConfirmation/BookingConfirmation';
+export * from './event/EventCalendar/EventCalendar';

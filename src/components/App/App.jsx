@@ -21,7 +21,8 @@ import {
   OrderRating,
   Event,
   Tickets,
-  BookingConfirmation
+  BookingConfirmation,
+  EventCalendar
 } from "../pages";
 import { OrderModal, RatingModal, RatingUpdateModal } from "../common";
 import { getShowModal } from "../../redux/modals/selectors";
@@ -61,6 +62,7 @@ const App = () => {
         <Route path={routes.event} component={Event} />
         <Route path={routes.tickets} component={Tickets} />
         <Route path={routes.bookingConfirmation} component={BookingConfirmation} />
+        <Route path={routes.eventCalendar} component={EventCalendar} />
       </Switch>
     </div>
   );

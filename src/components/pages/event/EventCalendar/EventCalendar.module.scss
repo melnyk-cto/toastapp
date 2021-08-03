@@ -1,0 +1,66 @@
+@import "../../../../assets/scss/variables";
+
+.event {
+  padding:          70px 15px 80px 15px;
+  display:          flex;
+  flex-direction:   column;
+  align-items:      flex-start;
+  background-color: #18191B;
+}
+
+.panel {
+  display:       flex;
+  align-items:   center;
+  width:         100%;
+  padding:       8px 8px 20px 8px;
+  position:      fixed;
+  z-index:       10;
+  left:          50%;
+  top:           0;
+  max-width:     768px;
+  transform:     translate(-50%, 0);
+  background:    #39434E;
+  border-radius: 0 0 10px 10px;
+  .header {
+    margin-left: 16px;
+    h4 {
+      margin-bottom: 2px;
+      color:         #EAF2FB;
+    }
+    p {
+      margin-bottom: 0;
+      color:         #EAF2FB;
+    }
+  }
+
+  .icon {
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    transition:      .2s linear;
+    width:           2rem;
+    height:          2rem;
+    cursor:          pointer;
+    background:      #39434E;
+    box-shadow:      -6px 6px 12px rgba(46, 54, 62, 0.2), 6px -6px 12px rgba(46, 54, 62, 0.2), -6px -6px 12px rgba(68, 80, 94, 0.9), 6px 6px 15px rgba(46, 54, 62, 0.9);
+    border-radius:   10px;
+    svg path {
+      fill: $whiteColor
+    }
+    &.more {
+      margin-left: auto;
+    }
+    &:active {
+      box-shadow: inset -6px 6px 12px rgba(46, 54, 62, 0.2), inset 6px -6px 12px rgba(46, 54, 62, 0.2), inset -6px -6px 12px rgba(68, 80, 94, 0.9), inset 6px 6px 15px rgba(46, 54, 62, 0.9);
+    }
+  }
+}
+
+.content {
+  h5 {
+    text-align:    center;
+    color:         rgba(244, 161, 42, 1);
+    margin-bottom: 0;
+    padding:       12px;
+  }
+}
