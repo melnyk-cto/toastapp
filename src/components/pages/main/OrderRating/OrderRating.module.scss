@@ -1,7 +1,7 @@
 @import "../../../../assets/scss/variables";
 
 .orderRating {
-  padding:        70px 15px 0 15px;
+  padding:        76px 15px 0 15px;
   display:        flex;
   flex-direction: column;
   align-items:    flex-start;
@@ -30,7 +30,6 @@
     align-items:        center;
     justify-content:    center;
     transition:         .2s linear;
-    margin-right:       8px;
     cursor:             pointer;
     &.close path {
       fill: $textColor;
@@ -42,7 +41,8 @@
       box-shadow: inset -0.125rem 0.125rem 0.25rem 0 rgba(221, 221, 224, 0.2), inset 0.125rem -0.125rem 0.25rem 0 rgba(221, 221, 224, 0.2), inset -0.125rem -0.125rem 0.25rem 0 rgba(255, 255, 255, 0.9), inset 0.125rem 0.125rem 0.3125rem 0 rgba(220, 220, 220, 0.9),;
     }
   }
-  h2 {
+  h3 {
+    margin-left:    16px;
     margin-bottom:  0;
     display:        flex;
     flex-direction: column;
@@ -78,19 +78,19 @@
     display:       flex;
     align-items:   center;
     flex-wrap:     wrap;
-    padding:       6px 9px;
+    padding:       7px 9px;
     margin-bottom: 16px;
     .image {
       width:         60px;
       height:        60px;
       object-fit:    cover;
       border-radius: 10px;
-      margin-right:  0.5rem;
+      margin-right:  6px;
     }
-    h3 {
+    h4 {
       display:       flex;
       align-items:   center;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
     .description {
       flex:  1 1 auto;

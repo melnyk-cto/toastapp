@@ -46,7 +46,7 @@ export const Checkout = () => {
             ))}
           </div>
           <div className={styles.order}>
-            <h5 className={styles.title}>Your Order</h5>
+            <h5 className={styles.title}>Friend’s Order</h5>
             {item1.map((item, index) => (
               <div key={index} className={styles.item}>
                 <h5>

@@ -83,6 +83,14 @@
     flex-direction:   column;
     justify-content:  flex-end;
   }
+  &.rating {
+    .inner {
+      background-color: #39434E;
+      .header {
+        padding-bottom: 0;
+      }
+    }
+  }
   .inner {
     background-color: $textColor;
     width:            100%;

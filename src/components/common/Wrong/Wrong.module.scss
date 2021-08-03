@@ -1,18 +1,18 @@
 @import "../../../assets/scss/variables";
 
 .wrong {
-  padding: 16px 0;
+  padding: 16px 10px;
   h5 {
     margin-bottom: 16px;
   }
   span {
-    background:     $textColor;
+    background:     #4A5662;
     box-shadow:     inset -2px 2px 4px rgba(67, 77, 88, 0.2), inset 2px -2px 4px rgba(67, 77, 88, 0.2), inset -2px -2px 4px rgba(81, 95, 108, 0.9), inset 2px 2px 5px rgba(67, 77, 88, 0.9);
     border-radius:  16px;
     text-transform: uppercase;
     padding:        10px 8px 8px 8px;
     display:        inline-block;
-    margin-right:   8px;
+    margin-right:   16px;
     margin-bottom:  8px;
     font-size:      10px;
     color:          $backgroundColor;
@@ -26,7 +26,7 @@
   }
   .provide {
     margin-top:      16px;
-    margin-bottom:   46px;
+    margin-bottom:   22px;
     font-size:       12px;
     display:         block;
     text-decoration: underline;

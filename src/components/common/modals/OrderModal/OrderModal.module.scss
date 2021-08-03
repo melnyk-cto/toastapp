@@ -1,7 +1,7 @@
 @import "../../../../assets/scss/variables";
 
 .order {
-  padding:  16px 11px 16px 11px;
+  padding: 24px 11px 16px 11px;
   * {
     color: $whiteColor;
   }
@@ -29,6 +29,7 @@
     }
   }
   .card {
+    margin:        0 6px;
     padding:       8px 8px 16px;
     background:    $secondColor;
     box-shadow:    inset -2px 2px 4px rgba(42, 50, 58, 0.2), inset 2px -2px 4px rgba(42, 50, 58, 0.2), inset -2px -2px 4px rgba(72, 84, 98, 0.9), inset 2px 2px 5px rgba(42, 50, 58, 0.9);
@@ -46,7 +47,7 @@
         color: $secondColor;
       }
       img {
-        width:       49%;
+        width:       45%;
         margin-left: 10px;
         max-width:   200px;
       }

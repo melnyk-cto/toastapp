@@ -11,7 +11,7 @@ import { routes } from "../../../App/routes";
 const coupons = [
   {
     title: 'Get flat 20% off',
-    description: 'Prism Hyderabad, Old Mumbai Hwy, Financial District, Gowlidoddy, 500075',
+    description: 'Prism Hyderabad, Old Mumbai Hwy, Financial District, Gowlidoddy, 500075 Terms & conditions apply.',
     code: 'super20',
     applied: true
   },
@@ -36,7 +36,7 @@ export const Coupons = () => {
         <TopPanel title='Coupons' noBorder noWarning route={routes.checkout} />
         {coupons.map(coupon => (
           <div className={styles.coupon}>
-            <h2>{coupon.title}</h2>
+            <h3>{coupon.title}</h3>
             <p>{coupon.description}</p>
             <hr />
             <div className={styles.info}>

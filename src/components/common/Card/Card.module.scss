@@ -3,17 +3,22 @@
 .card {
   border-radius: 10px;
   background:    linear-gradient(90deg, #757F9A 0%, #D7DDE8 100%);
-  padding:       21px 15px;
+  padding:       18px 15px 24px 18px;
+  margin-bottom: 6px;
+
   .description {
     display:         flex;
     align-items:     flex-start;
     justify-content: space-between;
     h2 {
-      color: $whiteColor;
+      color:       $whiteColor;
+      padding-top: 3px;
+      margin-bottom: 22px;
     }
     h4 {
       font-weight: 300;
       line-height: 1.4;
+      margin-bottom: 0;
       span {
         font-weight: 500;
       }

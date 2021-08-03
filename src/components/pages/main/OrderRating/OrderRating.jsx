@@ -46,14 +46,14 @@ export const OrderRating = () => {
                 }}>
             <CloseSvg />
           </Link>
-          <h2>
+          <h3>
             Sacred Earth Cafe
             <div className={styles.stars}>
               {stars.map((star, index) => (
                 <span key={index} className={`${styles.star} ${star === 2 && styles.active}`} />
               ))}
             </div>
-          </h2>
+          </h3>
           <div className={`${styles.icon} ${styles.edit}`}
                onClick={() => dispatch(modalsActions.setShowModal('Rating Update'))}>
             <EditSvg />
@@ -65,10 +65,10 @@ export const OrderRating = () => {
             <div key={index} className={styles.item}>
               {product.image && <img src={product.image} className={styles.image} alt={product.title} />}
               <div className={styles.description}>
-                <h3>
+                <h4>
                   <VeganStatus />
                   {product.title}
-                </h3>
+                </h4>
                 {!instructionAdded &&
                 <Link to={'#'} className={styles.review} onClick={() => setShowFeedback(true)}>
                   Add a review

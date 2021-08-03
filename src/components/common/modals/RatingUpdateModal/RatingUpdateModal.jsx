@@ -17,7 +17,7 @@ export const RatingUpdateModal = () => {
   const dispatch = useDispatch();
 
   return (
-    <WrapperModal blackIcon title='Rate your experience' noFullScreen>
+    <WrapperModal blackIcon title='Rate your experience' noFullScreen rating>
       <div className={styles.ratingUpdate}>
         <Card image={saly8} />
         <Wrong />

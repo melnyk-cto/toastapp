@@ -17,7 +17,7 @@ export const RatingModal = () => {
   const dispatch = useDispatch();
 
   return (
-    <WrapperModal blackIcon disableMenu noFullScreen>
+    <WrapperModal blackIcon disableMenu noFullScreen rating>
       <div className={styles.rating}>
         <Card title='Payment successfully!' image={success} />
         <Wrong />
