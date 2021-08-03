@@ -15,4 +15,5 @@ export const routes = Object.freeze({
   event: '/event',
   eventCalendar: '/event-calendar',
   tickets: '/tickets',
+  bookingConfirmation: '/booking-confirmation',
 });

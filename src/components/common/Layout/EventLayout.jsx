@@ -5,7 +5,7 @@ import React from 'react'
 import { useSelector } from "react-redux";
 
 // components
-import { Footer, RegisterEventModal } from "../";
+import { Footer, BookEventModal } from "../";
 import { getShowModal } from "../../../redux/modals/selectors";
 
 export const EventLayout = ({children}) => {
@@ -13,7 +13,7 @@ export const EventLayout = ({children}) => {
 
   return (
     <>
-      {modal === 'Register Event' && <RegisterEventModal />}
+      {modal === 'Register Event' && <BookEventModal />}
       {children}
       <Footer noMenu />
     </>

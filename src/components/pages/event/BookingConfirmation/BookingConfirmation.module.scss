@@ -1,0 +1,101 @@
+@import "../../../../assets/scss/variables";
+
+.bookingConfirmation {
+  padding:        70px 15px 16px 15px;
+  display:        flex;
+  flex-direction: column;
+  align-items:    flex-start;
+}
+
+.content {
+  text-align:  left;
+  padding-top: 18px;
+}
+
+.booking {
+  padding:       16px 0;
+  background:    #F6F6F6;
+  box-shadow:    0 0 20px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  .info {
+    padding: 0 16px;
+  }
+  h3 {
+    background:              -webkit-linear-gradient(45deg, rgba(254, 172, 94, 1), rgba(199, 121, 208, 1), rgba(75, 192, 200, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding:                 0 16px;
+    margin-bottom:           24px;
+  }
+  hr {
+    border:        none;
+    border-bottom: 2px dashed #E9E9E9;
+    margin:        16px 0;
+    position:      relative;
+    z-index:       1;
+    overflow:      visible;
+    &:before, &:after {
+      content:          '';
+      position:         absolute;
+      z-index:          2;
+      left:             0;
+      top:              50%;
+      transform:        translate(-50%, -50%);
+      width:            12px;
+      height:           12px;
+      background-color: #E9E9E9;
+      border-radius:    50%;
+    }
+    &:after {
+      left:      inherit;
+      right:     0;
+      transform: translate(50%, -50%);
+    }
+  }
+}
+
+.btn {
+  max-width: 160px;
+  margin:    32px auto;
+}
+
+.ticket {
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+  padding:         0 16px;
+  .number {
+    padding:      16px 0;
+    margin-right: auto;
+    p {
+      margin-bottom: 4px;
+      font-size:     10px;
+    }
+    h1 {
+      font-size:     24px;
+      margin-bottom: 0;
+      font-family:   Inter, sans-serif;
+    }
+  }
+  .icon {
+    margin-left:     16px;
+    display:         inline-flex;
+    align-items:     center;
+    justify-content: center;
+    min-width:       28px;
+    height:          28px;
+    background:      $backgroundColor;
+    box-shadow:      -5px 5px 10px rgba(222, 222, 222, 0.2), 5px -5px 10px rgba(222, 222, 222, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(222, 222, 222, 0.9);
+    border-radius:   10px;
+    cursor:          pointer;
+    transition:      .2s linear;
+    &:nth-child(2) {
+      path {
+        stroke: rgba(244, 168, 40, 1);
+      }
+    }
+    &:active {
+      box-shadow: inset -0.125rem 0.125rem 0.25rem 0 rgba(221, 221, 224, 0.2), inset 0.125rem -0.125rem 0.25rem 0 rgba(221, 221, 224, 0.2), inset -0.125rem -0.125rem 0.25rem 0 rgba(255, 255, 255, 0.9), inset 0.125rem 0.125rem 0.3125rem 0 rgba(220, 220, 220, 0.9),;
+    }
+  }
+}

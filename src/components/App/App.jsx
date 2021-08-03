@@ -20,7 +20,8 @@ import {
   Coupons,
   OrderRating,
   Event,
-  Tickets
+  Tickets,
+  BookingConfirmation
 } from "../pages";
 import { OrderModal, RatingModal, RatingUpdateModal } from "../common";
 import { getShowModal } from "../../redux/modals/selectors";
@@ -28,7 +29,7 @@ import { getShowModal } from "../../redux/modals/selectors";
 // assets
 import styles from './App.module.scss';
 
-function App() {
+const App = () => {
   const modal = useSelector(getShowModal);
 
   useEffect(() => {
@@ -59,6 +60,7 @@ function App() {
         <Route path={routes.orderRating} component={OrderRating} />
         <Route path={routes.event} component={Event} />
         <Route path={routes.tickets} component={Tickets} />
+        <Route path={routes.bookingConfirmation} component={BookingConfirmation} />
       </Switch>
     </div>
   );

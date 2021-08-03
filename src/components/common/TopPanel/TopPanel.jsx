@@ -13,7 +13,7 @@ import { ReactComponent as BackSvg } from "../../../assets/images/icons/arrow-ba
 import { ReactComponent as WarningSvg } from "../../../assets/images/icons/warning.svg";
 import { modalsActions } from "../../../redux/modals/actions";
 
-export const TopPanel = ({title, noBorder, noWarning, route}) => {
+export const TopPanel = ({title, noBorder, noWarning, route, verified}) => {
   const dispatch = useDispatch();
 
   return (
@@ -23,6 +23,9 @@ export const TopPanel = ({title, noBorder, noWarning, route}) => {
       </Link>
       <h2>
         {title}
+        {verified && <div className={styles.verified}>
+          <img src={verified} alt='verified' />
+        </div>}
         {!noWarning && <div className={styles.icon} onClick={() => dispatch(modalsActions.setShowModal('Complaints'))}>
           <WarningSvg />
         </div>}

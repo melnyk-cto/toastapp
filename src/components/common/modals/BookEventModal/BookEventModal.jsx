@@ -1,40 +1,26 @@
 import React from "react";
 
 // components
-import { AddButton, PrimaryButton, WrapperModal } from "../../";
+import { AddButton, BookingInfo, PrimaryButton, WrapperModal } from "../../";
+import { routes } from "../../../App/routes";
 
 // assets
-import styles from "./RegisterEventModal.module.scss";
-import calendar from "../../../../assets/images/icons/calendar-event.svg";
-import clock from "../../../../assets/images/icons/clock.svg";
-import pin from "../../../../assets/images/icons/pin.svg";
+import styles from "./BookEventModal.module.scss";
 import whatsapp from "../../../../assets/images/icons/whatsapp.svg";
 
 const phoneCode = ['+91', '+38'];
-export const RegisterEventModal = () => {
+export const BookEventModal = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+    window.location = routes.bookingConfirmation;
   }
 
   return (
     <WrapperModal event title='Thursday Live with VARNAM' noFullScreen>
       <div className={styles.registerEvent}>
         <hr />
-        <div className={styles.info}>
-          <div className={styles.item}>
-            <img src={calendar} alt='calendar' />
-            <h5>15 Apr 2021</h5>
-          </div>
-          <div className={styles.item}>
-            <img src={clock} alt='clock' />
-            <h5>8pm onwards</h5>
-          </div>
-          <div className={styles.item}>
-            <img src={pin} alt='pin' />
-            <h5>Prism Hyderabad, <span>Old Mumbai Hwy, Financial District, Gowlidoddy, 500075</span></h5>
-          </div>
-        </div>
+        <BookingInfo />
         <hr />
         <h6>ABOUT THE EVENT</h6>
         <p>
