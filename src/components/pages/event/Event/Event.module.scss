@@ -1,7 +1,7 @@
 @import "../../../../assets/scss/variables";
 
 .event {
-  padding:        70px 15px 80px 15px;
+  padding:        73px 15px 80px 15px;
   display:        flex;
   flex-direction: column;
   align-items:    flex-start;
@@ -12,7 +12,7 @@
   align-items:      center;
   justify-content:  space-between;
   width:            100%;
-  padding:          8px 8px 20px 8px;
+  padding:          8px 18px 20px 16px;
   position:         fixed;
   z-index:          10;
   left:             50%;
@@ -61,7 +61,7 @@
   align-items:     center;
   justify-content: center;
   p {
-    margin-top: 16px;
+    margin-top: 20px;
     color:      $placeholderColor;
   }
 }
@@ -74,7 +74,7 @@
     margin-bottom: 16px;
   }
   .top {
-    padding:     16px;
+    padding:     6px 9px;
     width:       100%;
     display:     flex;
     align-items: center;
@@ -98,8 +98,8 @@
       justify-content: center;
       align-items:     center;
       flex-direction:  column;
-      width:           34px;
-      height:          34px;
+      width:           35px;
+      height:          35px;
       background:      $whiteColor;
       border-radius:   10px;
       display:         flex;
@@ -115,30 +115,30 @@
     align-items: flex-start;
     .peoples {
       position:    absolute;
-      bottom:      10px;
-      left:        10px;
+      bottom:      5px;
+      left:        4px;
       z-index:     1;
       display:     flex;
       align-items: center;
     }
     .people {
-      width:           48px;
-      height:          48px;
+      width:           34px;
+      height:          34px;
       border-radius:   50%;
       font-weight:     500;
       display:         flex;
       align-items:     center;
       justify-content: center;
       &:nth-child(2) {
-        margin-left: -35px;
+        margin-left: -21px;
       }
       &:nth-child(3) {
-        margin-left: -35px;
+        margin-left: -22px;
       }
       &:nth-child(4) {
-        margin-left:      -30px;
-        width:            38px;
-        height:           38px;
+        margin-left:      -17px;
+        width:            25px;
+        height:           25px;
         background-color: $whiteColor;
         border:           2px solid #e9e9e9;
         font-size:        8px;
@@ -150,7 +150,7 @@
     h6 {
       font-weight:   600;
       color:         #5BAC81;
-      margin-bottom: 8px;
+      margin-bottom: 4px;
     }
   }
   .action {

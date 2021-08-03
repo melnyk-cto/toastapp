@@ -22,7 +22,7 @@ export const BookEventModal = () => {
         <hr />
         <BookingInfo />
         <hr />
-        <h6>ABOUT THE EVENT</h6>
+        <h6 className={styles.about}>ABOUT THE EVENT</h6>
         <p>
           Experience a journey of melodious tunes with Band @varnamtheband at @prismhyderabad.
         </p>

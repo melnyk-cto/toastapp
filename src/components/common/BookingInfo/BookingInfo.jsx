@@ -5,12 +5,13 @@ import styles from "./BookingInfo.module.scss";
 import calendar from "../../../assets/images/icons/calendar-event.svg";
 import clock from "../../../assets/images/icons/clock.svg";
 import pin from "../../../assets/images/icons/pin.svg";
+import user from "../../../assets/images/icons/user.svg";
 
-export const BookingInfo = ({people}) => {
+export const BookingInfo = ({mod}) => {
   return (
-    <div className={styles.info}>
-      {people && <div className={`${styles.item} ${styles.people}`}>
-        <img src={calendar} alt='people' />
+    <div className={`${styles.info} ${mod ? styles.mod : ''}`}>
+      {mod && <div className={`${styles.item} ${styles.people}`}>
+        <img src={user} alt='people' />
         <h5>Sharan Pillai</h5>
       </div>}
       <div className={styles.item}>

@@ -30,7 +30,7 @@ export const BookingConfirmation = () => {
           <div className={styles.booking}>
             <h3>Thursday Live with VARNAM</h3>
             <div className={styles.info}>
-              <BookingInfo people />
+              <BookingInfo mod />
             </div>
             <hr />
             <div className={styles.ticket}>
