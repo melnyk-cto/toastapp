@@ -8,7 +8,7 @@ import { NoNavigationLayout } from "../../../common";
 // assets
 import styles from '../Onboarding.module.scss';
 import saly from '../../../../assets/images/onboarding/saly-1.png';
-import { ReactComponent as NumbersSvg } from '../../../../assets/images/onboarding/numbers.svg';
+import numbers from '../../../../assets/images/onboarding/numbers.svg';
 
 const phoneCode = ['+91', '+38'];
 export const Register = () => {
@@ -44,9 +44,7 @@ export const Register = () => {
         <section>
           <div className={styles.inner}>
             <img className={styles.saly} src={saly} alt='saly' />
-            <div className={styles.numbers}>
-              <NumbersSvg />
-            </div>
+            <img className={styles.numbers} src={numbers} alt='numbers' />
             <div className={styles.panel}>
               <h2>Register yourself</h2>
               <p>Enter your 10 digit phone number</p>
