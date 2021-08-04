@@ -407,8 +407,38 @@ footer {
     font-size:   10px;
     font-weight: 500;
     color:       $placeholderColor;
+    position:    relative;
+    &.event {
+      &:before {
+        content:          '';
+        position:         absolute;
+        z-index:          3;
+        left:             50%;
+        top:              50%;
+        width:            30px;
+        height:           30px;
+        transform:        translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.32);
+        border-radius:    50%;
+      }
+    }
+    img {
+      position:      absolute;
+      z-index:       1;
+      width:         30px;
+      height:        30px;
+      left:          50%;
+      top:           50%;
+      transform:     translate(-50%, -50%);
+      border-radius: 50%;
+    }
+    span {
+      position: relative;
+      z-index:  6;
+      color:    #bbbbbb;
+    }
     &.is-disabled {
-      color:   transparent;
+      color: transparent;
     }
     &.title {
       text-transform: uppercase;
