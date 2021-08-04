@@ -2,6 +2,11 @@
 
 .events {
   overflow: auto;
+  &.noScroll {
+    .inner {
+      width: 100%;
+    }
+  }
   .inner {
     display:         flex;
     align-items:     flex-start;
@@ -36,7 +41,7 @@
       align-items: center;
       h5 {
         margin-bottom: 0;
-        color: $textColor;
+        color:         $textColor;
       }
       img {
         width:        24px;
