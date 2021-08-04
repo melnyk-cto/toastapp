@@ -1,20 +1,24 @@
 @import "../../../assets/scss/variables";
 
 .events {
-  overflow: auto;
   &.noScroll {
-    .inner {
+    .items {
       width: 100%;
     }
   }
-  .inner {
+  .wrapper {
+    overflow: auto;
+  }
+  .items {
     display:         flex;
     align-items:     flex-start;
     justify-content: space-between;
     flex-wrap:       wrap;
-    text-align:      left;
-    margin-top:      42px;
     width:           125vw;
+  }
+  .inner {
+    text-align: left;
+    margin-top: 42px;
     .title {
       width:         100%;
       display:       flex;
@@ -30,7 +34,7 @@
       }
     }
     .item {
-      width:         48%;
+      width:         60vw;
       background:    #FCFCFC;
       box-shadow:    inset -2px 2px 4px rgba(227, 227, 227, 0.2), inset 2px -2px 4px rgba(227, 227, 227, 0.2), inset -2px -2px 4px rgba(255, 255, 255, 0.9), inset 2px 2px 5px rgba(227, 227, 227, 0.9);
       border-radius: 10px;

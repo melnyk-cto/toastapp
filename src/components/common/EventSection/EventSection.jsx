@@ -11,19 +11,23 @@ export const EventSection = ({title, items}) => {
           {title}
           <hr />
         </h5>
-        {items.map((item, index) => (
-          <div key={index} className={styles.item}>
-            <div className={styles.top}>
-              <img src={item.avatar} alt='avatar' />
-              <h5>{item.title}</h5>
-            </div>
-            <img src={item.image} alt='event' />
-            <div className={styles.bottom}>
-              <h4>{item.info}</h4>
-              <h6>{item.date}</h6>
-            </div>
-          </div>
-        ))}
+       <div className={styles.wrapper}>
+         <div className={styles.items}>
+           {items.map((item, index) => (
+             <div key={index} className={styles.item}>
+               <div className={styles.top}>
+                 <img src={item.avatar} alt='avatar' />
+                 <h5>{item.title}</h5>
+               </div>
+               <img src={item.image} alt='event' />
+               <div className={styles.bottom}>
+                 <h4>{item.info}</h4>
+                 <h6>{item.date}</h6>
+               </div>
+             </div>
+           ))}
+         </div>
+       </div>
       </div>
     </div>
   )
