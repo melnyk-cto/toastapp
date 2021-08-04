@@ -11,13 +11,13 @@
     align-items:     flex-start;
     justify-content: space-between;
     h2 {
-      color:       $whiteColor;
-      padding-top: 3px;
+      color:         $whiteColor;
+      padding-top:   3px;
       margin-bottom: 22px;
     }
     h4 {
-      font-weight: 300;
-      line-height: 1.4;
+      font-weight:   300;
+      line-height:   1.4;
       margin-bottom: 0;
       span {
         font-weight: 500;
@@ -30,9 +30,11 @@
     }
   }
   .rate {
-    margin-top:  16px;
-    display:     flex;
-    align-items: center;
+    margin-top:      16px;
+    display:         flex;
+    align-items:     center;
+    justify-content: space-between;
+    padding-right:   5%;
     .star {
       cursor:              pointer;
       width:               32px;
@@ -45,7 +47,7 @@
       margin-right:        8px;
     }
     p {
-      margin-left:   20px;
+      margin-left:   5px;
       font-size:     12px;
       color:         $textColor;
       margin-bottom: 0;
