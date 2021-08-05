@@ -29,7 +29,7 @@ export const AddButton = ({count, register}) => {
       ? <button className={`${styles.add} ${styles.register}`} type='button'
                 onClick={() => dispatch(modalsActions.setShowModal('Register Event'))}>
         <span className={styles.plus} />
-        REGISTER
+        <span className={styles.name}>REGISTER</span>
       </button>
       : !count ?
       <button className={styles.add} type='button' onClick={() => addButton()}>
