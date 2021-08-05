@@ -213,16 +213,18 @@ label {
   font-weight:   400;
   line-height:   1;
   textarea {
-    padding:       16px;
-    background:    transparent;
-    height:        104px;
-    top:           48px;
-    box-shadow:    inset -2px 2px 4px rgba(63, 73, 83, 0.2), inset 2px -2px 4px rgba(63, 73, 83, 0.2), inset -2px -2px 4px rgba(85, 99, 113, 0.9), inset 2px 2px 5px rgba(63, 73, 83, 0.9);
-    border-radius: 10px;
-    width:         100%;
-    color:         $whiteColor;
-    border:        none;
-    line-height:   1.4;
+    padding:            16px;
+    background:         transparent;
+    height:             104px;
+    top:                48px;
+    box-shadow:         inset -2px 2px 4px rgba(63, 73, 83, 0.2), inset 2px -2px 4px rgba(63, 73, 83, 0.2), inset -2px -2px 4px rgba(85, 99, 113, 0.9), inset 2px 2px 5px rgba(63, 73, 83, 0.9);
+    border-radius:      10px;
+    width:              100%;
+    color:              $whiteColor;
+    border:             none;
+    line-height:        1.4;
+    appearance:         inherit;
+    -webkit-appearance: inherit;
     &::placeholder {
       color: $placeholderColor;
     }
