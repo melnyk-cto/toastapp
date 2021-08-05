@@ -313,20 +313,35 @@ label {
   }
   &.phone {
     margin-bottom: 0;
+    &:before {
+      content:         '';
+      position:        absolute;
+      z-index:         1;
+      left:            42px;
+      top:             48%;
+      transform:       translate(0, -50%);
+      width:           8px;
+      height:          7px;
+      background:      url("./assets/images/icons/arrow-down.svg") no-repeat center center;
+      background-size: contain;
+    }
     input {
       padding-left: 64px;
     }
     select {
-      background:  transparent;
-      border:      transparent;
-      position:    absolute;
-      z-index:     1;
-      left:        6px;
-      top:         50%;
-      transform:   translate(0, -50%);
-      font-size:   14px;
-      font-weight: 500;
-      color:       $textColor;
+      padding:            0 6px;
+      background:         transparent;
+      border:             transparent;
+      position:           absolute;
+      z-index:            1;
+      left:               6px;
+      top:                50%;
+      transform:          translate(0, -50%);
+      font-size:          14px;
+      font-weight:        500;
+      color:              $textColor;
+      appearance:         none;
+      -webkit-appearance: none;
     }
   }
   &.digit {
