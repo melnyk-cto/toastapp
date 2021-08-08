@@ -17,9 +17,10 @@ import { ReactComponent as QRSvg } from "../../../assets/images/icons/qr.svg";
 const links = [
   {name: 'Special', url: routes.special},
   {name: 'Main', url: routes.main},
-  {name: 'Beverages', url: routes.beverages},
-  {name: 'Desserts', url: routes.desserts},
+  {name: 'Beverages', url: routes.beverages, disable:true},
+  {name: 'Desserts', url: routes.desserts, disable:true},
 ]
+
 
 export const Header = () => {
   const dispatch = useDispatch();
@@ -42,10 +43,10 @@ export const Header = () => {
         </ul>
       </div>
       <nav>
-        <ul>
+        <ul className={window.location.pathname.replace('/', "")}>
           {links.map((link) => (
             <li key={link.name}>
-              <NavLink key={link.name} to={link.url}>{link.name}</NavLink>
+              <NavLink className={link.disable ? styles.disable : ''} key={link.name} to={link.url}>{link.name}</NavLink>
             </li>
           ))}
         </ul>
