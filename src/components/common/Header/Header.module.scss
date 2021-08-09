@@ -11,6 +11,7 @@
   left:       50%;
   transform:  translate(-50%, 0);
   background: $backgroundColor;
+  box-shadow: -2px 2px 4px rgba(212, 212, 212, 0.2), 2px -2px 4px rgba(212, 212, 212, 0.2), -2px -2px 4px rgba(255, 255, 255, 0.9), 2px 2px 5px rgba(212, 212, 212, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(212, 212, 212, 0.5);
   .top {
     display:         flex;
     align-items:     center;
@@ -61,6 +62,7 @@
         border-radius: 10px;
         width:         25%;
         position:      relative;
+        padding:       0 10px;
       }
       a {
         width:         100%;
@@ -72,6 +74,17 @@
         padding:       6px 0 12px 0;
         text-align:    center;
         border-radius: 10px;
+        position:      relative;
+        &:before {
+          content:       '';
+          position:      absolute;
+          left:          0;
+          bottom:        0;
+          width:         100%;
+          border:        1px solid transparent;
+          border-radius: 10px;
+          transition:    .2s linear;
+        }
         &.disable {
           pointer-events: none;
         }
