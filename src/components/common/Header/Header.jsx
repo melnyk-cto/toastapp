@@ -43,7 +43,7 @@ export const Header = () => {
         </ul>
       </div>
       <nav>
-        <ul className={window.location.pathname.replace('/', "")}>
+        <ul>
           {links.map((link) => (
             <li key={link.name}>
               <NavLink className={link.disable ? styles.disable : ''} key={link.name} to={link.url}>{link.name}</NavLink>
